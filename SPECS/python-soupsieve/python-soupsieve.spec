@@ -23,6 +23,8 @@ BuildOption(install):  -l soupsieve
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3dist(hatchling) >= 0.21.1
+BuildRequires:  python3dist(pip) >= 19
 BuildRequires:  python3dist(setuptools)
 %if %{with tests}
 BuildRequires:  python3dist(pytest)
