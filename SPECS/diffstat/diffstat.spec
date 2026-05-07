@@ -7,13 +7,13 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           diffstat
-Version:        1.68
+Version:        1.69
 Release:        %autorelease
 Summary:        A utility for displaying a histogram of diff output
 License:        X11
 URL:            https://invisible-island.net/diffstat
 # VCS: No VCS link available
-#!RemoteAsset
+#!RemoteAsset:  sha256:bb02464072f769dd9832fd999526734c90eb4d66fb56d5351540a750c88a77f6
 Source:         https://invisible-mirror.net/archives/diffstat/diffstat-%{version}.tgz
 BuildSystem:    autotools
 
@@ -38,4 +38,4 @@ autoreconf -fiv
 %{_mandir}/man1/diffstat.1*
 
 %changelog
-%{?autochangelog}
+%autochangelog
