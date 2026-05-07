@@ -5,13 +5,13 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           firewalld
-Version:        2.4.0
+Version:        2.4.1
 Release:        %autorelease
 Summary:        A firewall daemon with D-Bus interface providing a dynamic firewall
 License:        GPL-2.0-or-later
 URL:            https://firewalld.org/
 VCS:            git:https://github.com/firewalld/firewalld
-#!RemoteAsset:  sha256:992853451a58d229068c0ed10c3e007b2032c0fb654f27d656bfa3c120a2f132
+#!RemoteAsset:  sha256:453230c49b961853144dd7614d59e82fafbcc52c314c39ec66d1316274a33001
 Source0:        https://github.com/firewalld/firewalld/releases/download/v%{version}/firewalld-%{version}.tar.bz2
 BuildArch:      noarch
 BuildSystem:    autotools
