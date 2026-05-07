@@ -5,13 +5,13 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           editorconfig-core-c
-Version:        0.12.10
+Version:        0.12.11
 Release:        %autorelease
 Summary:        Parser for EditorConfig files written in C
 License:        BSD-2-Clause AND BSD-3-Clause AND BSD-1-Clause
 URL:            https://github.com/editorconfig/editorconfig-core-c
-#!RemoteAsset:  sha256:ab9f897a90fb36cfc34e5b67221e55ab0e3119b3512de8e31029d376c6bab870
-Source0:        https://github.com/editorconfig/editorconfig-core-c/archive/refs/tags/v0.12.10.tar.gz
+#!RemoteAsset:  sha256:9d8b420b56a969ea3cf784861c72d26fa0e158fa1494d732df2c8a1480d36a5c
+Source0:        https://github.com/editorconfig/editorconfig-core-c/archive/refs/tags/v%{version}.tar.gz
 BuildSystem:    cmake
 
 # Downstream-only: Do not compile with -Werror
@@ -21,7 +21,6 @@ BuildSystem:    cmake
 Patch0:         0001-Downstream-only-Do-not-compile-with-Werror.patch
 
 BuildRequires:  cmake
-BuildRequires:  gcc
 BuildRequires:  pkgconfig(libpcre2-8)
 BuildRequires:  doxygen
 
@@ -57,4 +56,4 @@ rm -f %{buildroot}/%{_libdir}/libeditorconfig_static.a
 %{_libdir}/pkgconfig/editorconfig.pc
 
 %changelog
-%{?autochangelog}
+%autochangelog
