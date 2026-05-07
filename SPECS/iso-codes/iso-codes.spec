@@ -7,12 +7,12 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           iso-codes
-Version:        4.18.0
+Version:        4.20.1
 Release:        %autorelease
 Summary:        ISO Code Lists and Translations
 License:        LGPL-2.1-or-later
 URL:            https://salsa.debian.org/iso-codes-team/iso-codes
-#!RemoteAsset:  sha256:511f67bf4b51aa77f17c45adbff533242b50f1e370fe49a5706b6341902fac87
+#!RemoteAsset:  sha256:2d7d9f6084ab9ce6c534ce71a3dd5144b6e474f3c97616459a88f73f44a64bff
 Source0:        https://salsa.debian.org/iso-codes-team/%{name}/-/archive/v%{version}/%{name}-v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    autotools
