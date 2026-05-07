@@ -6,13 +6,13 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           libthai
-Version:        0.1.29
+Version:        0.1.30
 Release:        %autorelease
 Summary:        Thai language support routines
 License:        LGPL-2.1-or-later
 URL:            https://linux.thai.net/plone/TLWG/libthai/
 VCS:            git:https://github.com/tlwg/libthai
-#!RemoteAsset
+#!RemoteAsset:  sha256:ddba8b53dfe584c3253766030218a88825488a51a7deef041d096e715af64bdd
 Source0:        http://linux.thai.net/pub/thailinux/software/libthai/libthai-%{version}.tar.xz
 BuildSystem:    autotools
 
@@ -50,4 +50,4 @@ libthai.
 %{_libdir}/pkgconfig/*
 
 %changelog
-%{?autochangelog}
+%autochangelog
