@@ -7,13 +7,13 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           ell
-Version:        0.80
+Version:        0.83
 Release:        %autorelease
 Summary:        Embedded Linux Library
 License:        LGPL-2.1-or-later
 URL:            https://git.kernel.org/cgit/libs/ell/ell.git
 VCS:            git:https://git.kernel.org/pub/scm/libs/ell/ell.git
-#!RemoteAsset
+#!RemoteAsset:  sha256:39a562f5ab2768e69da1ffbb1f98a8eb3483baffc7d2ef6adc3705e4fd4e53fb
 Source:         https://mirrors.kernel.org/pub/linux/libs/ell/ell-%{version}.tar.xz
 BuildSystem:    autotools
 
@@ -50,4 +50,4 @@ files for the Embedded Linux Library (ELL).
 %{_includedir}/ell/
 
 %changelog
-%{?autochangelog}
+%autochangelog
