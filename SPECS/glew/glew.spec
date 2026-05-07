@@ -6,12 +6,12 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           glew
-Version:        2.2.0
+Version:        2.3.1
 Release:        %autorelease
 Summary:        The OpenGL Extension Wrangler Library
 License:        BSD-3-Clause AND MIT
 URL:            https://github.com/nigels-com/glew
-#!RemoteAsset
+#!RemoteAsset:  sha256:09e0083ae46930aba9b53e72c92ee1a557e24ed393526fec26cb0ebabd834720
 Source0:        https://github.com/nigels-com/glew/releases/download/glew-%{version}/glew-%{version}.zip
 BuildSystem:    autotools
 
@@ -74,4 +74,4 @@ find %{buildroot} -type f -name "*.a" -delete
 %doc doc/*
 
 %changelog
-%{?autochangelog}
+%autochangelog
