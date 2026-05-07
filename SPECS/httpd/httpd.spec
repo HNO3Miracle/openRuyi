@@ -15,13 +15,13 @@
 %define mmnisa %{mmn}%{__isa_name}%{__isa_bits}
 
 Name:           httpd
-Version:        2.4.66
+Version:        2.4.67
 Release:        %autorelease
 Summary:        Apache HTTP Server
 License:        Apache-2.0
 URL:            https://httpd.apache.org/
 VCS:            git:https://github.com/apache/httpd.git
-#!RemoteAsset
+#!RemoteAsset:  sha256:66cd206637b0d5c446fa7dabe75fe03525da8fb55855876c46288cd88b136aa4
 Source0:        https://www.apache.org/dist/httpd/httpd-%{version}.tar.bz2
 Source1:        config.layout
 Source2:        httpd.sysusers
@@ -322,4 +322,4 @@ rm -rf %{buildroot}/etc/httpd/conf/original \
 %exclude %{_mandir}/man1/dbmmanage.1*
 
 %changelog
-%{?autochangelog}
+%autochangelog
