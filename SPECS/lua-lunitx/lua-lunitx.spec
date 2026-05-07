@@ -6,12 +6,12 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           lua-lunitx
-Version:        0.8.1
+Version:        0.8.2
 Release:        %autorelease
 Summary:        Unit testing framework for Lua
 License:        MIT
 URL:            https://github.com/dcurrie/lunit
-#!RemoteAsset
+#!RemoteAsset:  sha256:d25450188ebd05828a2acf3137a09ad41f4ba09fd4ccd83119744ccf590bb685
 Source:         https://github.com/dcurrie/lunit/archive/refs/tags/%{version}.tar.gz
 
 BuildRequires:  pkgconfig(lua)
@@ -42,4 +42,4 @@ LUA_PATH='%{buildroot}%{lua_pkgdir}/?.lua;;' %{buildroot}%{_bindir}/lunit --dont
 %{lua_pkgdir}/*
 
 %changelog
-%{?autochangelog}
+%autochangelog
