@@ -7,12 +7,12 @@
 %global srcname asgiref
 
 Name:           python-%{srcname}
-Version:        3.8.1
+Version:        3.11.1
 Release:        %autorelease
 Summary:        ASGI specs, helper code, and adapters
 License:        BSD-3-Clause AND Apache-2.0
 URL:            https://github.com/django/asgiref
-#!RemoteAsset
+#!RemoteAsset:  sha256:5f184dc43b7e763efe848065441eac62229c9f7b0475f41f80e207a114eda4ce
 Source0:        https://files.pythonhosted.org/packages/source/a/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    pyproject
@@ -22,7 +22,7 @@ BuildOption(install):  -l %{srcname} +auto
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  pyproject-rpm-macros
 
-Provides:       python3-%{srcname}
+Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
 
 %description
@@ -37,4 +37,4 @@ WSGI.  This package includes libraries for implementing ASGI servers.
 %doc README.rst
 
 %changelog
-%{?autochangelog}
+%autochangelog
