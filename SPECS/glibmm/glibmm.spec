@@ -10,14 +10,14 @@
 %global __requires_exclude ^perl\\((DocsParser|Enum|Function|FunctionBase|GtkDefs|Object|Output|Property|Util|WrapParser)\\)
 
 Name:           glibmm
-Version:        2.86.0
+Version:        2.88.0
 Release:        %autorelease
 Summary:        C++ interface for the GLib library
 License:        LGPL-2.1-or-later AND GPL-2.0-or-later
 URL:            https://gtkmm.org/
 VCS:            git:https://gitlab.gnome.org/GNOME/gtkmm.git
-#!RemoteAsset
-Source:         https://download.gnome.org/sources/glibmm/2.86/glibmm-%{version}.tar.xz
+#!RemoteAsset:  sha256:a6549da3a6c43de83b8717dae5413c57a60d92f6ecc624615c612d0bb0ad0fe2
+Source:         https://download.gnome.org/sources/glibmm/2.88/glibmm-%{version}.tar.xz
 BuildSystem:    meson
 
 BuildOption(conf):  -Dbuild-documentation=false
@@ -67,4 +67,4 @@ chmod +x %{buildroot}%{_libdir}/glibmm-%{apiver}/proc/gmmproc
 %{_libdir}/pkgconfig/glibmm-2.68.pc
 
 %changelog
-%{?autochangelog}
+%autochangelog
