@@ -9,13 +9,13 @@
 %global cups_serverbin %{_exec_prefix}/lib/cups
 
 Name:           cups
-Version:        2.4.16
+Version:        2.4.19
 Release:        %autorelease
 Summary:        Standards-based, open source printing system for Linux
 License:        Apache-2.0
 URL:            https://openprinting.github.io/cups/
 VCS:            git:https://github.com/OpenPrinting/cups
-#!RemoteAsset:  sha256:0339587204b4f9428dd0592eb301dec0bf9ea6ea8dce5d9690d56be585aba92d
+#!RemoteAsset:  sha256:820984b12a67f98705785aae2dd1347fe0ac097828001d4583ff64574aed6389
 Source0:        https://github.com/OpenPrinting/cups/releases/download/v%{version}/cups-%{version}-source.tar.gz
 Source1:        macros.cups
 BuildSystem:    autotools
