@@ -8,12 +8,12 @@
 %global srcname gi_docgen
 
 Name:           gi-docgen
-Version:        2025.4
+Version:        2026.1
 Release:        %autorelease
 Summary:        Documentation tool for GObject-based libraries
 License:        (Apache-2.0 OR GPL-3.0-or-later) AND CC0-1.0 AND MIT AND OFL-1.1
 URL:            https://gitlab.gnome.org/GNOME/gi-docgen
-#!RemoteAsset
+#!RemoteAsset:  sha256:65ac3c4f2b4255d1c616fb8eae55139b6ca10071545ca2272759ffd2ccf2c7b5
 Source0:        https://files.pythonhosted.org/packages/source/g/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildSystem:    pyproject
 
@@ -70,4 +70,4 @@ stable.
 %{_datadir}/pkgconfig/gi-docgen.pc
 
 %changelog
-%{?autochangelog}
+%autochangelog
