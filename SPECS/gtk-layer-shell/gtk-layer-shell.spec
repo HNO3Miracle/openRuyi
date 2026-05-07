@@ -5,12 +5,12 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           gtk-layer-shell
-Version:        0.10.0
+Version:        0.10.1
 Release:        %autorelease
 Summary:        Library to create components for Wayland using the Layer Shell
 License:        LGPL-3.0-or-later AND MIT
 URL:            https://github.com/wmww/gtk-layer-shell
-#!RemoteAsset:  sha256:ed9bb801d6d9252defba41104820ace595dac824dc8972a758ee2ad134e10505
+#!RemoteAsset:  sha256:88c3a3e0a5300532f3d368d5df64838a87f1fb85273f22d41df0a6b8d0ec59c6
 Source0:        https://github.com/wmww/gtk-layer-shell/archive/refs/tags/v%{version}.tar.gz
 BuildSystem:    meson
 
@@ -56,4 +56,4 @@ Development files for %{name}.
 %{_libdir}/pkgconfig/gtk-layer-shell-0.pc
 
 %changelog
-%{?autochangelog}
+%autochangelog
