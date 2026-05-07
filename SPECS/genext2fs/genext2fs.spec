@@ -7,12 +7,12 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           genext2fs
-Version:        1.5.0
+Version:        1.6.2
 Release:        %autorelease
 Summary:        ext2 filesystem generator
 License:        GPL-2.0-only
 URL:            https://github.com/bestouff/genext2fs/
-#!RemoteAsset
+#!RemoteAsset:  sha256:b8aba9af48e664fa60134af696a57b3bb4ebd2b2878533d7611734e90b883ecc
 Source0:        https://github.com/bestouff/genext2fs/archive/refs/tags/v%{version}.tar.gz
 BuildSystem:    autotools
 
@@ -37,4 +37,4 @@ autoreconf -fi
 %{_mandir}/man8/genext2fs.8*
 
 %changelog
-%{?autochangelog}
+%autochangelog
