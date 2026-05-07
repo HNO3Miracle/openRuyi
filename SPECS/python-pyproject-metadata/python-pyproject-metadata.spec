@@ -7,13 +7,13 @@
 %global srcname pyproject-metadata
 
 Name:           python-%{srcname}
-Version:        0.9.1
+Version:        0.11.0
 Release:        %autorelease
 Summary:        PEP 621 metadata parsing
 License:        MIT
 URL:            https://github.com/FFY00/python-pyproject-metadata
-#!RemoteAsset
-Source0:        https://github.com/FFY00/python-pyproject-metadata/archive/refs/tags/%{version}.tar.gz#/pyproject-metadata-%{version}.tar.gz
+#!RemoteAsset:  sha256:c72fa49418bb7c5a10f25e050c418009898d1c051721d19f98a6fb6da59a66cf
+Source0:        https://files.pythonhosted.org/packages/source/p/%{srcname}/pyproject_metadata-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    pyproject
 
@@ -22,7 +22,7 @@ BuildOption(install):  -l pyproject_metadata  +auto
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
 
-Provides:       python3-%{srcname}
+Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
 
 %description
@@ -43,4 +43,4 @@ file (e.g. `PKG-INFO`).
 %doc README*
 
 %changelog
-%{?autochangelog}
+%autochangelog
