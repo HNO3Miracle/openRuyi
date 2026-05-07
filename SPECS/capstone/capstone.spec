@@ -9,13 +9,13 @@
 %global srcname capstone
 
 Name:           %{srcname}
-Version:        5.0.3
+Version:        5.0.7
 Release:        %autorelease
 Summary:        A multi-platform, multi-architecture disassembly framework
 License:        BSD-3-Clause
 URL:            https://www.capstone-engine.org
 VCS:            git:https://github.com/capstone-engine/capstone
-#!RemoteAsset
+#!RemoteAsset:  sha256:6427a724726d161d1e05fb49fff8cd0064f67836c04ffca3c11d6d859e719caa
 Source0:        https://github.com/capstone-engine/%{srcname}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildSystem:    cmake
 
@@ -103,4 +103,4 @@ sed -e '/^archive/d' -e 's|^libdir=.*|libdir=%{_libdir}|' \
 %{_docdir}/%{srcname}-doc/docs/
 
 %changelog
-%{?autochangelog}
+%autochangelog
