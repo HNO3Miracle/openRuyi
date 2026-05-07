@@ -7,13 +7,13 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           abseil-cpp
-Version:        20260107.0
+Version:        20260107.1
 Release:        %autorelease
 Summary:        C++ Common Libraries
 License:        Apache-2.0 AND LicenseRef-openRuyi-Public-Domain
 URL:            https://abseil.io
 VCS:            git:https://github.com/abseil/abseil-cpp
-#!RemoteAsset:  sha256:4c124408da902be896a2f368042729655709db5e3004ec99f57e3e14439bc1b2
+#!RemoteAsset:  sha256:4314e2a7cbac89cac25a2f2322870f343d81579756ceff7f431803c2c9090195
 Source:         https://github.com/abseil/abseil-cpp/archive/%{version}/abseil-cpp-%{version}.tar.gz
 BuildSystem:    cmake
 
@@ -83,7 +83,7 @@ Provides:       bundled(cctz)
 Development headers for %{name}
 
 %files
-%global lib_version 2601.0.0
+%global lib_version 2601.0.1
 %license LICENSE
 %doc FAQ.md README.md UPGRADES.md
 # All shared libraries except installed TESTONLY libraries; see the %%files
