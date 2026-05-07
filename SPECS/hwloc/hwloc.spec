@@ -7,8 +7,8 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 %global major_version 2
-%global minor_version 12
-%global patch_version 2
+%global minor_version 13
+%global patch_version 0
 
 Name:           hwloc
 Summary:        Portable Hardware Locality - portable abstraction of hierarchical architectures
@@ -17,7 +17,7 @@ Release:        %autorelease
 License:        BSD-2-Clause
 URL:            http://www.open-mpi.org/projects/hwloc/
 VCS:            git:https://github.com/open-mpi/ompi
-#!RemoteAsset
+#!RemoteAsset:  sha256:1514a5253f0a5c23bc006d3bdd30a6f6125c9a8dc9b5fa4984913d1fff45315d
 Source0:        https://download.open-mpi.org/release/hwloc/v%{major_version}.%{minor_version}/hwloc-%{version}.tar.gz
 BuildSystem:    autotools
 
@@ -103,4 +103,4 @@ sed -i 's/^{$/{return 77;/' tests/hwloc/glibc-sched.c
 %{_libdir}/*.so
 
 %changelog
-%{?autochangelog}
+%autochangelog
