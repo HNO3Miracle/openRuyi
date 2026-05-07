@@ -5,13 +5,13 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           djvulibre
-Version:        3.5.29
+Version:        3.5.30
 Release:        %autorelease
 Summary:        DjVu viewers, encoders, and utilities
 License:        GPL-2.0-or-later
 URL:            http://djvu.sourceforge.net/
 VCS:            git:https://git.code.sf.net/p/djvu/djvulibre-git
-#!RemoteAsset
+#!RemoteAsset:  sha256:ee5e457d4cfebe566f94b99e5e3d3cc7f5c79ddb741c2ac2ba2e456f00329644
 Source0:        http://downloads.sourceforge.net/djvu/djvulibre-%{version}.tar.gz
 BuildSystem:    autotools
 
@@ -58,4 +58,4 @@ done
 %{_libdir}/libdjvulibre.so
 
 %changelog
-%{?autochangelog}
+%autochangelog
