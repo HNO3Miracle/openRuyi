@@ -8,12 +8,12 @@
 %bcond doc 0
 
 Name:           iio-sensor-proxy
-Version:        3.8
+Version:        3.9
 Release:        %autorelease
 Summary:        IIO accelerometer sensor to input device proxy
 License:        GPL-3.0-or-later
 URL:            https://gitlab.freedesktop.org/hadess/iio-sensor-proxy
-#!RemoteAsset
+#!RemoteAsset:  sha256:af5edd307dcfa52dc3a242d13b7cc756e90a71640caf332efbad960e21649ae4
 Source0:        https://gitlab.freedesktop.org/hadess/iio-sensor-proxy/-/archive/%{version}/iio-sensor-proxy-%{version}.tar.gz
 BuildSystem:    meson
 
@@ -85,4 +85,4 @@ This package contains the documentation for %{name}.
 %endif
 
 %changelog
-%{?autochangelog}
+%autochangelog
