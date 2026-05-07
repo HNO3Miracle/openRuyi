@@ -9,12 +9,12 @@
 %bcond static 0
 
 Name:           SDL3
-Version:        3.4.2
+Version:        3.4.8
 Release:        %autorelease
 Summary:        Cross-platform multimedia library
 License:        Zlib AND MIT AND Apache-2.0 AND (Apache-2.0 OR MIT)
 URL:            https://github.com/libsdl-org/SDL
-#!RemoteAsset:  sha256:ef39a2e3f9a8a78296c40da701967dd1b0d0d6e267e483863ce70f8a03b4050c
+#!RemoteAsset:  sha256:e9fff7467fb60f037e6708da18b25560649e4c63edc2a69bb871b960d9cbfbba
 Source0:        https://www.libsdl.org/release/SDL3-%{version}.tar.gz
 BuildSystem:    cmake
 
@@ -87,4 +87,4 @@ sed -e 's/\r//g' -i README.md WhatsNew.txt BUGS.txt LICENSE.txt CREDITS.md
 %endif
 
 %changelog
-%{?autochangelog}
+%autochangelog
