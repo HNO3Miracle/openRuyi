@@ -9,15 +9,15 @@
 %global appstream_id org.kernel.software.network.ethtool
 
 Name:           ethtool
-Version:        6.15
+Version:        7.0
 Release:        %autorelease
 Summary:        Settings tool for Ethernet NICs
 License:        GPL-2.0-only AND GPL-2.0-or-later
 URL:            https://www.kernel.org/pub/software/network/ethtool
 VCS:            git:https://git.kernel.org/pub/scm/network/ethtool/ethtool.git
-#!RemoteAsset
+#!RemoteAsset:  sha256:660bf9725a7871343a0d232068a7634fbcfb69b6c2f8eff455827faefb0cd162
 Source0:        https://www.kernel.org/pub/software/network/%{name}/%{name}-%{version}.tar.xz
-#!RemoteAsset
+#!RemoteAsset:  sha256:9c5ae0120b2308ff28ec746c4ad1a646c140154df8c99544ee880a0be0fef89c
 Source1:        https://www.kernel.org/pub/software/network/%{name}/%{name}-%{version}.tar.sign
 BuildSystem:    autotools
 
@@ -57,4 +57,4 @@ hardware, particularly for wired Ethernet devices. It can be used to:
 %{_datadir}/metainfo/%{appstream_id}.metainfo.xml
 
 %changelog
-%{?autochangelog}
+%autochangelog
