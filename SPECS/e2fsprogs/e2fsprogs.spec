@@ -10,14 +10,14 @@
 %bcond systemd 0
 
 Name:           e2fsprogs
-Version:        1.47.3
+Version:        1.47.4
 Release:        %autorelease
 Summary:        Utilities for the Second Extended File System
 License:        GPL-2.0-only
 URL:            http://e2fsprogs.sourceforge.net
-#!RemoteAsset
+#!RemoteAsset:  sha256:fd5bf388cbdbe006a3d3b318d983b2948382440acc85a87f1e7d108653e8db0b
 Source0:        http://www.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/v%{version}/e2fsprogs-%{version}.tar.xz
-#!RemoteAsset
+#!RemoteAsset:  sha256:4883375e281c34773a099c91976b4a60b5801abf650e91a3b1835ba1f134b828
 Source1:        https://thunk.org/tytso/tytso-key.asc#/%{name}.keyring
 BuildSystem:    autotools
 
@@ -182,4 +182,4 @@ rm -f %{buildroot}%{_libdir}/e2initrd_helper
 %{_mandir}/man3/com_err.3.gz
 
 %changelog
-%{?autochangelog}
+%autochangelog
