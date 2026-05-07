@@ -5,13 +5,13 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           inetutils
-Version:        2.7
+Version:        2.8
 Release:        %autorelease
 Summary:        GNU network utilities
 License:        GPL-3.0-or-later
 URL:            https://www.gnu.org/software/inetutils
 VCS:            git:https://codeberg.org/inetutils/inetutils.git
-#!RemoteAsset
+#!RemoteAsset:  sha256:a76bb668060c5d28266a4dcd533cbf48e9a2d2542d1be3e5372e4307d534cd5b
 Source0:        https://ftpmirror.gnu.org/gnu/inetutils/inetutils-v%{version}-src.tar.gz
 BuildSystem:    autotools
 
