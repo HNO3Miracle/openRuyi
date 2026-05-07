@@ -7,12 +7,12 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           jsonnet
-Version:        0.21.0
+Version:        0.22.0
 Release:        %autorelease
 Summary:        A data templating language based on JSON
 License:        Apache-2.0 AND MIT AND CC0-1.0
 URL:            https://github.com/google/jsonnet
-#!RemoteAsset
+#!RemoteAsset:  sha256:5914b9904d97efa662d919519cef1a14e4132bfddddaeed8b061b4a8af628f8d
 Source0:        https://github.com/google/jsonnet/archive/refs/tags/v%{version}.tar.gz
 Source1:        jsonnet.1
 Source2:        jsonnetfmt.1
@@ -85,7 +85,7 @@ install -t '%{buildroot}%{_mandir}/man1' -p -m 0644 '%{SOURCE1}' '%{SOURCE2}'
 %{_libdir}/libjsonnet.so.*
 %{_libdir}/libjsonnet++.so.*
 
-%files    devel
+%files devel
 %{_includedir}/libjsonnet*
 %{_libdir}/libjsonnet.so
 %{_libdir}/libjsonnet++.so
@@ -93,4 +93,4 @@ install -t '%{buildroot}%{_mandir}/man1' -p -m 0644 '%{SOURCE1}' '%{SOURCE2}'
 %files -n python-%{name} -f %{pyproject_files}
 
 %changelog
-%{?autochangelog}
+%autochangelog
