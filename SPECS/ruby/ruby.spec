@@ -13,13 +13,13 @@
 %global ruby_gemextdir %{ruby_gemdir}/extensions/%{ruby_arch}/%{ruby_api_version}
 
 Name:           ruby
-Version:        4.0.3
+Version:        4.0.4
 Release:        %autorelease
 Summary:        Ruby programming language interpreter
 License:        (Ruby OR BSD-2-Clause) AND MIT
 URL:            https://www.ruby-lang.org/
 VCS:            git:https://github.com/ruby/ruby.git
-#!RemoteAsset:  sha256:77964acc370d5c8375b9502e5ba6c13c03ef91ab9eb9f521c84fb42b9c9a6b0f
+#!RemoteAsset:  sha256:f35f6edfa3dabb3f723f9d0cf1906c6512ae77f4e412ab1e68cc6e91d230fa80
 Source0:        https://cache.ruby-lang.org/pub/ruby/4.0/ruby-%{version}.tar.gz
 BuildSystem:    autotools
 
