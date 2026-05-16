@@ -8,17 +8,14 @@
 %global _test_target test
 
 Name:           multipath-tools
-Version:        0.11.1
+Version:        0.14.3
 Release:        %autorelease
 Summary:        Tools to manage multipath devices using device-mapper
 License:        GPL-2.0-only AND GPL-3.0-or-later
 URL:            https://github.com/opensvc/multipath-tools
-#!RemoteAsset
+#!RemoteAsset:  sha256:206ab1635b09309974e2fdf3bbd1825254638dc9b3d2bbd436d1105cd518d379
 Source0:        %{url}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 BuildSystem:    autotools
-
-# From https://github.com/opensvc/multipath-tools/commit/9f611e2f10a4456477b6447641eea041ecee1019
-Patch0:         multipath-tools-fix-c23-errors-with-strchr.patch
 
 BuildOption(conf):  LIB=%{_lib}
 BuildOption(install):  bindir=%{_sbindir}
@@ -131,6 +128,7 @@ fi
 %{_sbindir}/multipathc
 %{_sbindir}/mpathpersist
 %{_unitdir}/multipathd.service
+%{_unitdir}/multipathd-queueing.service
 %{_unitdir}/multipathd.socket
 %{_mandir}/man5/multipath.conf.5*
 %{_mandir}/man8/multipath.8*
@@ -194,4 +192,4 @@ fi
 %{_pkgconfdir}/libdmmp.pc
 
 %changelog
-%{?autochangelog}
+%autochangelog
