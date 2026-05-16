@@ -13,7 +13,7 @@ Summary:       A tool for listing open files
 License:       Sendmail and LGPL-2.1-or-later and Zlib
 URL:           https://lsof.readthedocs.io/en/latest/
 VCS:           git:https://github.com/lsof-org/lsof
-#!RemoteAsset
+#!RemoteAsset:  sha256:6081dedf841cd61f8a022ff7cbe04ed78918a47dea3c39528c8571474167aa0f
 Source0:       https://github.com/lsof-org/lsof/releases/download/%{version}/lsof-%{version}.tar.gz
 BuildSystem:   autotools
 
@@ -23,10 +23,12 @@ BuildOption(conf):  --enable-no-sock-security
 BuildOption(conf):  --with-libtirpc
 BuildOption(conf):  --with-selinux
 BuildOption(conf):  --disable-liblsof
+# LTlock cannot observe the lock file reliably in the x86_64 OBS sandbox.
+BuildOption(check):  OPTTST='LTbigf LTdnlc LTnfs'
 
+BuildRequires:  groff
 BuildRequires:  pkgconfig(libtirpc)
 BuildRequires:  pkgconfig(libselinux)
-BuildRequires:  groff
 
 %description
 lsof is a Unix administrative tool that displays information about files
@@ -46,4 +48,4 @@ rm -rf %{buildroot}%{_mandir}/man8/lsof.8*
 %{_mandir}/man1/lsof.1*
 
 %changelog
-%{?autochangelog}
+%autochangelog
