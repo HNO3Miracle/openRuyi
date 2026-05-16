@@ -17,11 +17,14 @@ VCS:            git:https://github.com/pauldreik/rdfind
 Source0:        https://github.com/pauldreik/rdfind/archive/refs/tags/releases/%{version}.tar.gz
 BuildSystem:    autotools
 
+# Upstream 1.7.0 requires C++17, but autotools otherwise falls back to gnu++11.
+BuildOption(conf):  CXXFLAGS="%{optflags} -std=gnu++17"
+
 BuildRequires:  autoconf
 BuildRequires:  automake
-BuildRequires:  m4
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
+BuildRequires:  m4
 BuildRequires:  make
 BuildRequires:  pkgconfig(nettle)
 
@@ -40,4 +43,4 @@ autoreconf -vif
 %{_mandir}/man1/rdfind.1*
 
 %changelog
-%{?autochangelog}
+%autochangelog
