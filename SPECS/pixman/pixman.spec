@@ -12,11 +12,13 @@ Release:        %autorelease
 Summary:        Pixel manipulation library
 License:        MIT
 URL:            https://gitlab.freedesktop.org/pixman/pixman
-#!RemoteAsset
+#!RemoteAsset:  sha256:d09c44ebc3bd5bee7021c79f922fe8fb2fb57f7320f55e97ff9914d2346a591c
 Source:         https://www.cairographics.org/releases/%{name}-%{version}.tar.gz
 BuildSystem:    meson
 
 BuildOption(conf):  --auto-features=auto
+# Several pixman tests exceed meson's default 120s timeout on riscv64 builders.
+BuildOption(check):  --timeout-multiplier 4
 
 BuildRequires:  meson
 
@@ -42,4 +44,4 @@ files for the pixman library.
 %{_libdir}/pkgconfig/pixman-1.pc
 
 %changelog
-%{?autochangelog}
+%autochangelog
