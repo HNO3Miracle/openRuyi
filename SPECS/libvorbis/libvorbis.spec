@@ -11,15 +11,17 @@ Release:        %autorelease
 Summary:        The Vorbis General Audio Compression Codec
 License:        BSD-3-Clause
 URL:            https://github.com/xiph/vorbis
-#!RemoteAsset
+#!RemoteAsset:  sha256:270c76933d0934e42c5ee0a54a36280e2d87af1de3cc3e584806357e237afd13
 Source:         https://github.com/xiph/vorbis/archive/refs/tags/v%{version}.tar.gz
 BuildSystem:    autotools
 
 BuildOption(conf):  --disable-static
+# riscv64 GCC 16 currently ICEs when linking the check binary with LTO enabled.
+BuildOption(check):  CFLAGS="%{optflags} -fno-lto"
 
-BuildRequires:  gcc
-BuildRequires:  automake
 BuildRequires:  autoconf
+BuildRequires:  automake
+BuildRequires:  gcc
 BuildRequires:  libtool
 BuildRequires:  make
 BuildRequires:  pkgconfig(ogg)
@@ -62,4 +64,4 @@ rm -f %{buildroot}%{_docdir}/%{name}-%{version}/doxygen-build.stamp
 %{_datadir}/aclocal/vorbis.m4
 
 %changelog
-%{?autochangelog}
+%autochangelog
