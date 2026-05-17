@@ -35,6 +35,8 @@ BuildSystem:    autotools
 # [   13s] lto-wrapper: fatal error: make returned 2 exit status
 # [   13s] compilation terminated.
 Patch2000:      2000-fix-lto-uninitialized.diff
+# Remove a dead checksum byte counter that GCC 16 reports under -Werror.
+Patch2001:      2001-fix-gcc16-unused-variable.patch
 
 BuildOption(build):  LD=ld.bfd
 

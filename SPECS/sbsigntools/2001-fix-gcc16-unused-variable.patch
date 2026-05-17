@@ -1,0 +1,36 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: HNO3Miracle <hno3miracle@outlook.com>
+Date: Sun, 17 May 2026 17:20:00 +0800
+Subject: [PATCH] image: remove unused checksum byte counter
+
+The checksum byte counter is only accumulated and never used. GCC 16
+reports it as an error because sbsigntools builds with -Werror.
+---
+ src/image.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/src/image.c b/src/image.c
+index 1111111..2222222 100644
+--- a/src/image.c
++++ b/src/image.c
+@@ -512,17 +512,14 @@ int image_hash_sha256(struct image *image, uint8_t digest[])
+ {
+ 	struct region *region;
+ 	SHA256_CTX ctx;
+-	int rc, i, n;
++	int rc, i;
+ 
+ 	rc = SHA256_Init(&ctx);
+ 	if (!rc)
+ 		return -1;
+ 
+-	n = 0;
+-
+ 	for (i = 0; i < image->n_checksum_regions; i++) {
+ 		region = &image->checksum_regions[i];
+-		n += region->size;
+ #if 0
+ 		printf("sum region: 0x%04lx -> 0x%04lx [0x%04x bytes]\n",
+ 				region->data - image->buf,
+-- 
+2.53.0
