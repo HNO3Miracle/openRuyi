@@ -20,6 +20,8 @@ BuildSystem:    cmake
 
 # https://github.com/warmcat/libwebsockets/pull/3570
 Patch0:         0001-core-net-Fix-ISO-C23-errors-with-strchr.patch
+# Initialize nested VFS read amount before use to fix GCC 16 LTO diagnostics.
+Patch1:         0002-http-fops-zip-initialize-nested-read-amount.patch
 
 BuildOption(conf):  -DLWS_WITH_HTTP2:BOOL=ON
 BuildOption(conf):  -DLWS_IPV6:BOOL=ON

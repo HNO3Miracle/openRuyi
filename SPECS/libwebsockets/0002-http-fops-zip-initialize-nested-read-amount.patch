@@ -1,0 +1,31 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: HNO3Miracle <hno3miracle@outlook.com>
+Date: Sun, 17 May 2026 17:50:00 +0800
+Subject: [PATCH] http: fops-zip: initialize nested read amount
+
+Some VFS read implementations use *amount as an input limit before
+overwriting it with the number of bytes read. Initialize ramount to the
+requested read length before passing it to nested reads.
+---
+ lib/roles/http/server/fops-zip.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/lib/roles/http/server/fops-zip.c b/lib/roles/http/server/fops-zip.c
+index 1111111..2222222 100644
+--- a/lib/roles/http/server/fops-zip.c
++++ b/lib/roles/http/server/fops-zip.c
+@@ -533,6 +533,7 @@ spin:
+ 			if (rlen > eff_size(priv) - (cur - priv->content_start))
+ 				rlen = eff_size(priv) - (cur - priv->content_start);
+ 
++			ramount = rlen;
+ 			if (priv->zip_fop_fd->fops->LWS_FOP_READ(
+ 					priv->zip_fop_fd, &ramount, priv->rbuf,
+ 					rlen))
+@@ -605,3 +606,4 @@ spin:
++				ramount = rlen;
+ 				if (lws_vfs_file_read(priv->zip_fop_fd,
+ 						      &ramount, buf, rlen))
+ 					return LWS_FZ_ERR_READ_CONTENT;
+-- 
+2.53.0
