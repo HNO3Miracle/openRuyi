@@ -13,7 +13,7 @@ Summary:        The mdadm program controls Linux md devices (software RAID array
 License:        GPL-2.0-or-later
 URL:            http://www.kernel.org/pub/linux/utils/raid/mdadm/
 VCS:            git:https://git.kernel.org/pub/scm/utils/mdadm/mdadm.git/
-#!RemoteAsset
+#!RemoteAsset:  sha256:680fed532857088e0cd87c56c00033ae35eae0a3f9cb7e1523b345ba8717fb93
 Source0:        https://git.kernel.org/pub/scm/utils/mdadm/mdadm.git/snapshot/mdadm-%{version}.tar.gz
 Source1:        raid-check
 Source2:        mdadm-raid-check.sysconfig
@@ -25,6 +25,8 @@ BuildSystem:    autotools
 
 # include xmalloc to build successfully.
 Patch0:         0001-fix-missing-xmalloc-include.patch
+# Remove dead stores that GCC 16 reports as errors under -Werror.
+Patch1:         0002-fix-gcc16-unused-variables.patch
 
 BuildOption(build):  CXFLAGS="%{optflags} -std=gnu17 -Wno-error=unterminated-string-initialization"
 BuildOption(build):  SYSCONFDIR="%{_sysconfdir}"
@@ -96,4 +98,4 @@ install -Dm644 raid6check.man %{buildroot}/%{_mandir}/man8/raid6check.man
 %{_datadir}/mdadm/
 
 %changelog
-%{?autochangelog}
+%autochangelog

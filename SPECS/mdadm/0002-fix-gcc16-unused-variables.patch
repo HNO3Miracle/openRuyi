@@ -1,0 +1,99 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: HNO3Miracle <hno3miracle@outlook.com>
+Date: Sun, 17 May 2026 17:20:00 +0800
+Subject: [PATCH] mdadm: fix GCC 16 diagnostics
+
+GCC 16 reports variables that are set but not used as errors because
+mdadm builds with -Werror. The counters removed here do not affect any
+later control flow or output.
+
+It also reports a possible format overflow when writing generated
+missing-disk serial strings. Use a local unsigned value derived from
+the bounded loop counter so the formatted range is explicit.
+---
+ Assemble.c    | 5 +----
+ Detail.c      | 4 ----
+ super-intel.c | 9 ++++++---
+ 3 files changed, 7 insertions(+), 11 deletions(-)
+
+diff --git a/Assemble.c b/Assemble.c
+index 1111111..2222222 100644
+--- a/Assemble.c
++++ b/Assemble.c
+@@ -1377,7 +1377,7 @@ int Assemble(struct supertype *st, char *mddev,
+ 	int *best = NULL; /* indexed by raid_disk */
+ 	int bestcnt = 0;
+ 	int devcnt;
+-	unsigned int okcnt, sparecnt, rebuilding_cnt, replcnt, journalcnt;
++	unsigned int okcnt, sparecnt, rebuilding_cnt, journalcnt;
+ 	int journal_clean = 0;
+ 	int i;
+ 	int was_forced = 0;
+@@ -1619,7 +1619,6 @@ try_again:
+ 	 */
+ 	avail = xcalloc(content->array.raid_disks, 1);
+ 	okcnt = 0;
+-	replcnt = 0;
+ 	sparecnt=0;
+ 	journalcnt=0;
+ 	rebuilding_cnt=0;
+@@ -1679,8 +1678,7 @@ try_again:
+ 					if (!avail[i/2]) {
+ 						okcnt++;
+ 						avail[i/2]=1;
+-					} else
+-						replcnt++;
++					}
+ 				} else
+ 					rebuilding_cnt++;
+ 			} else if (devices[j].i.disk.raid_disk != MD_DISK_ROLE_JOURNAL)
+diff --git a/Detail.c b/Detail.c
+index 1111111..2222222 100644
+--- a/Detail.c
++++ b/Detail.c
+@@ -91,7 +91,6 @@ int Detail(char *dev, struct context *c)
+ 	int max_devices = 0, n_devices = 0;
+ 	int spares = 0;
+ 	struct stat stb;
+-	int failed = 0;
+ 	struct supertype *st = NULL;
+ 	char *subarray = NULL;
+ 	int max_disks = MD_SB_DISKS; /* just a default */
+@@ -741,9 +740,6 @@ int Detail(char *dev, struct context *c)
+ 		if (!c->brief && array.raid_disks) {
+ 			if (disk.state & (1 << MD_DISK_FAULTY)) {
+ 				printf(" faulty");
+-				if (disk.raid_disk < array.raid_disks &&
+-				    disk.raid_disk >= 0)
+-					failed++;
+ 			}
+ 			if (disk.state & (1 << MD_DISK_ACTIVE))
+ 				printf(" active");
+diff --git a/super-intel.c b/super-intel.c
+index 1111111..2222222 100644
+--- a/super-intel.c
++++ b/super-intel.c
+@@ -10029,14 +10029,16 @@ static int apply_takeover_update(struct imsm_update_takeover *u,
+ 			*space_list = *space;
+ 			du = (void *)space;
+ 			memcpy(du, super->disks, sizeof(*du));
++			__u16 missing_index = (i * 2) + 1;
++
+ 			du->fd = -1;
+ 			du->minor = 0;
+ 			du->major = 0;
+-			du->index = (i * 2) + 1;
+-			sprintf((char *)du->disk.serial,
+-				" MISSING_%d", du->index);
+-			sprintf((char *)du->serial,
+-				"MISSING_%d", du->index);
++			du->index = missing_index;
++			snprintf((char *)du->disk.serial, sizeof(du->disk.serial),
++				" MISSING_%u", (unsigned int)missing_index);
++			snprintf((char *)du->serial, sizeof(du->serial),
++				"MISSING_%u", (unsigned int)missing_index);
+ 			du->next = super->missing;
+ 			super->missing = du;
+ 		}
+-- 
+2.53.0
