@@ -1,11 +1,13 @@
 # SPDX-FileCopyrightText: (C) 2026 Institute of Software, Chinese Academy of Sciences (ISCAS)
 # SPDX-FileCopyrightText: (C) 2026 openRuyi Project Contributors
 # SPDX-FileContributor: misaka00251 <liuxin@iscas.ac.cn>
+# SPDX-FileContributor: HNO3Miracle <xiangao.or@isrc.iscas.ac.cn>
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
 %define _name           tools
 %define go_import_path  golang.org/x/tools
+%define telemetry_version  0.80.0
 # So tired, can't stand more flaky tests - 251
 %define go_test_exclude_glob %{shrink:
     golang.org/x/tools/cmd/signature-fuzzer/*
@@ -38,10 +40,10 @@ Summary:        Various packages and tools that support the Go programming langu
 License:        BSD-3-Clause
 URL:            https://golang.org/x/tools
 VCS:            git:https://github.com/golang/tools
-#!RemoteAsset
+#!RemoteAsset:  sha256:e39e3550f2881d7c54ca3fbba3ef1ad8901bd82135579b67412fd412ca7d05c2
 Source0:        https://github.com/golang/tools/archive/v%{version}.tar.gz#/%{_name}-%{version}.tar.gz
-#!RemoteAsset
-Source1:        https://github.com/golang/telemetry/archive/config/v0.80.0.tar.gz#/telemetry-config-v0.80.0.tar.gz
+#!RemoteAsset:  sha256:10c8a43fdea21fe756b84db97f54dacfc67cb736ed1a2e8610aa0d8df9eed94b
+Source1:        https://github.com/golang/telemetry/archive/config/v%{telemetry_version}.tar.gz#/telemetry-config-v%{telemetry_version}.tar.gz
 BuildSystem:    golangmodules
 
 # Skip flaky test - 251
@@ -87,9 +89,9 @@ mkdir -p vendor/golang.org/x/telemetry
 tar -xf %{SOURCE1} \
     --strip-components=1 \
     -C vendor/golang.org/x/telemetry \
-    telemetry-config-v0.80.0
+    telemetry-config-v%{telemetry_version}
 cat > vendor/modules.txt <<'EOF'
-# golang.org/x/telemetry v0.80.0
+# golang.org/x/telemetry v%{telemetry_version}
 ## explicit
 golang.org/x/telemetry
 EOF
@@ -107,8 +109,8 @@ install -d %{buildroot}%{_bindir}
 install -m 0755 %{_builddir}/go/bin/* %{buildroot}%{_bindir}/
 
 %files
-%license LICENSE*
 %doc README*
+%license LICENSE*
 %{go_sys_gopath}/%{go_import_path}
 
 %files -n go-tools
@@ -116,4 +118,4 @@ install -m 0755 %{_builddir}/go/bin/* %{buildroot}%{_bindir}/
 %{_bindir}/*
 
 %changelog
-%{?autochangelog}
+%autochangelog
