@@ -18,8 +18,6 @@ Source0:        https://github.com/go-test/deep/archive/refs/tags/v1.1.1.tar.gz#
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n deep-1.1.1
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

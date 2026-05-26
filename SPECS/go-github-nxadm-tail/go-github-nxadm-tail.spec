@@ -19,8 +19,6 @@ Patch0:         2000-fix-example-non-constant-fmt-printf.patch
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n tail-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/fsnotify/fsnotify)

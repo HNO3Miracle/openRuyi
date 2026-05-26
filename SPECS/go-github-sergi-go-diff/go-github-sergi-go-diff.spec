@@ -18,8 +18,6 @@ Source0:        https://github.com/sergi/go-diff/archive/refs/tags/v1.4.0.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-diff-1.4.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/davecgh/go-spew)

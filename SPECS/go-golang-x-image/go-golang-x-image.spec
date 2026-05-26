@@ -20,8 +20,6 @@ Source0:        https://github.com/golang/image/archive/v%{version}.tar.gz#/%{_n
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/text)

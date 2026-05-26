@@ -18,7 +18,6 @@ Source0:        https://github.com/goccy/go-graphviz/archive/v%{version}.tar.gz#
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-graphviz-0.2.10
 # internal/tools/nori is a nested Go module used to generate sources; it has
 # its own module path and is not part of the packaged go-graphviz test set.
 %define go_test_exclude_glob %{go_import_path}/internal/tools/nori*

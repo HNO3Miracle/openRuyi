@@ -19,7 +19,6 @@ Source0:        https://github.com/envoyproxy/go-control-plane/archive/refs/tags
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-control-plane-ratelimit-v%{version}
 # The ratelimit tag contains a nested Go module below the archive root. Keep
 # prep at the root so shared LICENSE/README files are available, then enter the
 # nested module for install and check.

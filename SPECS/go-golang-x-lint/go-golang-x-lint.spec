@@ -19,8 +19,6 @@ Source0:        https://github.com/golang/lint/archive/%{commit_id}.tar.gz#/%{_n
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n lint-%{commit_id}
-
 BuildRequires:  go
 BuildRequires:  go(golang.org/x/tools)
 BuildRequires:  go-rpm-macros

@@ -22,8 +22,6 @@ BuildSystem:    golangmodules
 # hermetic so host /etc/ssh/ssh_config read errors cannot mask those fixtures.
 Patch0:         2000-make-fixture-tests-ignore-system-config.patch
 
-BuildOption(prep):  -n ssh_config-1.6.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

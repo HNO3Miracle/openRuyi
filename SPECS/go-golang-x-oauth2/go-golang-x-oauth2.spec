@@ -22,8 +22,6 @@ Source0:        https://github.com/golang/oauth2/archive/v%{version}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/google/go-cmp)

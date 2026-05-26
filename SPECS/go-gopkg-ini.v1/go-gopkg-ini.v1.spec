@@ -18,8 +18,6 @@ Source0:        https://github.com/go-ini/ini/archive/v%{version}.tar.gz#/%{_nam
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n ini-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/davecgh/go-spew)

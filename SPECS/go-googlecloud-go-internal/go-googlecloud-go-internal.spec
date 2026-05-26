@@ -18,7 +18,6 @@ Source0:        https://github.com/googleapis/google-cloud-go/archive/release-%{
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n google-cloud-go-release-%{version}
 # Package only the internal helper subtrees actually imported by split
 # google-cloud-go modules. Building the monorepo root pulls a broad dependency
 # cycle; these leaf helpers keep iam and translate checks/builds resolvable.

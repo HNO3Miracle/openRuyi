@@ -21,8 +21,6 @@ Source0:        https://github.com/census-instrumentation/opencensus-go/archive/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opencensus-go-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/davecgh/go-spew)
 BuildRequires:  go(github.com/golang/groupcache)

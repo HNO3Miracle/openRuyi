@@ -18,7 +18,6 @@ Source0:        https://github.com/pb33f/jsonpath/archive/refs/tags/v0.8.2.tar.g
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n jsonpath-0.8.2
 # Upstream release tarball does not include jsonpath-compliance-test-suite/cts.json,
 # so this test fails before exercising package code.
 BuildOption(check):  -skip TestJSONPathComplianceTestSuite

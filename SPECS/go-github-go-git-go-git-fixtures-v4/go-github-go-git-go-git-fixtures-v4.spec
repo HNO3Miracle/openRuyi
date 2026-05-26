@@ -23,8 +23,6 @@ BuildSystem:    golangmodules
 # keep tgz extraction temp dirs relative to the supplied filesystem.
 Patch0:         2000-use-filesystem-relative-temp-dir.patch
 
-BuildOption(prep):  -n go-git-fixtures-%{commit_id}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/davecgh/go-spew)

@@ -21,8 +21,6 @@ Source0:        https://github.com/golang/sys/archive/v%{version}.tar.gz#/%{_nam
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

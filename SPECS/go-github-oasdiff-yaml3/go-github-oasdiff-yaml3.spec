@@ -18,8 +18,6 @@ Source0:        https://github.com/oasdiff/yaml3/archive/refs/tags/v0.0.13.tar.g
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n yaml3-0.0.13
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(gopkg.in/check.v1)

@@ -19,7 +19,6 @@ Patch2000:      2000-update-cloud-go-api-and-drop-prometheus-dependency.patch
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opencensus-go-exporter-stackdriver-%{version}
 # Backport upstream cloud-go API update and direct prometheus dependency removal
 # so this exporter builds against the cloud.google.com/go packages in openRuyi.
 # Root package tests require Google Application Default Credentials for

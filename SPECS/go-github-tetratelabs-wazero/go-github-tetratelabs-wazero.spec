@@ -18,7 +18,6 @@ Source0:        https://github.com/tetratelabs/wazero/archive/v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n wazero-1.11.0
 # OBS filesystem returns EEXIST instead of ENOTEMPTY for rename-over-nonempty-dir
 # cases in internal/sysfs tests; the rest of the package test suite still runs.
 %define go_test_exclude github.com/tetratelabs/wazero/internal/sysfs

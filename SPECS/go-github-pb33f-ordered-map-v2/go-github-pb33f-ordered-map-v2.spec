@@ -18,7 +18,6 @@ Source0:        https://github.com/pb33f/ordered-map/archive/refs/tags/v2.3.1.ta
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n ordered-map-2.3.1
 # With packaged go.yaml.in/yaml/v4, YAML round-trip tests fail with
 # "pipeline must contain YAML mapping, has 1"; keep the rest of %check enabled.
 BuildOption(check):  -skip TestYAMLRoundTrip

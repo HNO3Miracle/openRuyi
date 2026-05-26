@@ -22,7 +22,6 @@ BuildSystem:    golangmodules
 # MIME type; sniff named assets before falling back to the default upload type.
 Patch0:         2000-detect-generic-release-asset-content-types.patch
 
-BuildOption(prep):  -n go-github-%{version}
 # Nested Go modules have their own module path/dependencies; skip them in %check
 # so the parent package does not try to test unrelated internal tools.
 %define go_test_exclude_glob %{shrink:

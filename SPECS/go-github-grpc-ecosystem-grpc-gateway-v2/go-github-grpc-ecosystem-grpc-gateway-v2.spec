@@ -18,8 +18,6 @@ Source0:        https://github.com/grpc-ecosystem/grpc-gateway/archive/refs/tags
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n grpc-gateway-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/antihax/optional)

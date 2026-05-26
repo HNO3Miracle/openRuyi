@@ -28,8 +28,6 @@ BuildSystem:    golangmodules
 Patch0:         2000-Fix-collector-metrics-test-for-Go-1.25.patch
 Patch1:         2001-skip-mutiple-tests.patch
 
-BuildOption(prep):  -n %{_name}-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/beorn7/perks)

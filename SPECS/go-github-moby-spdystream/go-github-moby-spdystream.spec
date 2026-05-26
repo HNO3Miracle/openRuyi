@@ -18,8 +18,6 @@ Source0:        https://github.com/moby/spdystream/archive/refs/tags/v%{version}
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n spdystream-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

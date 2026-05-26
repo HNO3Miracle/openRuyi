@@ -19,7 +19,6 @@ Source0:        https://github.com/shurcooL/httpfs/archive/%{commit_id}.tar.gz#/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n httpfs-%{commit_id}
 # The remaining packages either import golang.org/x/tools/godoc/vfs/httpfs,
 # which is not provided by the current go-golang-x-tools package in openRuyi,
 # or contain no tests after those packages are excluded.

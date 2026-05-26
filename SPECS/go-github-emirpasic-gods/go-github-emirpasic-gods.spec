@@ -19,8 +19,6 @@ Source0:        https://github.com/emirpasic/gods/archive/v%{version}.tar.gz#/%{
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

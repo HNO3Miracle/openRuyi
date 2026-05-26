@@ -18,8 +18,6 @@ Source0:        https://github.com/go-resty/resty/archive/refs/tags/v%{version}.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n resty-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/net)

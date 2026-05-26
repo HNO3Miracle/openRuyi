@@ -18,8 +18,6 @@ Source0:        https://github.com/woodsbury/decimal128/archive/refs/tags/v1.4.0
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n decimal128-1.4.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

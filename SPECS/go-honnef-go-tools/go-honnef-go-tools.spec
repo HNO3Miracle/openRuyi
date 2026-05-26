@@ -19,8 +19,6 @@ Source0:        https://github.com/dominikh/go-tools/archive/v%{upstream_version
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-tools-%{upstream_version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/BurntSushi/toml)
 BuildRequires:  go(golang.org/x/exp)

@@ -18,7 +18,6 @@ Source0:        https://github.com/open-telemetry/opentelemetry-go/archive/v%{ve
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opentelemetry-go-%{version}
 # go.opentelemetry.io/otel/internal/global imports go.opentelemetry.io/auto/sdk,
 # while auto/sdk imports otel APIs. Limit bootstrap %check to leaf API packages
 # that do not require auto/sdk so the BuildRequires cycle can be resolved.

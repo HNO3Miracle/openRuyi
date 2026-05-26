@@ -19,8 +19,6 @@ Source0:        https://github.com/google/go-cmp/archive/v%{version}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

@@ -18,8 +18,6 @@ Source0:        https://github.com/google/go-pkcs11/archive/refs/tags/v%{version
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-pkcs11-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

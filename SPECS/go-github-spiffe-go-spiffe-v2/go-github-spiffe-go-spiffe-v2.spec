@@ -18,7 +18,6 @@ Source0:        https://github.com/spiffe/go-spiffe/archive/refs/tags/v%{version
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-spiffe-%{version}
 # go-google-grpc only needs go-spiffe's core SPIFFE ID and bundle packages.
 # The workloadapi/spiffegrpc/spiffetls subtrees import grpc and create a source
 # package cycle, so this core package removes those grpc-bound trees and skips

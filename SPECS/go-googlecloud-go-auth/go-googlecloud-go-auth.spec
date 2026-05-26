@@ -19,7 +19,6 @@ Source0:        https://github.com/googleapis/google-cloud-go/archive/refs/tags/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n google-cloud-go-auth-v%{version}
 # This module imports only google.golang.org/api/googleapi, so depend on the
 # support leaf package instead of the full go-google-api package to avoid a
 # bootstrap cycle with google-api.

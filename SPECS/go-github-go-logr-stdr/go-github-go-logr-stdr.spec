@@ -18,7 +18,6 @@ Source0:        https://github.com/go-logr/stdr/archive/v%{version}.tar.gz#/%{_n
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
 # ExampleNewWithOptions expects the older slog output format; Go 1.25 prints
 # slog groups with '=' separators instead of ':'.
 BuildOption(check):  -skip ExampleNewWithOptions

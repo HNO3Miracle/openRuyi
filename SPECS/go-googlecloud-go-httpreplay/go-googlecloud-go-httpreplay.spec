@@ -19,7 +19,6 @@ Source0:        https://github.com/googleapis/google-cloud-go/archive/refs/tags/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n google-cloud-go-storage-v%{version}
 # httpreplay is not tagged as an independent module in this archive. Package
 # only the source subtree needed by storage tests and keep sibling internal
 # packages in the temporary GOPATH during %%check.

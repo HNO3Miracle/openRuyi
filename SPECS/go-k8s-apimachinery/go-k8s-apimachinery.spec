@@ -19,7 +19,6 @@ Source0:        https://github.com/kubernetes/apimachinery/archive/kubernetes-%{
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n apimachinery-kubernetes-%{upstream_version}
 # managedfields tests expect api/openapi-spec/swagger.json from the full
 # kubernetes repository, but the standalone apimachinery archive lacks it.
 %define go_test_exclude %{shrink:

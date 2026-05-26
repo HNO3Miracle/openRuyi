@@ -18,7 +18,6 @@ Source0:        https://github.com/onsi/gomega/archive/v%{version}.tar.gz#/%{_na
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n gomega-%{version}
 # The upstream test suite is written with github.com/onsi/ginkgo/v2, while
 # ginkgo itself needs gomega. Exclude gomega tests to break the packaging
 # bootstrap cycle; ginkgo can run its own tests after gomega is available.

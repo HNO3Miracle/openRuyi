@@ -19,7 +19,6 @@ Source0:        https://github.com/googleapis/go-genproto/archive/%{commit_id}.t
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-genproto-%{commit_id}
 # This generated leaf package has no independent go.mod. Package only this
 # source subtree so the root go-genproto package does not need to be upgraded
 # just to satisfy cloud.google.com/go/compute.

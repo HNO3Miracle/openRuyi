@@ -20,8 +20,6 @@ Patch0:         2000-fix-killf-test-format-string.patch
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n tomb-%{commit_id}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

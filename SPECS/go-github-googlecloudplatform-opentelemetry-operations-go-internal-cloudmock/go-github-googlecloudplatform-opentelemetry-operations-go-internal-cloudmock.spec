@@ -18,7 +18,6 @@ Source0:        https://github.com/GoogleCloudPlatform/opentelemetry-operations-
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opentelemetry-operations-go-internal-cloudmock-v%{version}/internal/cloudmock
 # The import path is a Go module below the repository root; keep %check scoped
 # to this module so GOPATH-mode tests do not scan sibling modules from the archive.
 %define go_test_include %{go_import_path}

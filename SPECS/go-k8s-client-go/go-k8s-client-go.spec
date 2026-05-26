@@ -19,7 +19,6 @@ Source0:        https://github.com/kubernetes/client-go/archive/refs/tags/kubern
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n client-go-kubernetes-%{upstream_version}
 # k8s.io/client-go/testing/internal and k8s.io/client-go/tools/cache use
 # testing/synctest; OBS builds run with asynctimerchan!=0, which makes
 # synctest.Run panic with "synctest.Run not supported with asynctimerchan!=0".

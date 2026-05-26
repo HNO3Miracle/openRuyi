@@ -19,7 +19,6 @@ Source0:        https://github.com/open-telemetry/opentelemetry-go-contrib/archi
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opentelemetry-go-contrib-instrumentation-net-http-httptrace-otelhttptrace-v%{version}
 # This tag archive is the repository root; the Go module we package lives in
 # %%{go_source_subdir}, so the explicit sections below scope install/check to it.
 %define go_test_include %{go_import_path}

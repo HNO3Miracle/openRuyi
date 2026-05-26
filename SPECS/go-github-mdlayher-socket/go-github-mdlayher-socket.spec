@@ -18,8 +18,6 @@ Source0:        https://github.com/mdlayher/socket/archive/refs/tags/v%{version}
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n socket-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/google/go-cmp)

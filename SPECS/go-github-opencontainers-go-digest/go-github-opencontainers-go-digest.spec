@@ -19,8 +19,6 @@ Source0:        https://github.com/opencontainers/go-digest/archive/refs/tags/v%
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-digest-%{upstream_version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

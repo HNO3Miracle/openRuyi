@@ -18,7 +18,6 @@ Source0:        https://github.com/wI2L/jettison/archive/v%{version}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n jettison-%{version}
 # Go 1.25 encodes \b and \f differently from the old stdlib output expected
 # by this upstream compatibility test; the rest of the suite still runs.
 BuildOption(check):  -skip TestStringEscaping

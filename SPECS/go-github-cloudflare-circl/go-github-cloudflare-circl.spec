@@ -18,8 +18,6 @@ Source0:        https://github.com/cloudflare/circl/archive/v%{version}.tar.gz#/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n circl-1.6.3
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/bwesterb/go-ristretto)

@@ -18,7 +18,6 @@ Source0:        https://github.com/bufbuild/protocompile/archive/v%{version}.tar
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n protocompile-0.14.1
 # internal/tools is only used by upstream generate/lint targets, and
 # internal/benchmarks depends on the predecessor parser for comparisons.
 # linker tests require upstream's generated ../.tmp/cache/protoc/27.0/bin/protoc

@@ -18,8 +18,6 @@ Source0:        https://github.com/joshdk/go-junit/archive/refs/tags/v%{version}
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-junit-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/stretchr/testify)

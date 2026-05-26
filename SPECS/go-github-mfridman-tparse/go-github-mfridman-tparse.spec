@@ -18,8 +18,6 @@ Source0:        https://github.com/mfridman/tparse/archive/v%{version}.tar.gz#/%
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n tparse-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/aymanbagabas/go-osc52/v2)
 BuildRequires:  go(github.com/charmbracelet/colorprofile)

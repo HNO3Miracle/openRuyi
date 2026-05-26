@@ -18,8 +18,6 @@ Source0:        https://github.com/uber-go/automaxprocs/archive/v%{version}.tar.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n automaxprocs-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/davecgh/go-spew)
 BuildRequires:  go(github.com/pmezard/go-difflib)

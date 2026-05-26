@@ -18,7 +18,6 @@ Source0:        https://github.com/open-telemetry/opentelemetry-collector/archiv
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opentelemetry-collector-internal-testutil-v%{version}/internal/testutil
 # The import path is a Go module below the repository root; keep %check scoped
 # to this module so GOPATH-mode tests do not scan sibling modules from the archive.
 %define go_test_include %{go_import_path}

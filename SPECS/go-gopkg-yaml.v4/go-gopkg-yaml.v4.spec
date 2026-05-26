@@ -19,7 +19,6 @@ Source0:        https://github.com/yaml/go-yaml/archive/v%{upstream_version}.tar
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-yaml-%{upstream_version}
 # The yts package requires external YAML Test Suite data files:
 # "Run 'make test-data' to download them first". Offline OBS builds cannot
 # download test data during %check, so keep the rest of the repository tested.

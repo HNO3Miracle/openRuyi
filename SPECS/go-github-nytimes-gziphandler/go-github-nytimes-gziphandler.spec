@@ -18,8 +18,6 @@ Source0:        https://github.com/NYTimes/gziphandler/archive/refs/tags/v%{vers
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n gziphandler-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/stretchr/testify)

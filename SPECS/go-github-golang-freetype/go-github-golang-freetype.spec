@@ -21,7 +21,6 @@ Source0:        https://github.com/golang/freetype/archive/%{commit_id}.tar.gz#/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{commit_id}
 BuildOption(check):  -vet=off
 
 BuildRequires:  go

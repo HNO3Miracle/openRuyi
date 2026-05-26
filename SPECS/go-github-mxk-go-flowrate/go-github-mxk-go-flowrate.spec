@@ -19,8 +19,6 @@ Source0:        https://github.com/mxk/go-flowrate/archive/%{commit_id}.tar.gz#/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{commit_id}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

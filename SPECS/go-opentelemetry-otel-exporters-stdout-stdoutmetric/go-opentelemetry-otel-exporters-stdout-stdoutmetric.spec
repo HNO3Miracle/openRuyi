@@ -19,7 +19,6 @@ Source0:        https://github.com/open-telemetry/opentelemetry-go/archive/refs/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opentelemetry-go-exporters-stdout-stdoutmetric-v%{version}
 # This package owns a Go module below the repository root; the explicit
 # %%install/%%check sections below copy only %%{go_source_subdir}, because
 # the default golangmodules phases would copy the full archive under

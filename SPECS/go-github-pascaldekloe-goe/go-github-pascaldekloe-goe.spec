@@ -20,8 +20,6 @@ BuildSystem:    golangmodules
 
 Patch2000:      2000-fix-non-constant-differ-format.patch
 
-BuildOption(prep):  -n goe-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

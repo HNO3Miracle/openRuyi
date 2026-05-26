@@ -18,8 +18,6 @@ Source0:        https://github.com/moby/term/archive/refs/tags/v%{version}.tar.g
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n term-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/creack/pty)

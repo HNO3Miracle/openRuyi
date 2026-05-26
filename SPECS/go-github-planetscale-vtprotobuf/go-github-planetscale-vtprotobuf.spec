@@ -21,8 +21,6 @@ Source0:        https://github.com/planetscale/vtprotobuf/archive/v%{version}.ta
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n vtprotobuf-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/davecgh/go-spew)
 BuildRequires:  go(github.com/golang/protobuf)

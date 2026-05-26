@@ -18,8 +18,6 @@ Source0:        https://github.com/oklog/run/archive/v%{version}.tar.gz#/%{_name
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n run-1.2.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

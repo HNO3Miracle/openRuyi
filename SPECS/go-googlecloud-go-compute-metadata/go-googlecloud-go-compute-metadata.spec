@@ -19,7 +19,6 @@ Source0:        https://github.com/googleapis/google-cloud-go/archive/refs/tags/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n google-cloud-go-compute-metadata-v%{version}
 # The explicit %%install/%%check sections below enter %%{go_source_subdir};
 # otherwise this package would install the whole google-cloud-go repository and
 # conflict with sibling cloud.google.com/go submodules.

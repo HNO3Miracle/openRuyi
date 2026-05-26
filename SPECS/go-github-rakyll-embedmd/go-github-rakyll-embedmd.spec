@@ -25,8 +25,6 @@ Source0:        https://github.com/rakyll/embedmd/archive/v%{version}.tar.gz#/%{
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n embedmd-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/campoy/embedmd/embedmd)
 BuildRequires:  go(github.com/pmezard/go-difflib)

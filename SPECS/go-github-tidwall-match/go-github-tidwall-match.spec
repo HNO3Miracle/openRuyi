@@ -18,8 +18,6 @@ Source0:        https://github.com/tidwall/match/archive/refs/tags/v1.2.0.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n match-1.2.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

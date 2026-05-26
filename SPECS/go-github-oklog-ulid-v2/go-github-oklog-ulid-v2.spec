@@ -18,8 +18,6 @@ Source0:        https://github.com/oklog/ulid/archive/refs/tags/v2.1.1.tar.gz#/%
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n ulid-2.1.1
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/pborman/getopt)

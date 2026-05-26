@@ -22,7 +22,6 @@ BuildSystem:    golangmodules
 # https://sources.debian.org/src/golang-testify/1.10.0-1/debian/patches/do-not-use-race.patch
 Patch0:         2000-do-not-use-race.patch
 
-BuildOption(prep):  -n %{_name}-%{version}
 BuildOption(check):  -vet=off
 
 BuildRequires:  go

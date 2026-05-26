@@ -18,7 +18,6 @@ Source0:        https://github.com/googleapis/google-api-go-client/archive/v%{ve
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n google-api-go-client-%{version}
 # These leaf packages are needed to break the google-api <-> gax-go bootstrap
 # cycle. They do not import gax-go or google-cloud-go, so they can be built
 # before the full go-google-api package.

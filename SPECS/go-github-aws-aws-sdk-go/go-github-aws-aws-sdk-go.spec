@@ -18,8 +18,6 @@ Source0:        https://github.com/aws/aws-sdk-go/archive/refs/tags/v%{version}.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n aws-sdk-go-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/jmespath/go-jmespath)

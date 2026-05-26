@@ -25,8 +25,6 @@ Source0:        https://github.com/jmespath/go-jmespath/archive/refs/tags/v%{ver
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-jmespath-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/davecgh/go-spew)

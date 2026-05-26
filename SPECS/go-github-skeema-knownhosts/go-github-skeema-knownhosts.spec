@@ -18,8 +18,6 @@ Source0:        https://github.com/skeema/knownhosts/archive/refs/tags/v1.3.2.ta
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n knownhosts-1.3.2
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/crypto)

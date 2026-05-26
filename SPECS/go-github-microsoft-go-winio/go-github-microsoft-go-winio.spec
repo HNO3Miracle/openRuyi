@@ -18,8 +18,6 @@ Source0:        https://github.com/Microsoft/go-winio/archive/refs/tags/v%{versi
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-winio-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/sirupsen/logrus)

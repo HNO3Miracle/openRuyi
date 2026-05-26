@@ -18,8 +18,6 @@ Source0:        https://github.com/hashicorp/go-retryablehttp/archive/refs/tags/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-retryablehttp-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/fatih/color)

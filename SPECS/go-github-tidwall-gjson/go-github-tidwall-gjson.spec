@@ -18,8 +18,6 @@ Source0:        https://github.com/tidwall/gjson/archive/refs/tags/v1.19.0.tar.g
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n gjson-1.19.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/tidwall/match)

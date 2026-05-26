@@ -20,8 +20,6 @@ BuildSystem:    golangmodules
 
 Patch2000:      2000-fix-non-constant-fprintf-format.patch
 
-BuildOption(prep):  -n glob-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

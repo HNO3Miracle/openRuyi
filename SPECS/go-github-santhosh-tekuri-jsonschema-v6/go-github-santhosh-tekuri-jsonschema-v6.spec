@@ -18,7 +18,6 @@ Source0:        https://github.com/santhosh-tekuri/jsonschema/archive/refs/tags/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n jsonschema-6.0.2
 # Example_fromHTTPS fetches raw.githubusercontent.com; OBS builders do not have
 # network access during %check, so skip only this external-network example.
 BuildOption(check):  -skip Example_fromHTTPS

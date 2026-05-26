@@ -18,8 +18,6 @@ Source0:        https://github.com/zeebo/errs/archive/refs/tags/v%{version}.tar.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n errs-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

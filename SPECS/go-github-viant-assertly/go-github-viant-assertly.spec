@@ -18,7 +18,6 @@ Source0:        https://github.com/viant/assertly/archive/v%{version}.tar.gz#/%{
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n assertly-%{version}
 # TestAssertCoalesceWithZero is inconsistent with current assertly/toolbox
 # coalesce handling: OBS reports null vs 0 as a failed validation.
 BuildOption(check):  -skip TestAssertCoalesceWithZero

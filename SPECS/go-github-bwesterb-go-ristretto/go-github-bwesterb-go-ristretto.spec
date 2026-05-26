@@ -18,8 +18,6 @@ Source0:        https://github.com/bwesterb/go-ristretto/archive/v%{version}.tar
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-ristretto-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

@@ -18,8 +18,6 @@ Source0:        https://github.com/matttproud/golang_protobuf_extensions/archive
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n golang_protobuf_extensions-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/golang/protobuf)

@@ -20,7 +20,6 @@ Patch1:         2001-fix-time-format-test-12-hour-layout.patch
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n toolbox-%{version}
 # TestCase_To currently expects VendorId, but current toolbox conversion
 # returns Vendorid.
 # TestLogger leaves a goroutine that calls os.Exit(0), which Go treats as

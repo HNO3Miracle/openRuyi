@@ -18,7 +18,6 @@ Source0:        https://github.com/francoispqt/gojay/archive/v%{version}.tar.gz#
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n gojay-%{version}
 # embedded_struct tests compare JSON strings through assertly/toolbox; the
 # current packaged assertly reports Payload "" as actual '""' vs expected ''.
 %define go_test_exclude_glob github.com/francoispqt/gojay/gojay/codegen/test/embedded_struct

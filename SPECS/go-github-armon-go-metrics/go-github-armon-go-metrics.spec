@@ -20,7 +20,6 @@ Patch2000:      2000-fix-go-immutable-radix-v2-compatibility.patch
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-metrics-%{version}
 # Circonus and Prometheus sink tests assert serialized output from newer
 # dependency versions, while root/datadog/compat package tests still run.
 %define go_test_exclude %{shrink:

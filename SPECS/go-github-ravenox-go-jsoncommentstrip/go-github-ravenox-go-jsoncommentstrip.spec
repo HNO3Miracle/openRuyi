@@ -18,8 +18,6 @@ Source0:        https://github.com/RaveNoX/go-jsoncommentstrip/archive/refs/tags
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-jsoncommentstrip-1.0.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

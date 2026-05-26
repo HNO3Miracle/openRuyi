@@ -18,7 +18,6 @@ Source0:        https://github.com/go-errors/errors/archive/v%{version}.tar.gz#/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n errors-1.5.1
 # Go 1.25 vet rejects upstream non-constant Errorf strings and old-style examples.
 BuildOption(check):  -vet=off
 

@@ -18,8 +18,6 @@ Source0:        https://github.com/prometheus/prometheus/archive/v%{version}.tar
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n prometheus-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(cloud.google.com/go/auth)
 BuildRequires:  go(cloud.google.com/go/auth/oauth2adapt)

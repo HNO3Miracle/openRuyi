@@ -19,7 +19,6 @@ Source0:        https://github.com/googleapis/google-cloud-go/archive/refs/tags/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n google-cloud-go-auth-oauth2adapt-v%{version}
 # The explicit %%install/%%check sections below enter %%{go_source_subdir}; using
 # BuildOption(prep): -n .../auth/oauth2adapt would copy the whole repository
 # under the oauth2adapt import path because the GitHub archive still contains

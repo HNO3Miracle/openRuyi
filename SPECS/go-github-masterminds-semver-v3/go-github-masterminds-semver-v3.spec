@@ -18,8 +18,6 @@ Source0:        https://github.com/Masterminds/semver/archive/refs/tags/v%{versi
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n semver-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

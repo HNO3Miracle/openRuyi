@@ -20,7 +20,6 @@ BuildSystem:    golangmodules
 
 Patch0:         2000-fix-tests-for-current-toolchain.patch
 
-BuildOption(prep):  -n klog-%{version}
 # klogr in klog 0.x targets the pre-v1 go-logr API and does not build with the
 # packaged go-logr 1.4; keep the k8s.io/klog v1 module package scoped to klog.
 %define go_test_exclude_glob %{shrink:

@@ -20,7 +20,6 @@ BuildSystem:    golangmodules
 
 Patch2000:      2000-fix-non-constant-fprintf-format.patch
 
-BuildOption(prep):  -n getopt-1.1.0
 # Nested Go modules have their own module path/dependencies; skip them in %check
 # so the parent package does not try to test unrelated internal tools.
 %define go_test_exclude_glob %{go_import_path}/v2*

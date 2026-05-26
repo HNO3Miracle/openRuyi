@@ -19,7 +19,6 @@ Source0:        https://github.com/GoogleCloudPlatform/opentelemetry-operations-
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opentelemetry-operations-go-detectors-gcp-v%{version}
 # This tag archive is the repository root; the Go module we package lives in
 # %%{go_source_subdir}, so the explicit sections below scope install/check to it.
 # Keep %check scoped to this module so GOPATH-mode tests do not scan sibling

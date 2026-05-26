@@ -18,8 +18,6 @@ Source0:        https://github.com/go-git/go-billy/archive/refs/tags/v%{version}
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-billy-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/cyphar/filepath-securejoin)

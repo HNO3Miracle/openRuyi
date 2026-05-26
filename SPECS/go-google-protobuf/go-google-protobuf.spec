@@ -19,8 +19,6 @@ Source0:        https://github.com/protocolbuffers/protobuf-go/archive/v%{versio
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/google/go-cmp)

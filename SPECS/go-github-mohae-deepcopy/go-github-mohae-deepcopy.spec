@@ -19,8 +19,6 @@ Source0:        https://github.com/mohae/deepcopy/archive/%{commit_id}.tar.gz#/%
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n deepcopy-c48cc78d482608239f6c4c92a4abd87eb8761c90
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

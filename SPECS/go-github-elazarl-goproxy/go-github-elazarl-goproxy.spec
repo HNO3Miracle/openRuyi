@@ -18,7 +18,6 @@ Source0:        https://github.com/elazarl/goproxy/archive/refs/tags/v%{version}
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n goproxy-%{version}
 # Nested Go modules have their own module path/dependencies; skip them in %check
 # so the parent package does not try to test unrelated examples/tools.
 %define go_test_exclude_glob %{shrink:

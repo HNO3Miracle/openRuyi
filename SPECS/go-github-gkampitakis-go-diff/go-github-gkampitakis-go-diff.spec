@@ -18,8 +18,6 @@ Source0:        https://github.com/gkampitakis/go-diff/archive/refs/tags/v%{vers
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-diff-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

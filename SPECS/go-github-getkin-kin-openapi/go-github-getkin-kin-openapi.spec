@@ -18,7 +18,6 @@ Source0:        https://github.com/getkin/kin-openapi/archive/refs/tags/v0.138.0
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n kin-openapi-0.138.0
 # These tests fetch external schemas or archives from github.com,
 # raw.githubusercontent.com, schemas.sentex.io, and json-schema.org. OBS
 # builders do not have network access during %check.

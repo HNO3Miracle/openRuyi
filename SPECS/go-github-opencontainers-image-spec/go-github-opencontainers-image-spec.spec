@@ -18,8 +18,6 @@ Source0:        https://github.com/opencontainers/image-spec/archive/refs/tags/v
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n image-spec-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/opencontainers/go-digest)

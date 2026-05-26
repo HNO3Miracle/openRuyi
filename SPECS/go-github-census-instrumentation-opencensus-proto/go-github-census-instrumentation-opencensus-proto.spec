@@ -18,8 +18,6 @@ Source0:        https://github.com/census-instrumentation/opencensus-proto/archi
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opencensus-proto-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/golang/protobuf)

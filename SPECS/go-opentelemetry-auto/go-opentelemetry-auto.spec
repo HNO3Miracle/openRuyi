@@ -18,7 +18,6 @@ Source0:        https://github.com/open-telemetry/opentelemetry-go-instrumentati
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opentelemetry-go-instrumentation-sdk-v%{version}
 # go.opentelemetry.io/auto/sdk imports go.opentelemetry.io/auto/internal/...
 # from the repository root, so install the full source tree but keep %check
 # scoped to the public sdk module.

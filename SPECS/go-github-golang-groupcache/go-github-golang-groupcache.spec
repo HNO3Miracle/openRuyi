@@ -19,8 +19,6 @@ Source0:        https://github.com/golang/groupcache/archive/%{commit_id}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n groupcache-%{commit_id}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/golang/protobuf)

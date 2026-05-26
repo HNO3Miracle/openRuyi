@@ -18,7 +18,6 @@ Source0:        https://github.com/go-task/slim-sprig/archive/v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n slim-sprig-%{version}
 # TestGetHostByName depends on DNS/network availability and returns nil in the
 # OBS build sandbox.
 BuildOption(check):  -skip TestGetHostByName

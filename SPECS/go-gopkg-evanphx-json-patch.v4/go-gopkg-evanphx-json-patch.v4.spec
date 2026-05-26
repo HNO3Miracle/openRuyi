@@ -24,7 +24,6 @@ Source0:        https://github.com/evanphx/json-patch/archive/v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n json-patch-%{version}
 # Go 1.25 vet rejects non-constant format strings in upstream tests.
 BuildOption(check):  -vet=off
 

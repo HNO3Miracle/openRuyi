@@ -22,7 +22,6 @@ BuildSystem:    golangmodules
 # accepts empty subsection names; adjust that single compatibility assertion.
 Patch0:         2000-adjust-config-test-for-packaged-gcfg.patch
 
-BuildOption(prep):  -n go-git-%{version}
 # Nested Go modules have their own module path/dependencies; skip them in %check
 # so the parent package does not try to test unrelated internal tools.
 # OBS workers have no outbound network and no readable host SSH known_hosts;

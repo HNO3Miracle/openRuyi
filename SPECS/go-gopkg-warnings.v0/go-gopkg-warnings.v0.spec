@@ -18,8 +18,6 @@ Source0:        https://github.com/go-warnings/warnings/archive/refs/tags/v%{ver
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n warnings-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

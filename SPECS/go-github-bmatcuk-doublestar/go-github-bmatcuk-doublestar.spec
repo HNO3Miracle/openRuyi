@@ -21,8 +21,6 @@ Source0:        https://github.com/bmatcuk/doublestar/archive/refs/tags/v1.3.4.t
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n doublestar-1.3.4
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

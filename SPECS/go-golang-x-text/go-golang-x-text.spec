@@ -31,8 +31,6 @@ Patch0:         2000-Disable-failed-test-TestCountMallocs.patch
 # https://sources.debian.org/src/golang-golang-x-text/0.31.0-1/debian/patches/0002-Skip-TestLinking-in-language-display.patch
 Patch1:         2001-Skip-TestLinking-in-language-display.patch
 
-BuildOption(prep):  -n %{_name}-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

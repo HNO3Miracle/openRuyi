@@ -19,8 +19,6 @@ Source0:        https://github.com/kolo/xmlrpc/archive/%{commit_id}.tar.gz#/%{_n
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n xmlrpc-%{commit_id}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/text)

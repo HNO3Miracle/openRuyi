@@ -19,7 +19,6 @@ Source0:        https://github.com/influxdata/line-protocol-corpus/archive/%{com
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n line-protocol-corpus-%{commit_id}
 # The NaN marshal assertion fails with the packaged cmp/quicktest stack, while
 # the rest of the corpus reader/value tests pass.
 BuildOption(check):  -skip TestValueMarshal/NaN

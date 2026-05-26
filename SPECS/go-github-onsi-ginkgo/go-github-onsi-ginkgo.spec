@@ -18,7 +18,6 @@ Source0:        https://github.com/onsi/ginkgo/archive/v%{version}.tar.gz#/%{_na
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n ginkgo-%{version}
 # Go 1.25 vet flags Ginkgo v1's printf-style stenographer helpers when they
 # intentionally print preformatted strings; keep tests enabled but disable vet.
 BuildOption(check):  -vet=off

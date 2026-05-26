@@ -19,7 +19,6 @@ Source0:        https://github.com/pmezard/go-difflib/archive/v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
 BuildOption(check):  -vet=off
 
 BuildRequires:  go

@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 # Go 1.25 vet rejects status.Errorf with a non-constant format string.
 Patch0:         2000-fix-non-constant-status-errorf.patch
 
-BuildOption(prep):  -n go-control-plane-%{version}
 # The upstream repository contains nested Go modules. The root module uses local
 # replace directives for them, so testing sibling modules here would create a
 # bootstrap cycle with the separately packaged envoy/ratelimit modules.

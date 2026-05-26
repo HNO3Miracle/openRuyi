@@ -18,7 +18,6 @@ Source0:        https://github.com/segmentio/asm/archive/v%{version}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n asm-%{version}
 # build/* packages are generator helpers and fail with the current cpu feature API;
 # runtime packages such as base64/keyset are still tested.
 %define go_test_exclude_glob github.com/segmentio/asm/build*

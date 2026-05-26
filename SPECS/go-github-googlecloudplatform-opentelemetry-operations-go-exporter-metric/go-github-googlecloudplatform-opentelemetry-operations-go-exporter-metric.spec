@@ -19,7 +19,6 @@ Source0:        https://github.com/GoogleCloudPlatform/opentelemetry-operations-
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n opentelemetry-operations-go-exporter-metric-v%{version}
 # The explicit %%install/%%check sections below enter %%{go_source_subdir};
 # using BuildOption(prep): -n .../exporter/metric would place the module
 # contents at the wrong import root because the GitHub archive is still rooted

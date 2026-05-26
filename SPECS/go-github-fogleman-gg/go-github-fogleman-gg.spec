@@ -19,7 +19,6 @@ Patch0:         2000-do-not-parse-test-flags-in-init.patch
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n gg-1.3.0
 # Some raster hash tests differ across arches/current dependency versions; keep
 # the deterministic API tests that are stable in OBS.
 BuildOption(check):  -run '^(TestBlank|TestGrid|TestLines|TestCircles|TestCubic|TestFill|TestClip|TestDrawStringWrapped|TestDrawImage|TestSetPixel|TestDrawPoint|TestLinearGradient|TestRadialGradient|TestDashes)$'

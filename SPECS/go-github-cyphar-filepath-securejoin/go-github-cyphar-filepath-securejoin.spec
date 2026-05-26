@@ -18,7 +18,6 @@ Source0:        https://github.com/cyphar/filepath-securejoin/archive/v%{version
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n filepath-securejoin-%{version}
 # OBS returns "resource temporarily unavailable" for several openat2 symlink
 # loop cases, and the racing mkdir stress test hits "too many open files" on
 # riscv64. TestPartialLookup_RacingRename also exceeds the 10m go test timeout

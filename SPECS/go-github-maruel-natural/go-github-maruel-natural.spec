@@ -18,8 +18,6 @@ Source0:        https://github.com/maruel/natural/archive/refs/tags/v%{version}.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n natural-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

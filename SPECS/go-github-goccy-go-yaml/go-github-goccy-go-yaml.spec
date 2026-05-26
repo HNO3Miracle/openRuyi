@@ -18,8 +18,6 @@ Source0:        https://github.com/goccy/go-yaml/archive/v%{version}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-yaml-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/fatih/color)
 BuildRequires:  go(github.com/go-playground/validator/v10)

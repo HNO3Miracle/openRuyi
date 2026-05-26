@@ -37,7 +37,6 @@ Source0:        https://github.com/golang/exp/archive/%{commit_id}.tar.gz#/%{_na
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{commit_id}
 BuildOption(check):  -vet=off -short
 
 BuildRequires:  go

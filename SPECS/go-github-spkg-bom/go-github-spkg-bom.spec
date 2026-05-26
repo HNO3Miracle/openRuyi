@@ -18,8 +18,6 @@ Source0:        https://github.com/spkg/bom/archive/refs/tags/v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n bom-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

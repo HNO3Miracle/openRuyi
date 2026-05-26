@@ -18,8 +18,6 @@ Source0:        https://github.com/peterbourgon/diskv/archive/v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n diskv-3.0.1
-
 BuildRequires:  go
 BuildRequires:  go(github.com/google/btree)
 BuildRequires:  go-rpm-macros

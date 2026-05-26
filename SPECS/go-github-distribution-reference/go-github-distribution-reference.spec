@@ -18,8 +18,6 @@ Source0:        https://github.com/distribution/reference/archive/refs/tags/v%{v
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n reference-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/opencontainers/go-digest)

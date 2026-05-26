@@ -23,8 +23,6 @@ BuildSystem:    golangmodules
 # golang.org/x/crypto no longer ships golang.org/x/crypto/openpgp/armor.
 Patch0:         2000-use-local-openpgp-armor-in-forwarding-test.patch
 
-BuildOption(prep):  -n go-crypto-%{upstream_version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/cloudflare/circl)

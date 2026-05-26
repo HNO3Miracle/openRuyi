@@ -19,8 +19,6 @@ Source0:        https://github.com/kubernetes/api/archive/refs/tags/kubernetes-%
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n api-kubernetes-%{upstream_version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/davecgh/go-spew)

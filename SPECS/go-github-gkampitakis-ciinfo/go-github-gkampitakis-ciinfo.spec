@@ -21,8 +21,6 @@ Source0:        https://github.com/gkampitakis/ciinfo/archive/v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n ciinfo-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

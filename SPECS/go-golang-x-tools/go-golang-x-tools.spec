@@ -51,7 +51,6 @@ Patch0:         2000-skip-test.patch
 # Patches from debian, thanks!
 Patch1:         2001-Set-GO111MODULE-on.patch
 
-BuildOption(prep):  -n %{_name}-%{version}
 BuildOption(check):  -short -timeout=30m
 
 BuildRequires:  go

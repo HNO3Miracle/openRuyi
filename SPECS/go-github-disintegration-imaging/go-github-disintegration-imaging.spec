@@ -18,8 +18,6 @@ Source0:        https://github.com/disintegration/imaging/archive/v%{version}.ta
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n imaging-1.6.2
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/image)

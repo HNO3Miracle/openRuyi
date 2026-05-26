@@ -20,8 +20,6 @@ BuildSystem:    golangmodules
 
 Patch2000:      2000-fix-go-retryablehttp-checkretry-signature.patch
 
-BuildOption(prep):  -n circonus-gometrics-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/circonus-labs/circonusllhist)

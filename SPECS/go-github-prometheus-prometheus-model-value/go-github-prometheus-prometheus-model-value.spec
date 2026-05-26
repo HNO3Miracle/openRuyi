@@ -18,7 +18,6 @@ Source0:        https://github.com/prometheus/prometheus/archive/v%{version}.tar
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n prometheus-%{version}
 # Package only this standard-library-only leaf path so packages that import
 # github.com/prometheus/prometheus/model/value do not need to wait for the full
 # Prometheus package dependency chain.

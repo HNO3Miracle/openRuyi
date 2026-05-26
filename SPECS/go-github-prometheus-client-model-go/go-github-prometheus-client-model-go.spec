@@ -20,8 +20,6 @@ Source0:        https://github.com/prometheus/client_model/archive/%{commit_id}.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n client_model-%{commit_id}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(google.golang.org/protobuf)

@@ -23,7 +23,6 @@ Source0:        https://github.com/golang/arch/archive/v%{version}.tar.gz#/%{_na
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
 BuildOption(check):  -short
 
 BuildRequires:  go

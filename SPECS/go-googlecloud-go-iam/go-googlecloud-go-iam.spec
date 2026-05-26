@@ -19,7 +19,6 @@ Source0:        https://github.com/googleapis/google-cloud-go/archive/refs/tags/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n google-cloud-go-iam-v%{version}
 # The explicit %%install/%%check sections below enter %%{go_source_subdir};
 # using BuildOption(prep): -n .../iam would place the module contents at the
 # wrong import root because the GitHub archive is still rooted at the full

@@ -18,7 +18,6 @@ Source0:        https://github.com/KimMachineGun/automemlimit/archive/refs/tags/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n automemlimit-0.7.5-pre.1
 # OBS builders do not expose a normal process cgroup layout; this test
 # observes "process is not in cgroup" instead of upstream's expected
 # "cgroups is not supported on this system".

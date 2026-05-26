@@ -18,8 +18,6 @@ Source0:        https://github.com/xanzy/ssh-agent/archive/refs/tags/v0.3.3.tar.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n ssh-agent-0.3.3
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/crypto)

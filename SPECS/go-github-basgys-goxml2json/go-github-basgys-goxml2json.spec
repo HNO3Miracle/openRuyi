@@ -18,8 +18,6 @@ Source0:        https://github.com/basgys/goxml2json/archive/refs/tags/v%{versio
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n goxml2json-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/bitly/go-simplejson)

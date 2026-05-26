@@ -18,8 +18,6 @@ Source0:        https://github.com/golang/appengine/archive/v%{version}.tar.gz#/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n appengine-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/golang/protobuf)
 BuildRequires:  go(golang.org/x/net)

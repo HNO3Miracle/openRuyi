@@ -18,8 +18,6 @@ Source0:        https://github.com/googleapis/google-cloud-go/archive/release-%{
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n google-cloud-go-release-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(cel.dev/expr)
 BuildRequires:  go(cloud.google.com/go/auth)

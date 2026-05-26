@@ -18,7 +18,6 @@ Source0:        https://github.com/santhosh-tekuri/jsonschema/archive/refs/tags/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n jsonschema-5.3.1
 # Upstream release tarball does not include the JSON-Schema-Test-Suite
 # submodule/testdata needed by these tests.
 BuildOption(check):  -skip 'TestDraft4|TestDraft6|TestDraft7|TestDraft2019|TestDraft2020|TestExtra'

@@ -19,8 +19,6 @@ Source0:        https://github.com/prometheus/client_model/archive/v%{version}.t
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(google.golang.org/protobuf)

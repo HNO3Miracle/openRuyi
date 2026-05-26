@@ -21,8 +21,6 @@ BuildSystem:    golangmodules
 # Go 1.25 rejects example names that look like missing identifiers.
 Patch0:         2000-fix-example-names-for-current-go.patch
 
-BuildOption(prep):  -n marshmallow-1.1.5
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/go-test/deep)

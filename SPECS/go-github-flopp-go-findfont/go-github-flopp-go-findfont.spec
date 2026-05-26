@@ -18,8 +18,6 @@ Source0:        https://github.com/flopp/go-findfont/archive/v%{version}.tar.gz#
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-findfont-0.1.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

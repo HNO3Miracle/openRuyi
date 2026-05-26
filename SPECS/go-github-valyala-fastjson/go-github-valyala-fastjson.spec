@@ -18,8 +18,6 @@ Source0:        https://github.com/valyala/fastjson/archive/v%{version}.tar.gz#/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n fastjson-1.6.10
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

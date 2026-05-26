@@ -18,8 +18,6 @@ Source0:        https://github.com/circonus-labs/circonusllhist/archive/refs/tag
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n circonusllhist-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

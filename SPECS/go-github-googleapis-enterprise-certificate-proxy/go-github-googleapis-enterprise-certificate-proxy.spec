@@ -30,8 +30,6 @@ Source0:        https://github.com/googleapis/enterprise-certificate-proxy/archi
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n enterprise-certificate-proxy-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/google/go-pkcs11)
 BuildRequires:  go(golang.org/x/crypto)

@@ -18,8 +18,6 @@ Source0:        https://github.com/jstemmer/go-junit-report/archive/refs/tags/v%
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-junit-report-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

@@ -26,7 +26,6 @@ Source0:        https://github.com/mmcloughlin/avo/archive/v%{version}.tar.gz#/%
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
 BuildOption(check):  -short
 
 BuildRequires:  go

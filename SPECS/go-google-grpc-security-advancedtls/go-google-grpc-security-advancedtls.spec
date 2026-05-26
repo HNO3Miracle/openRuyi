@@ -19,7 +19,6 @@ Source0:        https://github.com/grpc/grpc-go/archive/refs/tags/security/advan
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n grpc-go-security-advancedtls-v%{version}
 # This package owns a Go module below the repository root; the explicit
 # %%install/%%check sections below copy only %%{go_source_subdir}, because
 # the default golangmodules phases would copy the full archive under

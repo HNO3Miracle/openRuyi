@@ -18,8 +18,6 @@ Source0:        https://github.com/lunixbochs/vtclean/archive/v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n vtclean-1.0.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

@@ -19,7 +19,6 @@ Source0:        https://github.com/igrmk/treemap/archive/%{commit_id}.tar.gz#/%{
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{commit_id}
 # The repository keeps the v2 Go module in the v2/ subdirectory; checking only
 # that module avoids testing the repository root, which intentionally has no Go files.
 %define go_test_include github.com/igrmk/treemap/v2

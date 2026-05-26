@@ -18,8 +18,6 @@ Source0:        https://github.com/morikuni/aec/archive/refs/tags/v1.1.0.tar.gz#
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n aec-1.1.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

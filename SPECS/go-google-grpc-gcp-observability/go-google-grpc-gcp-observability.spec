@@ -20,7 +20,6 @@ Patch2000:      2000-treat-empty-and-nil-logged-messages-as-equal.patch
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n grpc-go-gcp-observability-v%{version}
 # This package owns a Go module below the repository root; the explicit
 # %%install/%%check sections below copy only %%{go_source_subdir}, because
 # the default golangmodules phases would copy the full archive under

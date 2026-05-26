@@ -18,8 +18,6 @@ Source0:        https://github.com/tidwall/sjson/archive/refs/tags/v1.2.5.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n sjson-1.2.5
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/tidwall/gjson)

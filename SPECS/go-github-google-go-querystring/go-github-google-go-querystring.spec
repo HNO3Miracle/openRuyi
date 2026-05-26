@@ -18,8 +18,6 @@ Source0:        https://github.com/google/go-querystring/archive/v%{version}.tar
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-querystring-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/google/go-cmp)

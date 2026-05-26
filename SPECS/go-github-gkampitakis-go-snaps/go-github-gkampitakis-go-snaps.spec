@@ -19,8 +19,6 @@ Patch0:         2000-force-color-for-color-snapshot-tests.patch
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-snaps-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/gkampitakis/ciinfo)
 BuildRequires:  go(github.com/goccy/go-yaml)

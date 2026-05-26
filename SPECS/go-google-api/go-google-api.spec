@@ -18,7 +18,6 @@ Source0:        https://github.com/googleapis/google-api-go-client/archive/v%{ve
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n google-api-go-client-%{version}
 # google-api imports cloud.google.com/go/auth, while google-cloud-go-auth only
 # needs the google.golang.org/api/googleapi leaf package. Keep the leaf package
 # in go-google-api-support to break the bootstrap cycle without weakening tests.

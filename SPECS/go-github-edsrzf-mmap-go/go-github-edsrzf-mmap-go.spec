@@ -18,8 +18,6 @@ Source0:        https://github.com/edsrzf/mmap-go/archive/v%{version}.tar.gz#/%{
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n mmap-go-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/sys)

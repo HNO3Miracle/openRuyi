@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 
 Patch2000:      2000-fix-non-constant-fprintf-format.patch
 
-BuildOption(prep):  -n getopt-2.1.0
 # This package owns a Go module below the repository root; the explicit
 # %%install/%%check sections below copy only %%{go_source_subdir}, because
 # the default golangmodules phases would copy the full archive under

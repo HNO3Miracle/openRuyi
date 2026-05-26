@@ -20,7 +20,6 @@ Source0:        https://github.com/googleapis/gax-go/archive/%{commit_id}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n gax-go-%{commit_id}
 # Upstream keeps the v2 Go module in the v2/ subdirectory. Run install/check
 # from that directory so GOPATH import paths do not become
 # github.com/googleapis/gax-go/v2/v2.

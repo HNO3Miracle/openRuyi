@@ -18,8 +18,6 @@ Source0:        https://github.com/prometheus/otlptranslator/archive/refs/tags/v
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n otlptranslator-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

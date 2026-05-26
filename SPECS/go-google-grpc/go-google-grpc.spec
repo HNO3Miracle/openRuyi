@@ -24,7 +24,6 @@ BuildSystem:    golangmodules
 # chain validation reporting "no unrevoked chains found: map[2:1]".
 Patch0:         2000-skip-advancedtls-filewatcher-crl-provider-test.patch
 
-BuildOption(prep):  -n grpc-go-%{upstream_version}
 # The upstream archive contains sibling Go modules. GOPATH-mode %gocheck would
 # otherwise scan those module trees and pull in their separate Google Cloud,
 # OpenCensus, and example dependency chains from the main grpc package.

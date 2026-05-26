@@ -21,8 +21,6 @@ BuildSystem:    golangmodules
 
 Patch2000:      2000-drop-x-tools-test-deps.patch
 
-BuildOption(prep):  -n httpgzip-%{commit_id}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/net)

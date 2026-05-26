@@ -20,7 +20,6 @@ BuildSystem:    golangmodules
 
 Patch0:         2000-fix-non-constant-fprintf-test.patch
 
-BuildOption(prep):  -n s2a-go-%{version}
 # tools/internal_ci/test_gae is an upstream App Engine CI helper. It imports
 # Google API and Cloud Translate clients, creating a bootstrap cycle with
 # google-api/google-cloud-go packages, while the library packages do not use

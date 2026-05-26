@@ -19,8 +19,6 @@ Patch0:         2000-fix-test-non-constant-fmt-errorf.patch
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-json-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/francoispqt/gojay)

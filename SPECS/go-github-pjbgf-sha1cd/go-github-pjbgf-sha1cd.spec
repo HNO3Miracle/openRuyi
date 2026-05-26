@@ -18,8 +18,6 @@ Source0:        https://github.com/pjbgf/sha1cd/archive/refs/tags/v0.6.0.tar.gz#
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n sha1cd-0.6.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/klauspost/cpuid/v2)

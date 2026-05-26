@@ -19,8 +19,6 @@ Source0:        https://github.com/bboreham/go-loser/archive/%{commit_id}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-loser-fcc2c21820a3df67b4354d37b19c39a21de7b96e
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/exp)

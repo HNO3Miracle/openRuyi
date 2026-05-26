@@ -18,7 +18,6 @@ Source0:        https://github.com/emicklei/go-restful/archive/refs/tags/v3.12.2
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-restful-3.12.2
 # These examples require optional dependencies that are not part of the library
 # dependency path, such as gorilla/schema, httpin, jwt, msgpack, and openapi.
 %define go_test_exclude_glob %{shrink:

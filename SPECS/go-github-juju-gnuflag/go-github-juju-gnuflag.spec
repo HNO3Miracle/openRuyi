@@ -18,8 +18,6 @@ Source0:        https://github.com/juju/gnuflag/archive/refs/tags/v%{version}.ta
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n gnuflag-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

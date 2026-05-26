@@ -18,8 +18,6 @@ Source0:        https://github.com/mdlayher/vsock/archive/refs/tags/v%{version}.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n vsock-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/google/go-cmp)

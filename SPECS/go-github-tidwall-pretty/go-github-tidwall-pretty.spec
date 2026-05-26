@@ -18,8 +18,6 @@ Source0:        https://github.com/tidwall/pretty/archive/refs/tags/v1.2.1.tar.g
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n pretty-1.2.1
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

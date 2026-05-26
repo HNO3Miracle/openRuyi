@@ -18,8 +18,6 @@ Source0:        https://github.com/kubernetes-sigs/yaml/archive/v%{version}.tar.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n yaml-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/google/go-cmp)
 BuildRequires:  go(go.yaml.in/yaml/v2)

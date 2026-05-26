@@ -21,8 +21,6 @@ Source0:        https://github.com/kubernetes-sigs/randfill/archive/v%{version}.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n randfill-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

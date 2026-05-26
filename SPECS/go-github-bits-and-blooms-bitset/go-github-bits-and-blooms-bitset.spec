@@ -18,8 +18,6 @@ Source0:        https://github.com/bits-and-blooms/bitset/archive/refs/tags/v1.2
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n bitset-1.24.4
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

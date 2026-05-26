@@ -18,8 +18,6 @@ Source0:        https://github.com/corona10/goimagehash/archive/refs/tags/v%{ver
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n %{_name}-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/nfnt/resize)

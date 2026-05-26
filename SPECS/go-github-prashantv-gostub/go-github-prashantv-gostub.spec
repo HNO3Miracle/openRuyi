@@ -18,8 +18,6 @@ Source0:        https://github.com/prashantv/gostub/archive/v%{version}.tar.gz#/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n gostub-%{version}
-
 BuildRequires:  go
 BuildRequires:  go(github.com/davecgh/go-spew)
 BuildRequires:  go(github.com/pmezard/go-difflib)

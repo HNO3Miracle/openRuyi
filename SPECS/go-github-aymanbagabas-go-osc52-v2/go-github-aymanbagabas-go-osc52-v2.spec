@@ -18,8 +18,6 @@ Source0:        https://github.com/aymanbagabas/go-osc52/archive/refs/tags/v2.0.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-osc52-2.0.1
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

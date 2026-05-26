@@ -21,8 +21,6 @@ Source0:        https://github.com/BurntSushi/toml/archive/refs/tags/v1.6.0.tar.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n toml-1.6.0
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

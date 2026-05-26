@@ -19,7 +19,6 @@ Source0:        https://github.com/aws/aws-sdk-go-v2/archive/release-%{upstream_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n aws-sdk-go-v2-release-%{upstream_version}
 # The release archive contains generated service and benchmark packages outside
 # the core module surface packaged here; testing the whole archive pulls in
 # unrelated v1 SDK and private smithy test helpers.

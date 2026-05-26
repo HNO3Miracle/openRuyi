@@ -20,8 +20,6 @@ BuildSystem:    golangmodules
 
 Patch0:         2000-Fix-non-constant-format-string-in-test.patch
 
-BuildOption(prep):  -n zk-%{version}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 

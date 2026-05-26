@@ -19,7 +19,6 @@ Patch0:         2000-disable-corpus-test-bootstrap-cycle.patch
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n line-protocol-%{version}
 # corpus_test.go needs github.com/influxdata/line-protocol-corpus, while
 # that corpus package also needs this module; skip only the corpus tests to
 # break the bootstrap cycle and keep the rest of %check enabled.

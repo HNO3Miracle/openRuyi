@@ -18,7 +18,6 @@ Source0:        https://github.com/jessevdk/go-flags/archive/v%{version}.tar.gz#
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n go-flags-1.6.1
 # Go 1.25 vet rejects an upstream non-constant format string in newErrorf.
 BuildOption(check):  -vet=off
 

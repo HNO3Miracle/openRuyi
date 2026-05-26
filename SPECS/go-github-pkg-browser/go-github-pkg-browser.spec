@@ -19,8 +19,6 @@ Source0:        https://github.com/pkg/browser/archive/%{commit_id}.tar.gz#/%{_n
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-BuildOption(prep):  -n browser-%{commit_id}
-
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
