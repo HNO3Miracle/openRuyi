@@ -18,6 +18,9 @@ Source0:        https://github.com/klauspost/compress/archive/v%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# Fix Go vet warning with current Go toolchain.
+Patch2000:      2000-fix-buffer-format.patch
+
 BuildOption(prep):  -n %{_name}-%{version}
 BuildOption(check):  -short -timeout 1h
 
