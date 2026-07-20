@@ -5,15 +5,15 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%define _commit c4cb4e1794359db496d3700c4f1f115a935f553d
+%define _commit 2a4aef80afeb19d0fbb6ecf910e40c12a59a4f52
 
 Name:           go-rpm-macros
-Version:        0.1+git20260719.c4cb4e1
+Version:        0.1+git20260719.2a4aef8
 Release:        %autorelease
 Summary:        Go macros for openRuyi packaging
 License:        MIT AND GPL-3.0-or-later
 URL:            https://github.com/openRuyi-Project/go-rpm-macros
-#!RemoteAsset:  sha256:38cade47a303553b9e8cc4b80ae6a49010ffd6723b42dbe7db61195919571623
+#!RemoteAsset:  sha256:ea3960a3fafd45e5c72c1a8403c9a9382b445e203c6828c867afb708accde153
 Source0:        https://github.com/openRuyi-Project/go-rpm-macros/archive/%{_commit}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 
