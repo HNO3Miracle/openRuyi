@@ -6,6 +6,8 @@
 
 %define _name           osc-sdk-go
 %define go_import_path  github.com/outscale/osc-sdk-go
+# CI helper scripts are source artifacts, not runtime entry points.
+%global __requires_exclude_from ^%{go_sys_gopath}/%{go_import_path}/\\.github/scripts/.*$
 
 Name:           go-github-outscale-osc-sdk-go
 Version:        2.34.0
@@ -21,8 +23,6 @@ BuildSystem:    golangmodules
 # Keep live API tests behind an explicit integration opt-in while retaining all
 # offline unit tests.
 Patch2000:      2000-require-opt-in-for-live-api-tests.patch
-# Use the standard env path in executable repository scripts.
-Patch2001:      2001-ci-use-usr-bin-env-for-scripts.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
