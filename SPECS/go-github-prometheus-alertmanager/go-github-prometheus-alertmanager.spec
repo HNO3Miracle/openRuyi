@@ -78,7 +78,7 @@ BuildRequires:  tzdata
 
 Requires:       tzdata
 
-%package        -n go-github-prometheus-alertmanager
+%package     -n go-github-prometheus-alertmanager
 Summary:        Go source for Prometheus Alertmanager
 BuildArch:      noarch
 Provides:       go(github.com/prometheus/alertmanager) = %{version}
@@ -108,6 +108,7 @@ Requires:       go(github.com/KimMachineGun/automemlimit)
 Requires:       go(github.com/oklog/run)
 Requires:       go(github.com/oklog/ulid/v2)
 Requires:       go(github.com/prometheus/client_golang)
+Requires:       go(github.com/prometheus/client_model)
 Requires:       go(github.com/prometheus/common)
 Requires:       go(github.com/prometheus/exporter-toolkit)
 Requires:       go(github.com/prometheus/sigv4)
