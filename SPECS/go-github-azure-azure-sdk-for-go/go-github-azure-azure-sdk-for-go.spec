@@ -18,9 +18,9 @@
 # tag (azcore v1.21.1, 2026-04-16); every Provides below carries the
 # real upstream version of its sub-module.
 #
-# The five sub-module versions below are the ones pinned by Prometheus' go.mod
+# The sub-module versions below are pinned by Prometheus and its collector
 # (v3.12.0); each maps to an upstream git tag "sdk/<module>/v<ver>" in
-# github.com/Azure/azure-sdk-for-go (see Source0..4). To bump for a newer
+# github.com/Azure/azure-sdk-for-go (see Source0..7). To bump for a newer
 # Prometheus: read these modules in its go.mod, confirm the matching upstream
 # tags exist, then update the ver_* macros and the #!RemoteAsset sha256 lines.
 # Maintained by hand; go2spec cannot emit a monorepo multi-module spec.
@@ -29,6 +29,9 @@
 %define ver_internal    1.12.0
 %define ver_armcompute  5.7.0
 %define ver_armnetwork  4.3.0
+%define ver_azblob      1.7.0
+%define ver_azqueue     1.0.1
+%define ver_aztables    1.4.1
 
 # Source archive top-level directory names (github archive layout).
 %define dir_azcore      azure-sdk-for-go-sdk-azcore-v%{ver_azcore}
@@ -36,11 +39,14 @@
 %define dir_internal    azure-sdk-for-go-sdk-internal-v%{ver_internal}
 %define dir_armcompute  azure-sdk-for-go-sdk-resourcemanager-compute-armcompute-v%{ver_armcompute}
 %define dir_armnetwork  azure-sdk-for-go-sdk-resourcemanager-network-armnetwork-v%{ver_armnetwork}
+%define dir_azblob      azure-sdk-for-go-sdk-storage-azblob-v%{ver_azblob}
+%define dir_azqueue     azure-sdk-for-go-sdk-storage-azqueue-v%{ver_azqueue}
+%define dir_aztables    azure-sdk-for-go-sdk-data-aztables-v%{ver_aztables}
 
 Name:           go-github-azure-azure-sdk-for-go
-Version:        20260416
+Version:        20260514
 Release:        %autorelease
-Summary:        Azure SDK for Go (azcore, azidentity, internal, armcompute, armnetwork)
+Summary:        Azure SDK modules for Go
 License:        MIT
 URL:            https://github.com/Azure/azure-sdk-for-go
 BuildArch:      noarch
@@ -56,6 +62,12 @@ Source2:        https://github.com/Azure/azure-sdk-for-go/archive/refs/tags/sdk/
 Source3:        https://github.com/Azure/azure-sdk-for-go/archive/refs/tags/sdk/resourcemanager/compute/armcompute/v%{ver_armcompute}.tar.gz#/%{_name}-armcompute-%{ver_armcompute}.tar.gz
 #!RemoteAsset:  sha256:12f987760f5672ad6a188620f1e93e77689a34cb047dfb8e2d4fe00d1814f98d
 Source4:        https://github.com/Azure/azure-sdk-for-go/archive/refs/tags/sdk/resourcemanager/network/armnetwork/v%{ver_armnetwork}.tar.gz#/%{_name}-armnetwork-%{ver_armnetwork}.tar.gz
+#!RemoteAsset:  sha256:08c195a66e2826e6349cd82b668b3655a0fd4385d257b423893cbf31714fd616
+Source5:        https://github.com/Azure/azure-sdk-for-go/archive/refs/tags/sdk/storage/azblob/v%{ver_azblob}.tar.gz#/%{_name}-azblob-%{ver_azblob}.tar.gz
+#!RemoteAsset:  sha256:5400e1ee01ad0fa76dac0bdc5ef33298024e092cdeab15aad8a691526dbf1884
+Source6:        https://github.com/Azure/azure-sdk-for-go/archive/refs/tags/sdk/storage/azqueue/v%{ver_azqueue}.tar.gz#/%{_name}-azqueue-%{ver_azqueue}.tar.gz
+#!RemoteAsset:  sha256:1fd405224bbe50748cf84ef068bc1414fb3f42e73a077a88883b87192a09e715
+Source7:        https://github.com/Azure/azure-sdk-for-go/archive/refs/tags/sdk/data/aztables/v%{ver_aztables}.tar.gz#/%{_name}-aztables-%{ver_aztables}.tar.gz
 
 # Source-only install needs no Go deps; the entries below are only for the
 # %%check tests. azidentity additionally pulls in
@@ -107,6 +119,12 @@ Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/internal/uuid) = %{ver_
 Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute/v5) = %{ver_armcompute}
 # armnetwork v%{ver_armnetwork}
 Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork/v4) = %{ver_armnetwork}
+# azblob v%{ver_azblob}
+Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/storage/azblob) = %{ver_azblob}
+# azqueue v%{ver_azqueue}
+Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/storage/azqueue) = %{ver_azqueue}
+# aztables v%{ver_aztables}
+Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/data/aztables) = %{ver_aztables}
 
 Requires:       go(github.com/AzureAD/microsoft-authentication-library-for-go)
 Requires:       go(golang.org/x/crypto)
@@ -115,18 +133,20 @@ Requires:       go(golang.org/x/text)
 
 %description
 The Azure SDK for Go provides typed clients for Azure services. This
-package bundles the sub-modules required by Prometheus' Azure service
-discovery: azcore, azidentity, the shared internal module, and the
-Compute (armcompute/v5) and Network (armnetwork/v4) resource-manager
-clients. Each sub-module is installed under its GOPATH import path.
+package bundles the sub-modules required by Prometheus and the OpenTelemetry
+Collector, including identity, resource-manager, and Blob Storage clients.
+Each sub-module is installed under its GOPATH import path.
 
 %prep
-# Unpack all five source archives side by side (no merging of trees).
+# Unpack all source archives side by side (no merging of trees).
 %setup -q -c -T -a 0
 %setup -q -D -T -a 1
 %setup -q -D -T -a 2
 %setup -q -D -T -a 3
 %setup -q -D -T -a 4
+%setup -q -D -T -a 5
+%setup -q -D -T -a 6
+%setup -q -D -T -a 7
 
 %install
 # Install each sub-module subtree into its GOPATH/src import path. The
@@ -142,6 +162,14 @@ cp -a %{dir_armcompute}/sdk/resourcemanager/compute/armcompute/. \
 install -d %{buildroot}%{go_sys_gopath}/%{go_import_path}/sdk/resourcemanager/network/armnetwork
 cp -a %{dir_armnetwork}/sdk/resourcemanager/network/armnetwork/. \
       %{buildroot}%{go_sys_gopath}/%{go_import_path}/sdk/resourcemanager/network/armnetwork/v4
+install -d %{buildroot}%{go_sys_gopath}/%{go_import_path}/sdk/storage
+cp -a %{dir_azblob}/sdk/storage/azblob \
+      %{buildroot}%{go_sys_gopath}/%{go_import_path}/sdk/storage/azblob
+cp -a %{dir_azqueue}/sdk/storage/azqueue \
+      %{buildroot}%{go_sys_gopath}/%{go_import_path}/sdk/storage/azqueue
+install -d %{buildroot}%{go_sys_gopath}/%{go_import_path}/sdk/data
+cp -a %{dir_aztables}/sdk/data/aztables \
+      %{buildroot}%{go_sys_gopath}/%{go_import_path}/sdk/data/aztables
 
 %check
 %{go_common}
@@ -151,7 +179,10 @@ for mod in \
     sdk/azidentity \
     sdk/internal \
     sdk/resourcemanager/compute/armcompute/v5 \
-    sdk/resourcemanager/network/armnetwork/v4 ; do
+    sdk/resourcemanager/network/armnetwork/v4 \
+    sdk/storage/azblob \
+    sdk/storage/azqueue \
+    sdk/data/aztables ; do
   src="%{buildroot}%{go_sys_gopath}/%{go_import_path}/$mod"
   dst="%{_builddir}/go/src/%{go_import_path}/$mod"
   mkdir -p "$dst"
