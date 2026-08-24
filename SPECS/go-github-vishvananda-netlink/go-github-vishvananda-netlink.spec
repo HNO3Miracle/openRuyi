@@ -17,7 +17,7 @@ Source0:        https://github.com/vishvananda/netlink/archive/v%{version}.tar.g
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# OBS workers cannot create AF_XDP raw sockets, so skip only the affected test when it gets EPERM.
+# OBS workers may lack permission or kernel support for AF_XDP raw sockets, so skip only the affected test.
 Patch2000:      2000-skip-xdp-test-without-privileges.patch
 
 BuildRequires:  go
