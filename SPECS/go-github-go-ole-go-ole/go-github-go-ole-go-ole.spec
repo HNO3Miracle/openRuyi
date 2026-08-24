@@ -15,8 +15,10 @@ URL:            https://github.com/go-ole/go-ole
 #!RemoteAsset:  sha256:18fca64d2973bb1fd698caf9496e540a3e9790381b3b28e55dfbe0f1a201f2ad
 Source0:        https://github.com/go-ole/go-ole/archive/refs/tags/v%{version}.tar.gz#/%{_name}-%{version}.tar.gz
 BuildArch:      noarch
+BuildSystem:    golangmodules
 # OLE/COM tests require Windows APIs unavailable on OBS Linux workers.
 %define go_test_exclude_glob %{go_import_path}*
+BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/sys)
 BuildRequires:  go(github.com/stretchr/testify)
