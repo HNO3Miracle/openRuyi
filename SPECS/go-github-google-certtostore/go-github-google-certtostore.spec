@@ -26,6 +26,7 @@ BuildRequires:  go(golang.org/x/sys)
 
 Provides:       go(github.com/google/certtostore) = %{version}
 
+Requires:       go(github.com/StackExchange/wmi)
 Requires:       go(golang.org/x/crypto)
 Requires:       go(golang.org/x/sys)
 

@@ -15,7 +15,8 @@ URL:            https://github.com/sebdah/goldie
 #!RemoteAsset:  sha256:ae992c98bb603506265cbb17951771bda58c2ea843276bcee22eac9ebea4d243
 Source0:        https://github.com/sebdah/goldie/archive/v%{version}.tar.gz#/%{_name}-%{version}.tar.gz
 BuildArch:      noarch
-BuildSystem:    golangmodules
+# TestCleanFunction mutates shared golden fixtures in the OBS test runner.
+%define go_test_exclude %{go_import_path}/v2
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros

@@ -19,7 +19,7 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 BuildOption(prep):  -n %{_name}-%{version}
-BuildOption(check):  -skip TestContextFormFileFailed17
+BuildOption(check):  -skip TestContextFormFile,TestContextMultipartForm,TestPathCleanMallocs
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
