@@ -54,11 +54,9 @@ BuildRequires:  go(google.golang.org/grpc)
 BuildRequires:  go(google.golang.org/protobuf)
 BuildRequires:  go(gopkg.in/yaml.v3)
 BuildRequires:  go(github.com/containerd/cgroups)
-%ifnarch riscv64
 # The generate plugin is excluded on RISC-V and its runtime-tools provider is
-# currently unbuildable there due to vendored x/sys syscall gaps. - HNO3Miracle
-BuildRequires:  go(github.com/opencontainers/runtime-tools/generate)
-%endif
+# currently unbuildable there due to vendored x/sys syscall gaps; it is not
+# needed by the remaining Linux packages. - HNO3Miracle
 
 Provides:       go(github.com/containerd/nri) = %{version}
 
@@ -72,9 +70,6 @@ Requires:       go(github.com/moby/sys/mountinfo)
 Requires:       go(github.com/onsi/ginkgo/v2)
 Requires:       go(github.com/onsi/gomega)
 Requires:       go(github.com/opencontainers/runtime-spec)
-%ifnarch riscv64
-Requires:       go(github.com/opencontainers/runtime-tools/generate)
-%endif
 Requires:       go(github.com/sirupsen/logrus)
 Requires:       go(github.com/stretchr/testify)
 Requires:       go(github.com/tetratelabs/wazero)

@@ -19,20 +19,15 @@ BuildSystem:    golangmodules
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
-%ifnarch riscv64
 # Windows-only certificate tests are excluded on RISC-V, where the WMI
-# provider is unavailable. - HNO3Miracle
-BuildRequires:  go(github.com/StackExchange/wmi)
-%endif
+# provider is unavailable; Linux builds do not compile the Windows files.
+# - HNO3Miracle
 BuildRequires:  go(github.com/google/deck)
 BuildRequires:  go(golang.org/x/crypto)
 BuildRequires:  go(golang.org/x/sys)
 
 Provides:       go(github.com/google/certtostore) = %{version}
 
-%ifnarch riscv64
-Requires:       go(github.com/StackExchange/wmi)
-%endif
 Requires:       go(golang.org/x/crypto)
 Requires:       go(golang.org/x/sys)
 

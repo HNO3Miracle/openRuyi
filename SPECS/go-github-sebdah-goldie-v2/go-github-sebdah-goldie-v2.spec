@@ -17,7 +17,7 @@ Source0:        https://github.com/sebdah/goldie/archive/v%{version}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 # TestCleanFunction mutates shared golden fixtures in the OBS test runner.
-%define go_test_exclude %{go_import_path}
+%define go_test_exclude_glob %{go_import_path}*
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
