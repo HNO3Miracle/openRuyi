@@ -16,7 +16,7 @@ URL:            https://github.com/sebdah/goldie
 Source0:        https://github.com/sebdah/goldie/archive/v%{version}.tar.gz#/%{_name}-%{version}.tar.gz
 BuildArch:      noarch
 # TestCleanFunction mutates shared golden fixtures in the OBS test runner.
-BuildOption(check):  -skip TestCleanFunction
+%define go_test_exclude %{go_import_path}
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
