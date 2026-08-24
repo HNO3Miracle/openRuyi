@@ -16,7 +16,6 @@ URL:            https://dri.freedesktop.org
 VCS:            git:https://gitlab.freedesktop.org/mesa/libdrm
 #!RemoteAsset:  sha256:45ba9983b51c896406a3d654de81d313b953b76e6391e2797073d543c5f617d5
 Source0:        https://dri.freedesktop.org/libdrm/%{name}-%{version}.tar.xz
-Source1:        91-drm-modeset.rules
 BuildSystem:    meson
 
 BuildOption(conf):  -Dudev=true
@@ -47,12 +46,8 @@ Requires:       linux-headers
 %description    devel
 This package contains the header files and development libraries for libdrm.
 
-%install -a
-install -D -m0644 -t %{buildroot}%{_udevrulesdir} %{SOURCE1}
-
 %files
 %{_libdir}/lib*.so.*
-%{_udevrulesdir}/91-drm-modeset.rules
 %dir %{_datadir}/libdrm
 %{_datadir}/libdrm/*.ids
 
