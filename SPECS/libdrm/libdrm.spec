@@ -8,20 +8,20 @@
 # SPDX-License-Identifier: MulanPSL-2.0
 
 Name:           libdrm
-Version:        2.4.131
+Version:        2.4.134
 Release:        %autorelease
 License:        MIT
 Summary:        Library for Direct Rendering Manager
 URL:            https://dri.freedesktop.org
 VCS:            git:https://gitlab.freedesktop.org/mesa/libdrm
-#!RemoteAsset:  sha256:45ba9983b51c896406a3d654de81d313b953b76e6391e2797073d543c5f617d5
+#!RemoteAsset:  sha256:ac5e74d157830eb8bee44c6a6bf3ad49774ef0dd2a72bdad74a8f20308b52a95
 Source0:        https://dri.freedesktop.org/libdrm/%{name}-%{version}.tar.xz
 BuildSystem:    meson
 
 BuildOption(conf):  -Dudev=true
 BuildOption(conf):  -Dvalgrind=disabled
 BuildOption(conf):  -Dman-pages=disabled
-BuildOption(conf):  -Dtests=false
+BuildOption(conf):  -Dtests=true
 BuildOption(conf):  -Dcairo-tests=disabled
 
 BuildRequires:  meson
@@ -56,13 +56,7 @@ This package contains the header files and development libraries for libdrm.
 %{_libdir}/libdrm.so
 %{_libdir}/libdrm_*.so
 %{_libdir}/pkgconfig/libdrm.pc
-%{_libdir}/pkgconfig/libdrm_amdgpu.pc
-%{_libdir}/pkgconfig/libdrm_etnaviv.pc
-%{_libdir}/pkgconfig/libdrm_freedreno.pc
-%{_libdir}/pkgconfig/libdrm_intel.pc
-%{_libdir}/pkgconfig/libdrm_nouveau.pc
-%{_libdir}/pkgconfig/libdrm_radeon.pc
-%{_libdir}/pkgconfig/libdrm_vc4.pc
+%{_libdir}/pkgconfig/libdrm_*.pc
 
 %changelog
 %autochangelog
