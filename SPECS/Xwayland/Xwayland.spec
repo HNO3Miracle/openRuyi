@@ -68,6 +68,7 @@ BuildRequires:  pkgconfig(xcb-renderutil)
 Requires:       xkeyboard-config
 Requires:       xkbcomp
 Recommends:     mesa-gl
+Recommends:     mesa-dril
 
 %description
 Xwayland is an X server for running X clients under Wayland.
