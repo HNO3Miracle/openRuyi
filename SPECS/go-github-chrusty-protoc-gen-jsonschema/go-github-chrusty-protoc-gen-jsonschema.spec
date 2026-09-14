@@ -55,7 +55,8 @@ Protoc-gen-jsonschema converts Protocol Buffer definitions into standalone
 JSON schemas for validating messages encoded as JSON.
 
 %check
-# The release archive omits this declared git submodule; use the packaged copy.
+# The release archive omits this declared git submodule; use the packaged copy
+# so the complete test suite can run against the system-provided proto file.
 install -d protoc-gen-validate/validate
 cp -a %{go_sys_gopath}/github.com/envoyproxy/protoc-gen-validate/validate/validate.proto \
     protoc-gen-validate/validate/
