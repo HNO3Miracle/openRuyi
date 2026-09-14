@@ -13,7 +13,7 @@ Release:        %autorelease
 Summary:        Go macros for openRuyi packaging
 License:        MIT AND GPL-3.0-or-later
 URL:            https://github.com/openRuyi-Project/go-rpm-macros
-#!RemoteAsset:  sha256:a844471e7c276869e1c3434b2278908dba2824a77df81595dc2319bc3b2bef4c
+#!RemoteAsset:  sha256:7679928273dc6a9daaeb6724ab9665c9bb719c01359668219afa577bf68fa7c2
 Source0:        https://github.com/openRuyi-Project/go-rpm-macros/archive/%{_commit}.tar.gz#/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 
