@@ -29,7 +29,6 @@ BuildRequires:  go(github.com/stretchr/testify)
 BuildRequires:  go(go.yaml.in/yaml/v4)
 BuildRequires:  go(gopkg.in/yaml.v3)
 
-Provides:       go(github.com/pb33f/jsonpath) = %{version}
 
 Requires:       go(go.yaml.in/yaml/v4)
 

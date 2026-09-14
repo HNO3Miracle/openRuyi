@@ -24,8 +24,6 @@ BuildRequires:  go-rpm-macros
 # github.com/apapsch/go-jsonmerge/v2 imports the defunct apapsch fork path,
 # but the only available upstream source is RaveNoX/go-jsoncommentstrip.
 # - HNO3Miracle
-Provides:       go(github.com/apapsch/go-jsoncommentstrip) = %{version}
-Provides:       go(github.com/RaveNoX/go-jsoncommentstrip) = %{version}
 
 %description
 Go library for stripping comments from JSON input.

@@ -24,7 +24,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/google/go-cmp)
 
-Provides:       go(github.com/shoenig/test) = %{version}
 
 Requires:       go(github.com/google/go-cmp)
 

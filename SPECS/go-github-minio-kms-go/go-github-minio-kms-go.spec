@@ -27,7 +27,6 @@ BuildRequires:  go(github.com/prometheus/common)
 BuildRequires:  go(google.golang.org/protobuf)
 BuildRequires:  go(github.com/minio/kes-go)
 
-Provides:       go(github.com/minio/kms-go) = %{version}
 
 Requires:       go(aead.dev/mem)
 Requires:       go(aead.dev/mtls)

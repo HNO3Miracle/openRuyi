@@ -27,7 +27,6 @@ BuildRequires:  go(github.com/kr/fs)
 BuildRequires:  go(github.com/stretchr/testify)
 BuildRequires:  go(golang.org/x/crypto)
 
-Provides:       go(github.com/pkg/sftp) = %{version}
 
 Requires:       go(github.com/kr/fs)
 Requires:       go(github.com/stretchr/testify)

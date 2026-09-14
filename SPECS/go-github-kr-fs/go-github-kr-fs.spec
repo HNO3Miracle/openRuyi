@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/kr/fs) = %{version}
 
 %description
 Filesystem Package

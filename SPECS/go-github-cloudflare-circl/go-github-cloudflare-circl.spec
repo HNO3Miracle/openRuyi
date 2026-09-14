@@ -25,7 +25,6 @@ BuildRequires:  go(github.com/mmcloughlin/avo)
 BuildRequires:  go(golang.org/x/crypto)
 BuildRequires:  go(golang.org/x/sys)
 
-Provides:       go(github.com/cloudflare/circl) = %{version}
 
 Requires:       go(github.com/bwesterb/go-ristretto)
 Requires:       go(github.com/mmcloughlin/avo)

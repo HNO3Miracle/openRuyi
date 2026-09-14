@@ -24,7 +24,6 @@ BuildOption(prep):  -n %{_name}-%{commit_id}
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/influxdata/line-protocol) = %{version}
 
 %description
 InfluxDB line-protocol codec

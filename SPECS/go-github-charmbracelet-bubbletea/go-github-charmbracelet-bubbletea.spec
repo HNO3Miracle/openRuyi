@@ -27,7 +27,6 @@ BuildRequires:  go(github.com/charmbracelet/x)
 BuildRequires:  go(github.com/muesli/ansi)
 BuildRequires:  go(github.com/muesli/cancelreader)
 
-Provides:       go(github.com/charmbracelet/bubbletea) = %{version}
 
 Requires:       go(github.com/charmbracelet/lipgloss)
 Requires:       go(github.com/charmbracelet/x)

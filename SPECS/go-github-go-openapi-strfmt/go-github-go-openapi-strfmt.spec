@@ -32,9 +32,6 @@ BuildRequires:  go(github.com/google/uuid)
 BuildRequires:  go(github.com/oklog/ulid/v2)
 BuildRequires:  go(golang.org/x/net)
 
-Provides:       go(github.com/go-openapi/strfmt) = %{version}
-Provides:       go(github.com/go-openapi/strfmt/conv) = %{version}
-Provides:       go(github.com/go-openapi/strfmt/internal/bsonlite) = %{version}
 
 Requires:       go(github.com/go-openapi/errors)
 Requires:       go(github.com/go-viper/mapstructure/v2)

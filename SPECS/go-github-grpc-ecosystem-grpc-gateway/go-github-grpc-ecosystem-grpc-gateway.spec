@@ -31,7 +31,6 @@ BuildRequires:  go(google.golang.org/genproto/googleapis/rpc)
 BuildRequires:  go(google.golang.org/grpc)
 BuildRequires:  go(google.golang.org/protobuf)
 
-Provides:       go(github.com/grpc-ecosystem/grpc-gateway) = %{version}
 
 %description
 The gRPC-Gateway is a plugin of the Google protocol buffers compiler

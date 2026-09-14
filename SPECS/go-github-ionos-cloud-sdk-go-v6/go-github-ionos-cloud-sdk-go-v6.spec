@@ -24,7 +24,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/oauth2)
 
-Provides:       go(github.com/ionos-cloud/sdk-go/v6) = %{version}
 
 Requires:       go(golang.org/x/oauth2)
 

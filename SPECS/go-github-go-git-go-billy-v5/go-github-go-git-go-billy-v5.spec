@@ -36,7 +36,6 @@ BuildRequires:  go(golang.org/x/text)
 BuildRequires:  go(gopkg.in/check.v1)
 BuildRequires:  go(gopkg.in/yaml.v3)
 
-Provides:       go(github.com/go-git/go-billy/v5) = %{version}
 
 Requires:       go(github.com/cyphar/filepath-securejoin)
 Requires:       go(github.com/kr/pretty)

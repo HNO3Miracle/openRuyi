@@ -30,7 +30,6 @@ BuildRequires:  go(github.com/pmezard/go-difflib)
 BuildRequires:  go(github.com/stretchr/objx)
 BuildRequires:  go(go.yaml.in/yaml/v3)
 
-Provides:       go(github.com/stretchr/testify) = %{version}
 
 Requires:       go(github.com/davecgh/go-spew)
 Requires:       go(github.com/pmezard/go-difflib)

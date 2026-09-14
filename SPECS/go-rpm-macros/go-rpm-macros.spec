@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: MulanPSL-2.0
 
-%define _commit 864d62d7384090449a2b88aaef0ded86bcc7f0ae
+%define _commit 70766ecc5ff1feb9aac906bcfd2ca2c790d5b9c9
 
 Name:           go-rpm-macros
 Version:        0.1+git20260821.864d62d

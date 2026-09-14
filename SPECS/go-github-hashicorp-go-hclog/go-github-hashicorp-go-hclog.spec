@@ -25,7 +25,6 @@ BuildRequires:  go(github.com/mattn/go-isatty)
 BuildRequires:  go(github.com/stretchr/testify)
 BuildRequires:  go(golang.org/x/tools)
 
-Provides:       go(github.com/hashicorp/go-hclog) = %{version}
 
 Requires:       go(github.com/fatih/color)
 Requires:       go(github.com/mattn/go-isatty)

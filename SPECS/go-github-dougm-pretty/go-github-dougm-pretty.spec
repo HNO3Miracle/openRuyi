@@ -24,7 +24,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/dougm/pretty) = %{version}
 
 %description
 Package pretty provides pretty-printing for Go values.

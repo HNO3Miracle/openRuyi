@@ -30,7 +30,6 @@ BuildRequires:  go(github.com/google/go-cmp)
 BuildRequires:  go(github.com/influxdata/line-protocol/v2)
 BuildRequires:  go(gopkg.in/yaml.v3)
 
-Provides:       go(github.com/influxdata/line-protocol-corpus) = %{version}
 
 Requires:       go(github.com/influxdata/line-protocol/v2)
 

@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/fatih/structs) = %{version}
 
 %description
 Structs contains various utilities to work with Go (Golang) structs. It

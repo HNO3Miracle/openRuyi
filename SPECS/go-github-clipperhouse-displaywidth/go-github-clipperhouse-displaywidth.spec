@@ -29,7 +29,6 @@ BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/clipperhouse/stringish)
 BuildRequires:  go(github.com/clipperhouse/uax29/v2)
 
-Provides:       go(github.com/clipperhouse/displaywidth) = %{version}
 
 Requires:       go(github.com/clipperhouse/stringish)
 Requires:       go(github.com/clipperhouse/uax29/v2)

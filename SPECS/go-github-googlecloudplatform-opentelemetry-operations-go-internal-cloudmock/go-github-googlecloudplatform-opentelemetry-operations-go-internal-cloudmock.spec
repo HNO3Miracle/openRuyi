@@ -36,7 +36,6 @@ BuildRequires:  go(google.golang.org/grpc)
 BuildRequires:  go(google.golang.org/protobuf)
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/GoogleCloudPlatform/opentelemetry-operations-go/internal/cloudmock) = %{version}
 
 Requires:       go(cloud.google.com/go/logging)
 Requires:       go(cloud.google.com/go/monitoring)

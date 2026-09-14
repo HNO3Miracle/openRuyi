@@ -26,7 +26,6 @@ BuildRequires:  go(github.com/go-openapi/swag)
 BuildRequires:  go(github.com/go-openapi/testify)
 BuildRequires:  go(go.yaml.in/yaml/v3)
 
-Provides:       go(github.com/go-openapi/spec) = %{version}
 
 Requires:       go(github.com/go-openapi/jsonpointer)
 Requires:       go(github.com/go-openapi/jsonreference)

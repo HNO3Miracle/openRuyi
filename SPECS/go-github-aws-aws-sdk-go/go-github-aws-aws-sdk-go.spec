@@ -22,7 +22,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/jmespath/go-jmespath)
 
-Provides:       go(github.com/aws/aws-sdk-go) = %{version}
 
 Requires:       go(github.com/jmespath/go-jmespath)
 

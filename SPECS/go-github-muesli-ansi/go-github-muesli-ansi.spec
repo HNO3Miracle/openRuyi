@@ -23,7 +23,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/mattn/go-runewidth)
 
-Provides:       go(github.com/muesli/ansi) = %{version}
 
 Requires:       go(github.com/mattn/go-runewidth)
 

@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/cosiner/argv) = %{version}
 
 %description
 Argv is a  library for Go to split command line

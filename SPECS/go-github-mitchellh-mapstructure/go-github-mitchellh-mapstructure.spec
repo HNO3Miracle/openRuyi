@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/mitchellh/mapstructure) = %{version}
 
 %description
 mapstructure is a Go library for decoding generic map values to

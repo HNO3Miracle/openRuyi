@@ -25,7 +25,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/mattn/go-isatty)
 
-Provides:       go(github.com/mattn/go-colorable) = %{version}
 
 Requires:       go(github.com/mattn/go-isatty)
 

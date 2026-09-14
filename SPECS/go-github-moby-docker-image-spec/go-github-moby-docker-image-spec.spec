@@ -22,7 +22,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/opencontainers/image-spec)
 
-Provides:       go(github.com/moby/docker-image-spec) = %{version}
 
 Requires:       go(github.com/opencontainers/image-spec)
 

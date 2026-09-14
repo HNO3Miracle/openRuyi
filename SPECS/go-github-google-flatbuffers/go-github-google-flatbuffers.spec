@@ -31,7 +31,6 @@ BuildOption(prep):  -n %{_name}-%{commit_id}
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/google/flatbuffers) = %{version}
 
 %description
 FlatBuffers is a cross platform serialization library architected

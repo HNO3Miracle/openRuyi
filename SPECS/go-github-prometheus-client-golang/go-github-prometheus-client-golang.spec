@@ -43,7 +43,6 @@ BuildRequires:  go(github.com/prometheus/procfs)
 BuildRequires:  go(go.uber.org/goleak)
 BuildRequires:  go(google.golang.org/protobuf)
 
-Provides:       go(github.com/prometheus/client_golang) = %{version}
 
 Requires:       go(github.com/beorn7/perks)
 Requires:       go(github.com/cespare/xxhash/v2)

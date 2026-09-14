@@ -36,7 +36,6 @@ BuildOption(check):  -vet=off
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/emicklei/go-restful/v3) = %{version}
 
 %description
 This package provides a framework for building REST-style web services

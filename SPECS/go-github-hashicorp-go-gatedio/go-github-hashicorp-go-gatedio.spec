@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/hashicorp/go-gatedio) = %{version}
 
 %description
 The gatedio package provides tiny wrappers around the io.ReadWriter,

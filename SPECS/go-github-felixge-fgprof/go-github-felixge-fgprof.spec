@@ -23,7 +23,6 @@ BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/google/pprof)
 BuildRequires:  go(github.com/stretchr/testify)
 
-Provides:       go(github.com/felixge/fgprof) = %{version}
 
 Requires:       go(github.com/google/pprof)
 

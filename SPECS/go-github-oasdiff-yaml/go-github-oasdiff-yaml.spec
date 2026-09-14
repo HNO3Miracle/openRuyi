@@ -30,7 +30,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/oasdiff/yaml3)
 
-Provides:       go(github.com/oasdiff/yaml) = %{version}
 
 Requires:       go(github.com/oasdiff/yaml3)
 

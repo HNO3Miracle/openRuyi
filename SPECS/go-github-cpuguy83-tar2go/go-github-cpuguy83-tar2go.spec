@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/cpuguy83/tar2go) = %{version}
 
 %description
 tar2go exposes the contents of a tar archive through the Go io/fs.FS interface.

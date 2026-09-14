@@ -24,7 +24,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/charmbracelet/x) = %{version}
 
 %description
 This repository contains experimental packages with no promises of

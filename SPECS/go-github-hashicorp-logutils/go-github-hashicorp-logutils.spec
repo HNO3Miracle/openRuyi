@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/hashicorp/logutils) = %{version}
 
 %description
 logutils augments the Go standard library "log" package with level-based

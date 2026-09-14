@@ -25,7 +25,6 @@ BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/kr/text)
 BuildRequires:  go(github.com/rogpeppe/go-internal)
 
-Provides:       go(github.com/kr/pretty) = %{version}
 
 Requires:       go(github.com/kr/text)
 Requires:       go(github.com/rogpeppe/go-internal)

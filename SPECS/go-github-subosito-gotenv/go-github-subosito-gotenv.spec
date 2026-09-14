@@ -28,7 +28,6 @@ BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/stretchr/testify)
 BuildRequires:  go(golang.org/x/text)
 
-Provides:       go(github.com/subosito/gotenv) = %{version}
 
 Requires:       go(github.com/stretchr/testify)
 Requires:       go(golang.org/x/text)

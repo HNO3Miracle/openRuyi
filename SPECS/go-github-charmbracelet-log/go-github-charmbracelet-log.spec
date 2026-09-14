@@ -27,7 +27,6 @@ BuildRequires:  go(github.com/stretchr/testify)
 BuildRequires:  go(github.com/charmbracelet/colorprofile)
 BuildRequires:  go(github.com/mattn/go-runewidth)
 
-Provides:       go(github.com/charmbracelet/log) = %{version}
 
 Requires:       go(github.com/charmbracelet/lipgloss)
 Requires:       go(github.com/go-logfmt/logfmt)

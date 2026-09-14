@@ -23,7 +23,6 @@ BuildOption(prep):  -n %{_name}-%{version}
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/rivo/uniseg) = %{version}
 
 %description
 This Go package implements Unicode Text Segmentation according to

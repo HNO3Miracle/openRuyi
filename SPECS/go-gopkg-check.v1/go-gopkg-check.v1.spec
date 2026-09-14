@@ -27,7 +27,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/kr/pretty)
 
-Provides:       go(gopkg.in/check.v1) = %{version}
 
 Requires:       go(github.com/kr/pretty)
 

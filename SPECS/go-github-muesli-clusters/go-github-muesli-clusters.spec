@@ -22,7 +22,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/muesli/clusters) = %{version}
 
 %description
 Data structs and algorithms for clustering data observations and basic

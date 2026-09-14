@@ -7,6 +7,42 @@
 %define _name           azure-sdk-for-go
 %define go_import_path  github.com/Azure/azure-sdk-for-go
 
+%global go_submodules %{expand:
+github.com/Azure/azure-sdk-for-go/sdk/azcore %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/arm %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/arm/internal/resource %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/arm/policy %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/arm/runtime %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/cloud %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/exported %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/log %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/async %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/body %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/fake %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/loc %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/op %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/shared %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/log %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/policy %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/runtime %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/streaming %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/to %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azcore/tracing %{ver_azcore}
+github.com/Azure/azure-sdk-for-go/sdk/azidentity %{ver_azidentity}
+github.com/Azure/azure-sdk-for-go/sdk/azidentity/internal %{ver_azidentity}
+github.com/Azure/azure-sdk-for-go/sdk/internal/diag %{ver_internal}
+github.com/Azure/azure-sdk-for-go/sdk/internal/errorinfo %{ver_internal}
+github.com/Azure/azure-sdk-for-go/sdk/internal/exported %{ver_internal}
+github.com/Azure/azure-sdk-for-go/sdk/internal/log %{ver_internal}
+github.com/Azure/azure-sdk-for-go/sdk/internal/poller %{ver_internal}
+github.com/Azure/azure-sdk-for-go/sdk/internal/temporal %{ver_internal}
+github.com/Azure/azure-sdk-for-go/sdk/internal/uuid %{ver_internal}
+github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute/v5 %{ver_armcompute}
+github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork/v4 %{ver_armnetwork}
+}
+
+
 # azure-sdk-for-go is a monorepo whose sub-modules are versioned and
 # tagged independently; there is no single repository tag that carries
 # all of the sub-modules at the versions Prometheus pins. Following the
@@ -71,42 +107,10 @@ BuildRequires:  go(golang.org/x/net)
 BuildRequires:  go(golang.org/x/text)
 
 # azcore v%{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/arm) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/arm/internal/resource) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/arm/policy) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/arm/runtime) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/cloud) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/exported) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/log) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/async) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/body) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/fake) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/loc) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/op) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/shared) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/log) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/policy) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/runtime) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/streaming) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/to) = %{ver_azcore}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azcore/tracing) = %{ver_azcore}
 # azidentity v%{ver_azidentity}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azidentity) = %{ver_azidentity}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/azidentity/internal) = %{ver_azidentity}
 # internal v%{ver_internal}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/internal/diag) = %{ver_internal}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/internal/errorinfo) = %{ver_internal}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/internal/exported) = %{ver_internal}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/internal/log) = %{ver_internal}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/internal/poller) = %{ver_internal}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/internal/temporal) = %{ver_internal}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/internal/uuid) = %{ver_internal}
 # armcompute v%{ver_armcompute}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute/v5) = %{ver_armcompute}
 # armnetwork v%{ver_armnetwork}
-Provides:       go(github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork/v4) = %{ver_armnetwork}
 
 Requires:       go(github.com/AzureAD/microsoft-authentication-library-for-go)
 Requires:       go(golang.org/x/crypto)

@@ -32,7 +32,6 @@ BuildOption(check):  -skip TestSocketIsntListeningAfterInterrupt
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/apache/thrift) = %{version}
 
 %description
 Thrift is a lightweight, language-independent software stack for point-

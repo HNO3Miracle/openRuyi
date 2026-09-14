@@ -24,7 +24,6 @@ BuildRequires:  go(aead.dev/mem)
 BuildRequires:  go(github.com/prometheus/client_model)
 BuildRequires:  go(github.com/prometheus/common)
 
-Provides:       go(github.com/minio/kes-go) = %{version}
 
 %description
 MinIO KMS

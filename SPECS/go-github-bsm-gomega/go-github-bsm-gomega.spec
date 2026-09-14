@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/bsm/gomega) = %{version}
 
 %description
 This is a straight copy of the excellent Gomega

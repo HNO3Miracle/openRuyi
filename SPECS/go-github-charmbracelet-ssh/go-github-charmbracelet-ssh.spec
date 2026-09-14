@@ -27,7 +27,6 @@ BuildRequires:  go(github.com/creack/pty)
 BuildRequires:  go(golang.org/x/crypto)
 BuildRequires:  go(golang.org/x/sys)
 
-Provides:       go(github.com/charmbracelet/ssh) = %{version}
 
 Requires:       go(github.com/anmitsu/go-shlex)
 Requires:       go(github.com/charmbracelet/x)

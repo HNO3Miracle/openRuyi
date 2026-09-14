@@ -23,7 +23,6 @@ BuildOption(prep):  -n %{_name}-%{version}
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/julienschmidt/httprouter) = %{version}
 
 %description
 HttpRouter is a lightweight high performance HTTP request router (also

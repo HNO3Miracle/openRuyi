@@ -22,7 +22,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/mitchellh/mapstructure)
 
-Provides:       go(github.com/mitchellh/pointerstructure) = %{version}
 
 Requires:       go(github.com/mitchellh/mapstructure)
 

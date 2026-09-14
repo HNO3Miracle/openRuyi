@@ -22,7 +22,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/felixge/httpsnoop) = %{version}
 
 %description
 This package provides helpers to capture HTTP status, response size, and

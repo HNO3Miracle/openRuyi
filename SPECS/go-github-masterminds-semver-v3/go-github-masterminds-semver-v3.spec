@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/Masterminds/semver/v3) = %{version}
 
 %description
 This package provides Semantic versioning library for Go.

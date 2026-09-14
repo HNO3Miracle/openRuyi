@@ -22,7 +22,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/sys)
 
-Provides:       go(github.com/pkg/xattr) = %{version}
 
 Requires:       go(golang.org/x/sys)
 

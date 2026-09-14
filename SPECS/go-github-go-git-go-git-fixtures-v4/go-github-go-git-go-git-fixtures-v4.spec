@@ -35,7 +35,6 @@ BuildRequires:  go(golang.org/x/sys)
 BuildRequires:  go(gopkg.in/check.v1)
 BuildRequires:  go(gopkg.in/yaml.v3)
 
-Provides:       go(github.com/go-git/go-git-fixtures/v4) = %{version}
 
 Requires:       go(github.com/go-git/go-billy/v5)
 Requires:       go(github.com/kr/pretty)

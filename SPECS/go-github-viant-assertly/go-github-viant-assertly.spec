@@ -26,7 +26,6 @@ BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/stretchr/testify)
 BuildRequires:  go(github.com/viant/toolbox)
 
-Provides:       go(github.com/viant/assertly) = %{version}
 
 Requires:       go(github.com/viant/toolbox)
 

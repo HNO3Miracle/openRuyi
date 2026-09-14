@@ -22,7 +22,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/stretchr/testify)
 
-Provides:       go(go.etcd.io/gofail) = %{version}
 
 %description
 An implementation of failpoints for golang. Please read design.md for a deeper understanding.

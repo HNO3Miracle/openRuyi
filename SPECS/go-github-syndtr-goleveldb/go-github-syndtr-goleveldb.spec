@@ -36,7 +36,6 @@ BuildRequires:  go(gopkg.in/tomb.v1)
 BuildRequires:  go(gopkg.in/yaml.v2)
 BuildRequires:  go(gopkg.in/yaml.v3)
 
-Provides:       go(github.com/syndtr/goleveldb) = %{version}
 
 Requires:       go(github.com/fsnotify/fsnotify)
 Requires:       go(github.com/golang/snappy)

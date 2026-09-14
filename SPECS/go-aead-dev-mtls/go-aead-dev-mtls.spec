@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(aead.dev/mtls) = %{version}
 
 %description
 A Go library for TLS/HTTPS using public key pinning instead of

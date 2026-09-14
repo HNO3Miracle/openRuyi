@@ -24,7 +24,6 @@ BuildOption(prep):  -n %{_name}-%{commit_id}
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/junegunn/go-shellwords) = %{version}
 
 %description
 Package go-shellwords parses command lines into shell-style words and optional

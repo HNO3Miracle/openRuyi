@@ -25,7 +25,6 @@ BuildOption(check):  -vet=off
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/pascaldekloe/goe) = %{version}
 
 %description
 goe provides common enterprise helpers for Go programs.

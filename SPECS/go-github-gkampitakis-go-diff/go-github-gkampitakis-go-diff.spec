@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/gkampitakis/go-diff) = %{version}
 
 %description
 go-diff provides text diff helpers for Go projects.

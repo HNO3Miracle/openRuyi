@@ -23,7 +23,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/aymerick/douceur) = %{version}
 
 %description
 A simple CSS parser and inliner in Golang.

@@ -42,14 +42,6 @@ BuildRequires:  go(github.com/stretchr/testify)
 BuildRequires:  go(gopkg.in/yaml.v3)
 BuildRequires:  go-rpm-macros
 
-Provides:       go(go.opentelemetry.io/otel) = %{version}
-Provides:       go(go.opentelemetry.io/otel/exporters/stdout/stdoutmetric) = %{version}
-Provides:       go(go.opentelemetry.io/otel/exporters/stdout/stdouttrace) = %{version}
-Provides:       go(go.opentelemetry.io/otel/metric) = %{version}
-Provides:       go(go.opentelemetry.io/otel/sdk) = %{version}
-Provides:       go(go.opentelemetry.io/otel/sdk/metric) = %{version}
-Provides:       go(go.opentelemetry.io/otel/sdk/metric/metricdata) = %{version}
-Provides:       go(go.opentelemetry.io/otel/trace) = %{version}
 
 Requires:       go(github.com/cespare/xxhash/v2)
 Requires:       go(github.com/go-logr/logr)

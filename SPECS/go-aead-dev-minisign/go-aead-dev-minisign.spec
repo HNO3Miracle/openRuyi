@@ -22,7 +22,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/crypto)
 
-Provides:       go(aead.dev/minisign) = %{version}
 
 %description
 minisign is a dead simple tool to sign files and verify signatures.

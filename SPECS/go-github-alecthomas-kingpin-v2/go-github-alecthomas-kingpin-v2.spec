@@ -26,7 +26,6 @@ BuildRequires:  go(github.com/alecthomas/units)
 BuildRequires:  go(github.com/stretchr/testify)
 BuildRequires:  go(github.com/xhit/go-str2duration/v2)
 
-Provides:       go(github.com/alecthomas/kingpin/v2) = %{version}
 
 Requires:       go(github.com/alecthomas/units)
 Requires:       go(github.com/stretchr/testify)

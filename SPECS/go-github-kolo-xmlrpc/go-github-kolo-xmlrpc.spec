@@ -23,7 +23,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/text)
 
-Provides:       go(github.com/kolo/xmlrpc) = %{version}
 
 %description
 This package provides an XML-RPC client implementation for Go.

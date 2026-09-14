@@ -29,7 +29,6 @@ BuildRequires:  go(github.com/oapi-codegen/runtime)
 BuildRequires:  go(github.com/stretchr/testify)
 BuildRequires:  go(golang.org/x/net)
 
-Provides:       go(github.com/influxdata/influxdb-client-go/v2) = %{version}
 
 Requires:       go(github.com/influxdata/line-protocol)
 Requires:       go(github.com/oapi-codegen/runtime)

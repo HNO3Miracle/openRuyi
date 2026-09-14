@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/agext/levenshtein) = %{version}
 
 %description
 A Go package for calculating the Levenshtein distance between two

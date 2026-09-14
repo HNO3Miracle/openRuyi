@@ -32,7 +32,6 @@ BuildRequires:  go(github.com/tklauser/go-sysconf)
 BuildRequires:  go(github.com/stretchr/testify)
 BuildRequires:  go(golang.org/x/sys)
 
-Provides:       go(github.com/shirou/gopsutil) = %{version}
 
 %description
 gopsutil: psutil for Go

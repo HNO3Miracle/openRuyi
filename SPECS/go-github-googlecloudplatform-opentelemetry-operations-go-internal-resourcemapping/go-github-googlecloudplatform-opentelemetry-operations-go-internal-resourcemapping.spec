@@ -34,7 +34,6 @@ BuildRequires:  go(google.golang.org/genproto)
 BuildRequires:  go(google.golang.org/protobuf)
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/GoogleCloudPlatform/opentelemetry-operations-go/internal/resourcemapping) = %{version}
 
 Requires:       go(go.opentelemetry.io/otel)
 Requires:       go(google.golang.org/genproto)

@@ -27,7 +27,6 @@ BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/stathat/go)
 BuildSystem:    golangmodules
 
-Provides:       go(github.com/rcrowley/go-metrics) = %{version}
 
 %description
 Go port of Coda Hale's Metrics library: https://github.com/dropwizard/metrics.

@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/ajg/form) = %{version}
 
 %description
 This library is designed to allow seamless, high-fidelity encoding and

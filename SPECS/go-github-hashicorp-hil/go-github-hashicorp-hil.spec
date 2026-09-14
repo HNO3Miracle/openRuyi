@@ -24,7 +24,6 @@ BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/mitchellh/mapstructure)
 BuildRequires:  go(github.com/mitchellh/reflectwalk)
 
-Provides:       go(github.com/hashicorp/hil) = %{version}
 
 Requires:       go(github.com/mitchellh/mapstructure)
 Requires:       go(github.com/mitchellh/reflectwalk)

@@ -22,7 +22,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/gorilla/mux)
 
-Provides:       go(github.com/minio/mux) = %{version}
 
 Requires:       go(github.com/gorilla/mux)
 

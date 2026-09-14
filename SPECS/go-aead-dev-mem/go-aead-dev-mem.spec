@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(aead.dev/mem) = %{version}
 
 %description
 The mem package provides types and functions for measuring and

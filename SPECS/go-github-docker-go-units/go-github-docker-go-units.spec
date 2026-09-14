@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/docker/go-units) = %{version}
 
 %description
 go-units is a library to transform human friendly measurements into

@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/opencontainers/runtime-spec) = %{version}
 
 # schema/ provides JSON-schema validation pulling xeipuuv/gojsonschema; downstream uses specs-go only.
 %prep -a

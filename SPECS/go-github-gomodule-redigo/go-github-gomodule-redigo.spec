@@ -24,7 +24,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/stretchr/testify)
 
-Provides:       go(github.com/gomodule/redigo) = %{version}
 
 Requires:       go(github.com/stretchr/testify)
 

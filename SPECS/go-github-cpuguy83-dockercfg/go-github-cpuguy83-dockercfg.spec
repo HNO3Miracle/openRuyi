@@ -21,7 +21,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/cpuguy83/dockercfg) = %{version}
 
 %description
 Go library to load docker CLI configs, auths, etc. with minimal deps. So

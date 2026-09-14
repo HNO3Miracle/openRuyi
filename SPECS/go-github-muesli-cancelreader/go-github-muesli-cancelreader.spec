@@ -24,7 +24,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/sys)
 
-Provides:       go(github.com/muesli/cancelreader) = %{version}
 
 %description
 A cancelable reader for Go

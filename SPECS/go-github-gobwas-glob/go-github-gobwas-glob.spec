@@ -24,7 +24,6 @@ Patch2000:      2000-fix-non-constant-fprintf-format.patch
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/gobwas/glob) = %{version}
 
 %description
 glob provides glob pattern matching for Go.

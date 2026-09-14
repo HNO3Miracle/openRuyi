@@ -22,7 +22,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/CloudyKit/fastprinter) = %{version}
 
 %description
 FastPrinter supports write values in io.Writer without allocation

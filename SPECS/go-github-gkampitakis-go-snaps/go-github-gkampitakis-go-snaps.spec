@@ -40,7 +40,6 @@ BuildRequires:  go(github.com/tidwall/match)
 BuildRequires:  go(github.com/tidwall/pretty)
 BuildRequires:  go(github.com/tidwall/sjson)
 
-Provides:       go(github.com/gkampitakis/go-snaps) = %{version}
 
 Requires:       go(github.com/gkampitakis/ciinfo)
 Requires:       go(github.com/goccy/go-yaml)

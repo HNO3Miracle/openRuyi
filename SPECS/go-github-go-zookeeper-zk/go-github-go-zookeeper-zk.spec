@@ -26,7 +26,6 @@ Patch2000:      2000-Fix-non-constant-format-string-in-test.patch
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/go-zookeeper/zk) = %{version}
 
 %description
 This package provides a native ZooKeeper client library for Go.

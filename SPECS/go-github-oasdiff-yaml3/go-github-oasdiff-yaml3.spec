@@ -22,7 +22,6 @@ BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(gopkg.in/check.v1)
 
-Provides:       go(github.com/oasdiff/yaml3) = %{version}
 
 %description
 YAML support for Go with origin metadata tracking for decoded mapping nodes.

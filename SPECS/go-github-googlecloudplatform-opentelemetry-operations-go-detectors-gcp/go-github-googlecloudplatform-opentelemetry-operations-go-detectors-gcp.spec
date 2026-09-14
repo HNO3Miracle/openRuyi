@@ -35,7 +35,6 @@ BuildRequires:  go(gopkg.in/check.v1)
 BuildRequires:  go(gopkg.in/yaml.v3)
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/GoogleCloudPlatform/opentelemetry-operations-go/detectors/gcp) = %{version}
 
 Requires:       go(cloud.google.com/go/compute/metadata)
 

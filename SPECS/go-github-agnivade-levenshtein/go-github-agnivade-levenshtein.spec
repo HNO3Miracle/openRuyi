@@ -26,7 +26,6 @@ BuildOption(prep):  -n %{_name}-%{version}
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 
-Provides:       go(github.com/agnivade/levenshtein) = %{version}
 
 %description
 The library is fully capable of working with non-ascii strings. But the

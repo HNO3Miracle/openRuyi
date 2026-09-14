@@ -30,12 +30,6 @@ BuildRequires:  go(github.com/google/uuid)
 BuildRequires:  go(github.com/kylelemons/godebug)
 BuildRequires:  go(github.com/pkg/browser)
 
-Provides:       go(github.com/AzureAD/microsoft-authentication-library-for-go) = %{version}
-Provides:       go(github.com/AzureAD/microsoft-authentication-library-for-go/apps/cache) = %{version}
-Provides:       go(github.com/AzureAD/microsoft-authentication-library-for-go/apps/confidential) = %{version}
-Provides:       go(github.com/AzureAD/microsoft-authentication-library-for-go/apps/errors) = %{version}
-Provides:       go(github.com/AzureAD/microsoft-authentication-library-for-go/apps/managedidentity) = %{version}
-Provides:       go(github.com/AzureAD/microsoft-authentication-library-for-go/apps/public) = %{version}
 
 Requires:       go(github.com/golang-jwt/jwt/v5)
 Requires:       go(github.com/google/uuid)
