@@ -50,6 +50,8 @@ Requires:       go(golang.org/x/sys)
 ebpf provides pure Go APIs for loading, inspecting, and attaching eBPF
 programs.
 
+# The excluded packages need kernel privileges or host-specific fixtures to
+# run; compile them separately to retain build coverage without executing them.
 %check -a
 for pkg in %{go_test_exclude}; do
     go test -c -o /dev/null "${pkg}"
