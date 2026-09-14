@@ -18,7 +18,7 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # Associate the example with the Pickles function for current Go vet.
-Patch1:         2000-tests-associate-pickle-example-with-exported-function.patch
+Patch2000:      2000-tests-associate-pickle-example-with-exported-function.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
