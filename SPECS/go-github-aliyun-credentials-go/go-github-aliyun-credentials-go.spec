@@ -6,7 +6,7 @@
 %define _name           credentials-go
 %define go_import_path  github.com/aliyun/credentials-go
 # Integration tests require live Alibaba Cloud credentials.
-%define go_test_exclude %{go_import_path}/integration
+%define go_test_exclude_glob %{go_import_path}/integration*
 
 Name:           go-github-aliyun-credentials-go
 Version:        1.1.2
