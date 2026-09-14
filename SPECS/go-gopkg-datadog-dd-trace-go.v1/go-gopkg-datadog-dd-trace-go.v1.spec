@@ -20,9 +20,9 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # https://github.com/DataDog/dd-trace-go/commit/a83fc8bb30c3337fcd624e24f546913ca0bfb538
-Patch1:         1000-profiler-support-current-pprof-aggregate-api.patch
+Patch1000:      1000-profiler-support-current-pprof-aggregate-api.patch
 # https://github.com/DataDog/dd-trace-go/commit/fbda83b5f
-Patch2:         1001-internal-log-pass-errors-as-format-arguments.patch
+Patch1001:      1001-internal-log-pass-errors-as-format-arguments.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
