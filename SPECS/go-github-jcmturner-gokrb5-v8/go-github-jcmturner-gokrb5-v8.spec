@@ -20,10 +20,10 @@ BuildSystem:    golangmodules
 
 # Fix a Go 1.26 vet error caused by a dynamic fmt.Errorf format.
 # https://github.com/jcmturner/gokrb5/pull/579
-Patch0:         2000-client-fix-non-constant-fmt.Errorf-format.patch
+Patch2000:      2000-client-fix-non-constant-fmt.Errorf-format.patch
 
 # Keep the replay-cache test serialized to avoid parallel test interference.
-Patch1:         2001-service-avoid-running-replay-test-in-parallel.patch
+Patch2001:      2001-service-avoid-running-replay-test-in-parallel.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
