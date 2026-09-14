@@ -20,7 +20,7 @@ BuildSystem:    golangmodules
 
 # Keep Prometheus label values quoted while formatting their integer value.
 # https://github.com/VictoriaMetrics/metrics/pull/132
-Patch0:         2000-tests-fix-histogram-label-formatting.patch
+Patch2000:      2000-tests-fix-histogram-label-formatting.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
