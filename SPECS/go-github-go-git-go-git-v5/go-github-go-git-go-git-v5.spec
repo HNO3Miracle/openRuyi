@@ -12,8 +12,8 @@
 # these upstream transport packages exercise GitHub URLs, git daemon, host SSH
 # state, or a CLI nested module build. The packp gopkg.in/check suite has a
 # non-UTC time-depth assertion that fails in the build environment. Keep the
-# rest of the package tests enabled. - HNO3Miracle
-%define go_test_exclude_glob %{shrink:
+# rest of the package tests enabled.
+%define go_test_exclude_glob  %{shrink:
     %{go_import_path}/cli/go-git*
     %{go_import_path}
     %{go_import_path}/plumbing/protocol/packp
@@ -38,10 +38,9 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # https://github.com/go-git/go-git/commit/4ae786a01dfb96289854ddc6460981531a6fe53c
-Patch0:         0001-Compute-zlib-output-in-tests-instead-of-hardcoding-it.patch
+Patch1:         0001-Compute-zlib-output-in-tests-instead-of-hardcoding-it.patch
 # The packaged go-git/gcfg is newer than upstream's pinned pseudo-version and
 # accepts empty subsection names; adjust that single compatibility assertion.
-# - HNO3Miracle
 Patch2000:      2000-adjust-config-test-for-packaged-gcfg.patch
 
 BuildRequires:  go
