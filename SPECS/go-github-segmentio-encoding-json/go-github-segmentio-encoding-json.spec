@@ -6,10 +6,10 @@
 
 %define _name           json
 %define go_import_path  github.com/segmentio/encoding
-%define commit_id 7d5a25dbc5da13aed3cb047a127e4d0e96f536fb
+%define commit_id       7d5a25dbc5da13aed3cb047a127e4d0e96f536fb
 # json/fuzz imports the historical go-fuzz corpus helper package, which is no
 # longer present in the upstream corpus repository; keep normal packages tested. - HNO3Miracle
-%define go_test_exclude_glob github.com/segmentio/encoding/json/fuzz
+%define go_test_exclude_glob  github.com/segmentio/encoding/json/fuzz
 
 Name:           go-github-segmentio-encoding-json
 Version:        0+git20260607.7d5a25d
@@ -23,7 +23,8 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # Current Go vet rejects %q for pointers to unexportedFields in a test error
-# message; use structural formatting instead. - HNO3Miracle
+# message; use structural formatting instead.
+# https://github.com/segmentio/encoding/pull/164
 Patch2000:      2000-fix-unexported-fields-errorf-format.patch
 
 BuildRequires:  go
