@@ -8,8 +8,8 @@
 %define go_import_path  github.com/envoyproxy/go-control-plane
 # The upstream repository contains nested Go modules. The root module uses local
 # replace directives for them, so testing sibling modules here would create a
-# bootstrap cycle with the separately packaged envoy/ratelimit modules. - HNO3Miracle
-%define go_test_exclude_glob %{shrink:
+# bootstrap cycle with the separately packaged envoy/ratelimit modules.
+%define go_test_exclude_glob  %{shrink:
     %{go_import_path}/contrib*
     %{go_import_path}/envoy*
     %{go_import_path}/examples*
@@ -30,7 +30,9 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # Go 1.25 vet rejects non-constant and type-mismatched format strings.
-# - HNO3Miracle
+# https://github.com/envoyproxy/go-control-plane/pull/1492
+# Equivalent fixes later landed in https://github.com/envoyproxy/go-control-plane/pull/1334
+# and https://github.com/envoyproxy/go-control-plane/pull/1402.
 Patch2000:      2000-fix-non-constant-status-errorf.patch
 
 BuildRequires:  go
