@@ -7,8 +7,8 @@
 %define _name           gg
 %define go_import_path  github.com/fogleman/gg
 # The examples directory contains many standalone main packages, which cannot
-# be tested together as one package. - HNO3Miracle
-%define go_test_exclude github.com/fogleman/gg/examples
+# be tested together as one package.
+%define go_test_exclude  github.com/fogleman/gg/examples
 
 Name:           go-github-fogleman-gg
 Version:        1.3.0
@@ -21,7 +21,8 @@ Source0:        https://github.com/fogleman/gg/archive/v%{version}.tar.gz#/%{_na
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Avoid parsing rpm-injected go test flags in upstream test init. - HNO3Miracle
+# Avoid parsing RPM-injected go test flags in upstream test init.
+# https://github.com/fogleman/gg/pull/209
 Patch2000:      2000-do-not-parse-test-flags-in-init.patch
 
 # Some raster hash tests differ across arches/current dependency versions; keep
