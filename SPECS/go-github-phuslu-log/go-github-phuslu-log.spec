@@ -20,9 +20,10 @@ BuildSystem:    golangmodules
 
 # Keep the syslog test self-contained in restricted build environments.
 # https://github.com/phuslu/log/pull/122
-Patch0:         0001-use-local-udp-listener-for-syslog-tests.patch
-# Select the matching output when stale rotated files are present.
-Patch2000:      2000-select-the-matching-file-writer-output.patch
+Patch1:         0001-use-local-udp-listener-for-syslog-tests.patch
+# Isolate file writer output so stale rotated files cannot affect the test.
+# https://github.com/phuslu/log/pull/128
+Patch2000:      2000-tests-isolate-file-writer-output.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
