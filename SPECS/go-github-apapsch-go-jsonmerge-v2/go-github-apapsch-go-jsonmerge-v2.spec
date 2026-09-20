@@ -20,7 +20,7 @@ BuildSystem:    golangmodules
 
 # The v2.0.0 CLI sources still use the pre-v2 module path and old API.
 # Patch them to the canonical v2 module API so %check can build the CLI package.
-# - HNO3Miracle
+# https://github.com/apapsch/go-jsonmerge/pull/1
 Patch2000:      2000-fix-v2-cli-api-usage.patch
 
 BuildRequires:  go
