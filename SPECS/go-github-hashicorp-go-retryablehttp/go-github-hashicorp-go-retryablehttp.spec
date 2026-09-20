@@ -18,9 +18,9 @@ Source0:        https://github.com/hashicorp/go-retryablehttp/archive/refs/tags/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Upstreamable test fixes for current Go vet and hermetic transport failure
-# handling without depending on external DNS behavior. - HNO3Miracle
-Patch0:         0001-fix-tests-for-current-go-and-hermetic-transport-failure.patch
+# Fix current Go vet failures and make transport failure tests hermetic.
+# https://github.com/hashicorp/go-retryablehttp/pull/287
+Patch1:         0001-fix-tests-for-current-go-and-hermetic-transport-failure.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
