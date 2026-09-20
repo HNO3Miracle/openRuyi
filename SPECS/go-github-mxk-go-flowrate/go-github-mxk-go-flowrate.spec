@@ -19,9 +19,9 @@ Source0:        https://github.com/mxk/go-flowrate/archive/%{commit_id}.tar.gz#/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Upstreamable test fix: exact timing/rate assertions are sensitive to CI
-# scheduler jitter even when flow control works correctly. - HNO3Miracle
-Patch0:         0001-make-status-tests-tolerate-scheduler-jitter.patch
+# Exact timing/rate assertions are sensitive to scheduler jitter.
+# https://github.com/mxk/go-flowrate/pull/4
+Patch1:         0001-make-status-tests-tolerate-scheduler-jitter.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
