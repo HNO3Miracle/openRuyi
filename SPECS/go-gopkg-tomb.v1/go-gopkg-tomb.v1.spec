@@ -6,7 +6,7 @@
 
 %define _name           tomb.v1
 %define go_import_path  gopkg.in/tomb.v1
-%define commit_id dd632973f1e7218eb1089048e0798ec9ae7dceb8
+%define commit_id       dd632973f1e7218eb1089048e0798ec9ae7dceb8
 
 Name:           go-gopkg-tomb.v1
 Version:        0+git20260602.dd63297
@@ -19,6 +19,7 @@ Source0:        https://github.com/go-tomb/tomb/archive/%{commit_id}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# https://github.com/go-tomb/tomb/pull/32
 Patch2000:      2000-fix-killf-test-format-string.patch
 
 BuildRequires:  go
