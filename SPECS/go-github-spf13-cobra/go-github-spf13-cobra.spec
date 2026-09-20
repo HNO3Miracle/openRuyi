@@ -18,7 +18,7 @@ Source0:        https://github.com/spf13/cobra/archive/v%{version}.tar.gz#/%{_na
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Fix Go vet warning with current Go toolchain.
+# https://github.com/spf13/cobra/pull/2423
 Patch2000:      2000-fix-directive-format.patch
 
 BuildOption(prep):  -n %{_name}-%{version}
