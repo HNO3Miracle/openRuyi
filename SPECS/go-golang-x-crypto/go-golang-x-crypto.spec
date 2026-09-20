@@ -12,7 +12,7 @@
 # We need to to avoid circular dependency between go-golang-x-crypto and go-golang-x-net
 # So we need to manually download the right version of golang.org/x/net and place it in the source tree
 # Check https://github.com/golang/crypto/blob/master/go.mod for the correct version
-%define go_golang_x_net_version 0.47.0
+%define go_golang_x_net_version  0.47.0
 
 Name:           go-golang-x-crypto
 Version:        0.57.0
