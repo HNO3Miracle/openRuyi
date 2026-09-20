@@ -19,7 +19,7 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # Go 1.25 vet rejects non-constant fmt.Errorf format strings in tests.
-# - HNO3Miracle
+# https://github.com/goccy/go-json/pull/586
 Patch2000:      2000-fix-test-non-constant-fmt-errorf.patch
 
 BuildRequires:  go
