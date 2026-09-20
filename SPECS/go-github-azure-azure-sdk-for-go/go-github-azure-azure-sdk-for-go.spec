@@ -7,41 +7,19 @@
 %define _name           azure-sdk-for-go
 %define go_import_path  github.com/Azure/azure-sdk-for-go
 
+%define ver_azcore      1.21.1
+%define ver_azidentity  1.13.1
+%define ver_internal    1.12.0
+%define ver_armcompute  5.7.0
+%define ver_armnetwork  4.3.0
+
 %global go_submodules %{expand:
 github.com/Azure/azure-sdk-for-go/sdk/azcore %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/arm %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/arm/internal/resource %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/arm/policy %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/arm/runtime %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/cloud %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/exported %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/log %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/async %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/body %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/fake %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/loc %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/pollers/op %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/internal/shared %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/log %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/policy %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/runtime %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/streaming %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/to %{ver_azcore}
-github.com/Azure/azure-sdk-for-go/sdk/azcore/tracing %{ver_azcore}
 github.com/Azure/azure-sdk-for-go/sdk/azidentity %{ver_azidentity}
-github.com/Azure/azure-sdk-for-go/sdk/azidentity/internal %{ver_azidentity}
-github.com/Azure/azure-sdk-for-go/sdk/internal/diag %{ver_internal}
-github.com/Azure/azure-sdk-for-go/sdk/internal/errorinfo %{ver_internal}
-github.com/Azure/azure-sdk-for-go/sdk/internal/exported %{ver_internal}
-github.com/Azure/azure-sdk-for-go/sdk/internal/log %{ver_internal}
-github.com/Azure/azure-sdk-for-go/sdk/internal/poller %{ver_internal}
-github.com/Azure/azure-sdk-for-go/sdk/internal/temporal %{ver_internal}
-github.com/Azure/azure-sdk-for-go/sdk/internal/uuid %{ver_internal}
+github.com/Azure/azure-sdk-for-go/sdk/internal %{ver_internal}
 github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/compute/armcompute/v5 %{ver_armcompute}
 github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork/v4 %{ver_armnetwork}
 }
-
 
 # azure-sdk-for-go is a monorepo whose sub-modules are versioned and
 # tagged independently; there is no single repository tag that carries
@@ -51,8 +29,8 @@ github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork/v4 %{ve
 # sub-module is fetched from its own tag archive (all github.com
 # official sources, no proxy/mirror) and installed into its GOPATH
 # location. The package Version is the date of the newest sub-module
-# tag (azcore v1.21.1, 2026-04-16); every Provides below carries the
-# real upstream version of its sub-module.
+# tag (azcore v1.21.1, 2026-04-16); generated Go Provides use each
+# declared sub-module version.
 #
 # The five sub-module versions below are the ones pinned by Prometheus' go.mod
 # (v3.12.0); each maps to an upstream git tag "sdk/<module>/v<ver>" in
@@ -146,6 +124,7 @@ cp -a %{dir_armcompute}/sdk/resourcemanager/compute/armcompute/. \
 install -d %{buildroot}%{go_sys_gopath}/%{go_import_path}/sdk/resourcemanager/network/armnetwork
 cp -a %{dir_armnetwork}/sdk/resourcemanager/network/armnetwork/. \
       %{buildroot}%{go_sys_gopath}/%{go_import_path}/sdk/resourcemanager/network/armnetwork/v4
+%go_generate_provides -i %{go_import_path} -v %{version}
 
 %check
 %{go_common}

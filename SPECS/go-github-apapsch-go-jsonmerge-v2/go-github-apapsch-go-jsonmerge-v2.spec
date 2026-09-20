@@ -30,6 +30,7 @@ BuildRequires:  go(github.com/bmatcuk/doublestar)
 BuildRequires:  go(github.com/juju/gnuflag)
 BuildRequires:  go(github.com/spkg/bom)
 
+Provides:       go(github.com/apapsch/go-jsonmerge/v2) = %{version}
 
 Requires:       go(github.com/apapsch/go-jsoncommentstrip)
 Requires:       go(github.com/bmatcuk/doublestar)
