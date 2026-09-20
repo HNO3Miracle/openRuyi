@@ -1,0 +1,26 @@
+From 245f5fba905ad3c2200f95ac633ee873d9ce07c3 Mon Sep 17 00:00:00 2001
+From: HNO3Miracle <xiangao.or@isrc.iscas.ac.cn>
+Date: Mon, 21 Sep 2026 05:22:23 +0800
+Subject: [PATCH] tests: fix 12-hour layout expectation
+
+Signed-off-by: HNO3Miracle <xiangao.or@isrc.iscas.ac.cn>
+---
+ time_format_test.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/time_format_test.go b/time_format_test.go
+index 7222eb7..e947ebe 100644
+--- a/time_format_test.go
++++ b/time_format_test.go
+@@ -27,7 +27,7 @@ func TestTimeFormat(t *testing.T) {
+ 
+ 	{
+ 		timeLayout := toolbox.DateFormatToLayout("yyyy-MM-dd hh:mm:ss")
+-		assert.EqualValues(t, "2006-01-02 15:04:05", timeLayout)
++		assert.EqualValues(t, "2006-01-02 03:04:05", timeLayout)
+ 	}
+ 
+ 	{
+-- 
+2.43.0
+

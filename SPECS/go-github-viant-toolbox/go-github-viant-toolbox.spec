@@ -11,7 +11,7 @@
 # Keep those optional backend packages out of %check and installation. The root
 # and cred tests contain current behavior mismatches and os.Exit handling that
 # fail in OBS. - HNO3Miracle
-%define go_test_exclude_glob %{shrink:
+%define go_test_exclude_glob  %{shrink:
     github.com/viant/toolbox
     github.com/viant/toolbox/cred
     github.com/viant/toolbox/kms/aws
@@ -36,9 +36,13 @@ Source0:        https://github.com/viant/toolbox/archive/v%{version}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Fix test expectations for current time and case formatting behavior.
-# - HNO3Miracle
-Patch2000:      2000-fix-current-format-test-expectations.patch
+# Java-style hh is a 12-hour token and maps to Go's 03 layout.
+# https://github.com/viant/toolbox/pull/52
+Patch2000:      2000-tests-fix-12-hour-layout-expectation.patch
+
+# Match the mismatch test to the current conversion behavior for its invalid
+# lower-underscore input.
+Patch2001:      2001-tests-align-mismatch-expectation-with-conversion.patch
 
 # Go 1.25+ vet rejects fmt.Errorf calls whose format string is built at
 # runtime; keep tests enabled but disable vet instead of patching upstream

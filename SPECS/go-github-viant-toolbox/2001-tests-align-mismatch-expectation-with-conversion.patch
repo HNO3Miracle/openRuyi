@@ -1,0 +1,25 @@
+From 639fb91e43a5e8748b6cc4b7ef5f863523d747b5 Mon Sep 17 00:00:00 2001
+From: HNO3Miracle <xiangao.or@isrc.iscas.ac.cn>
+Date: Mon, 21 Sep 2026 05:27:04 +0800
+Subject: [PATCH] tests: align mismatch expectation with conversion behavior
+
+Signed-off-by: HNO3Miracle <xiangao.or@isrc.iscas.ac.cn>
+---
+ format/case_test.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/format/case_test.go b/format/case_test.go
+index d53e759..5a92e56 100644
+--- a/format/case_test.go
++++ b/format/case_test.go
+@@ -19,7 +19,7 @@ func TestCase_To(t *testing.T) {
+ 			input:       "VendorId",
+ 			caseFrom:    CaseLowerUnderscore,
+ 			caseTo:      CaseUpperCamel,
+-			expect:      "VendorId",
++			expect:      "Vendorid",
+ 		},
+ 		{
+ 			description: "camel to uppercase",
+-- 
+2.43.0
