@@ -8,8 +8,7 @@
 %define go_import_path  github.com/pborman/getopt
 # Nested Go modules have their own module path/dependencies; skip them in
 # %check so the parent package does not try to test unrelated internal tools.
-# - HNO3Miracle
-%define go_test_exclude_glob %{go_import_path}/v2*
+%define go_test_exclude_glob  %{go_import_path}/v2*
 
 Name:           go-github-pborman-getopt
 Version:        1.1.0
@@ -22,8 +21,7 @@ Source0:        https://github.com/pborman/getopt/archive/refs/tags/v%{version}.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Go 1.25 vet rejects non-constant fmt.Fprintf format strings in examples.
-# - HNO3Miracle
+# https://github.com/pborman/getopt/pull/22
 Patch2000:      2000-fix-non-constant-fprintf-format.patch
 
 BuildRequires:  go
