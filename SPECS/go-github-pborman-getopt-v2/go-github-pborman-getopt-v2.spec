@@ -6,7 +6,7 @@
 
 %define _name           getopt
 %define go_import_path  github.com/pborman/getopt/v2
-%define go_source_subdir v2
+%define go_source_subdir  v2
 
 Name:           go-github-pborman-getopt-v2
 Version:        2.1.0
@@ -19,8 +19,7 @@ Source0:        https://github.com/pborman/getopt/archive/refs/tags/v%{version}.
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Go 1.25 vet rejects non-constant fmt.Fprintf format strings in examples.
-# - HNO3Miracle
+# https://github.com/pborman/getopt/pull/22
 Patch2000:      2000-fix-non-constant-fprintf-format.patch
 
 # This package owns a Go module below the repository root; the explicit
