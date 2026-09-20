@@ -23,7 +23,8 @@ BuildSystem:    golangmodules
 
 # The v0.0.9 source is still built from the old invopop fork and carries an
 # import comment for github.com/invopop/yaml, but kin-openapi imports the
-# pre-rename github.com/oasdiff/yaml path. - HNO3Miracle
+# pre-rename github.com/oasdiff/yaml path.
+# https://github.com/oasdiff/yaml/pull/10
 Patch2000:      2000-use-oasdiff-import-path.patch
 
 BuildRequires:  go
