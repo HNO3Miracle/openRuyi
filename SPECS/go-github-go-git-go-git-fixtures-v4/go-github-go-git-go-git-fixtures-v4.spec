@@ -6,7 +6,7 @@
 
 %define _name           go-git-fixtures
 %define go_import_path  github.com/go-git/go-git-fixtures/v4
-%define commit_id 55a94097c399cd93043103aa276a733b91537b0b
+%define commit_id       55a94097c399cd93043103aa276a733b91537b0b
 
 Name:           go-github-go-git-go-git-fixtures-v4
 Version:        4.3.1+git20260616.55a9409
