@@ -19,7 +19,8 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # Current Go vet treats the local assert helper as printf-like, so assertion
-# messages must not contain stray printf directives. - HNO3Miracle
+# messages must not contain stray printf directives.
+# https://github.com/zeebo/errs/pull/11
 Patch2000:      2000-avoid-printf-directives-in-assert-messages.patch
 
 BuildRequires:  go
