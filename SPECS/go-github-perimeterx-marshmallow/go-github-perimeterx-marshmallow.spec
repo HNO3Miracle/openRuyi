@@ -18,7 +18,8 @@ Source0:        https://github.com/perimeterx/marshmallow/archive/refs/tags/v%{v
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Go 1.25 rejects example names that look like missing identifiers. - HNO3Miracle
+# Go 1.25 rejects example names that look like missing identifiers.
+# https://github.com/HumanSecurity/marshmallow/pull/34
 Patch2000:      2000-fix-example-names-for-current-go.patch
 
 BuildRequires:  go
