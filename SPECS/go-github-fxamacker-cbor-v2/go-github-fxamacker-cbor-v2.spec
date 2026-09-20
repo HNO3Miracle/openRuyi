@@ -19,8 +19,8 @@ Source0:        https://github.com/fxamacker/cbor/archive/v%{version}.tar.gz#/%{
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Current Go vet rejects the Decode test because the Errorf arguments are
-# swapped relative to the format string. - HNO3Miracle
+# Fix swapped values in the Decode test failure diagnostic.
+# https://github.com/fxamacker/cbor/issues/784
 Patch2000:      2000-fix-decode-test-errorf-argument-order.patch
 
 BuildRequires:  go
