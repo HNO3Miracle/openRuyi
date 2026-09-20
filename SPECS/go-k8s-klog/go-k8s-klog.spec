@@ -8,7 +8,7 @@
 %define go_import_path  k8s.io/klog
 # klogr in klog 0.x targets the pre-v1 go-logr API and does not build with the
 # packaged go-logr 1.4; keep the k8s.io/klog v1 module package scoped to klog. - HNO3Miracle
-%define go_test_exclude_glob %{shrink:
+%define go_test_exclude_glob  %{shrink:
     %{go_import_path}/examples/klogr*
     %{go_import_path}/klogr*
 }
