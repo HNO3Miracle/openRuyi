@@ -8,8 +8,8 @@
 %define _name           apimachinery
 %define go_import_path  k8s.io/apimachinery
 # managedfields tests expect api/openapi-spec/swagger.json from the full
-# kubernetes repository, but the standalone apimachinery archive lacks it. - HNO3Miracle
-%define go_test_exclude %{shrink:
+# kubernetes repository, but the standalone apimachinery archive lacks it.
+%define go_test_exclude  %{shrink:
     %{go_import_path}/pkg/util/managedfields
     %{go_import_path}/pkg/util/managedfields/internal
 }
@@ -26,7 +26,7 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # Tolerate Go 1.27 json/v2 UTF-8 encoding in serializer tests.
-Patch0:         0001-Tolerate-json-v2-invalid-UTF-8-munging-in-unstructured-serialization-tests.patch
+Patch1:         0001-Tolerate-json-v2-invalid-UTF-8-munging-in-unstructured-serialization-tests.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
