@@ -9,7 +9,7 @@
 # plugin/ochttp hits https://example.com during TestAgainstSpecs, which fails
 # in the OBS network sandbox. plugin/ocgrpc has a timing-sensitive
 # TestServerSpanDuration failure on riscv64 with "no more spans". - HNO3Miracle
-%define go_test_exclude %{shrink:
+%define go_test_exclude  %{shrink:
     go.opencensus.io/plugin/ochttp
     go.opencensus.io/plugin/ocgrpc
 }
