@@ -6,7 +6,7 @@
 
 %define _name           observability
 %define go_import_path  google.golang.org/grpc/gcp/observability
-%define go_source_subdir gcp/observability
+%define go_source_subdir  gcp/observability
 
 Name:           go-google-grpc-gcp-observability
 Version:        1.0.1
