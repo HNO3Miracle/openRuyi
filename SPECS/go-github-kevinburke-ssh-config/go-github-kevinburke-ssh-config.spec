@@ -20,7 +20,7 @@ BuildSystem:    golangmodules
 
 # Fixture tests exercise explicit testdata as the user config. Keep them
 # hermetic so host /etc/ssh/ssh_config read errors cannot mask those fixtures.
-# - HNO3Miracle
+# https://github.com/kevinburke/ssh_config/pull/89
 Patch2000:      2000-make-fixture-tests-ignore-system-config.patch
 
 BuildRequires:  go
