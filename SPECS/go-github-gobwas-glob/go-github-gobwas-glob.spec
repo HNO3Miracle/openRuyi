@@ -18,7 +18,8 @@ Source0:        https://github.com/gobwas/glob/archive/refs/tags/v%{version}.tar
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Go 1.25 vet rejects non-constant fmt.Fprintf format strings. - HNO3Miracle
+# The fix applies to the v0 code; upstream v1 replaced this implementation.
+# https://github.com/gobwas/glob/pull/70
 Patch2000:      2000-fix-non-constant-fprintf-format.patch
 
 BuildRequires:  go
