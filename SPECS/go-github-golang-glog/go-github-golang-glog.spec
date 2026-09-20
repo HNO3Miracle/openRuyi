@@ -19,6 +19,7 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # Fix Go vet warning with current Go toolchain.
+# https://github.com/golang/glog/pull/78
 Patch2000:      2000-fix-stack-slice-format.patch
 
 BuildOption(prep):  -n %{_name}-%{version}
