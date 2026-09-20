@@ -9,7 +9,7 @@
 # Nested Go modules have their own module path/dependencies; skip them in
 # %check so the parent package does not try to test unrelated internal tools.
 # - HNO3Miracle
-%define go_test_exclude_glob %{shrink:
+%define go_test_exclude_glob  %{shrink:
     %{go_import_path}/example*
     %{go_import_path}/scrape*
     %{go_import_path}/tools*
@@ -30,8 +30,8 @@ BuildSystem:    golangmodules
 # type; sniff named assets before falling back to the default upload type.
 # - HNO3Miracle
 Patch2000:      2000-detect-generic-release-asset-content-types.patch
-# https://github.com/google/go-github/pull/4029 backport
-Patch2001:      2001-Ensure-compatibility-with-encoding-json-v2-experimen.patch
+# https://github.com/google/go-github/pull/4029
+Patch1000:      1000-Ensure-compatibility-with-encoding-json-v2-experimen.patch
 
 # Go 1.26 vet reports Errorf %q with a *strings.Reader argument in upstream
 # github tests; keep tests enabled but disable vet. - HNO3Miracle
