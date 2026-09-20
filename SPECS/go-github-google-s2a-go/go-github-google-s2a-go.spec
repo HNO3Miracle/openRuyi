@@ -10,7 +10,7 @@
 # Google API and Cloud Translate clients, creating a bootstrap cycle with
 # google-api/google-cloud-go packages, while the library packages do not use
 # those imports. - HNO3Miracle
-%define go_test_exclude_glob %{go_import_path}/tools*
+%define go_test_exclude_glob  %{go_import_path}/tools*
 
 Name:           go-github-google-s2a-go
 Version:        0.1.9
@@ -24,7 +24,7 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # Go 1.25 vet rejects non-constant fmt.Fprintf format strings in tests.
-# - HNO3Miracle
+# https://github.com/google/s2a-go/pull/160
 Patch2000:      2000-fix-non-constant-fprintf-test.patch
 
 BuildRequires:  go
