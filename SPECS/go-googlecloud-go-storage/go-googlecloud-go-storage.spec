@@ -7,7 +7,7 @@
 
 %define _name           storage
 %define go_import_path  cloud.google.com/go/storage
-%define go_source_subdir storage
+%define go_source_subdir  storage
 # The explicit %%install/%%check sections below enter %%{go_source_subdir};
 # using BuildOption(prep): -n .../storage would place the module contents at the
 # wrong import root because the GitHub archive is still rooted at the full
@@ -15,7 +15,7 @@
 # storage/internal/benchmarks is a benchmark helper, not library code. It pulls
 # cloudprober and the OpenTelemetry trace exporter, which are not required for
 # the storage client checks. - HNO3Miracle
-%define go_test_exclude_glob %{go_import_path}/internal/benchmarks
+%define go_test_exclude_glob  %{go_import_path}/internal/benchmarks
 
 Name:           go-googlecloud-go-storage
 Version:        1.67.1
