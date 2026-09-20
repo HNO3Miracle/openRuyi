@@ -84,6 +84,8 @@ BuildRequires:  go(golang.org/x/crypto)
 BuildRequires:  go(golang.org/x/net)
 BuildRequires:  go(golang.org/x/text)
 
+Provides:       go(github.com/Azure/azure-sdk-for-go) = %{version}
+
 # azcore v%{ver_azcore}
 # azidentity v%{ver_azidentity}
 # internal v%{ver_internal}
