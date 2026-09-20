@@ -20,8 +20,11 @@ BuildSystem:    golangmodules
 
 # Keep live API tests behind an explicit integration opt-in while retaining all
 # offline unit tests.
+# https://github.com/outscale/osc-sdk-go/pull/1154
 Patch2000:      2000-require-opt-in-for-live-api-tests.patch
-# Use the standard env path in executable repository scripts.
+
+# Use the standard env path in the two affected scripts present in v2.34.0.
+# https://github.com/outscale/osc-sdk-go/pull/1155
 Patch2001:      2001-ci-use-usr-bin-env-for-scripts.patch
 
 BuildRequires:  go
