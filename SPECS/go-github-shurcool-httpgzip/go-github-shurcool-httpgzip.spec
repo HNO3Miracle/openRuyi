@@ -6,7 +6,7 @@
 
 %define _name           httpgzip
 %define go_import_path  github.com/shurcooL/httpgzip
-%define commit_id d1585fc322fa7cad2956ba8e01a41a39d09d6b31
+%define commit_id       d1585fc322fa7cad2956ba8e01a41a39d09d6b31
 
 Name:           go-github-shurcool-httpgzip
 Version:        0+git20260607.d1585fc
@@ -21,8 +21,7 @@ BuildSystem:    golangmodules
 
 # Upstreamable test fixture modernization: replace obsolete x/tools godoc VFS
 # fixtures with standard-library filesystem fixtures.
-# - HNO3Miracle
-Patch0:         0001-drop-x-tools-test-deps.patch
+Patch1:         0001-drop-x-tools-test-deps.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
