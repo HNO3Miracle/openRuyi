@@ -23,7 +23,8 @@ BuildSystem:    golangmodules
 # as CI, while upstream color golden files include ANSI escapes. - HNO3Miracle
 Patch2000:      2000-force-color-for-color-snapshot-tests.patch
 # Current Go vet rejects Skipf test calls with arguments but no formatting
-# directives. Keep the forwarding test and use a real format string. - HNO3Miracle
+# directives. Keep the forwarding test and use a real format string.
+# https://github.com/gkampitakis/go-snaps/pull/160
 Patch2001:      2001-fix-skipf-test-format-for-go-vet.patch
 
 BuildRequires:  go
