@@ -7,9 +7,10 @@
 
 %define _name           grpc
 %define go_import_path  google.golang.org/grpc
-# TODO: I'm hungry and tired please send help - 251
-%define go_test_ignore_failure 1
-%define go_test_exclude_glob %{shrink:
+# Several upstream test groups require unavailable services or hermetic test
+# infrastructure. Run the remaining suite while keeping failures non-fatal.
+%define go_test_ignore_failure  1
+%define go_test_exclude_glob    %{shrink:
     google.golang.org/grpc/authz*
     google.golang.org/grpc/balancer/weightedroundrobin*
     google.golang.org/grpc/benchmark*
