@@ -17,6 +17,17 @@
 %define ver_user          0.4.1
 %define ver_userns        0.1.0
 
+%global go_submodules %{expand:
+github.com/moby/sys/atomicwriter %{ver_atomicwriter}
+github.com/moby/sys/mount %{ver_mount}
+github.com/moby/sys/mountinfo %{ver_mountinfo}
+github.com/moby/sys/reexec %{ver_reexec}
+github.com/moby/sys/sequential %{ver_sequential}
+github.com/moby/sys/signal %{ver_signal}
+github.com/moby/sys/user %{ver_user}
+github.com/moby/sys/userns %{ver_userns}
+}
+
 %define dir_atomicwriter  sys-atomicwriter-v%{ver_atomicwriter}
 %define dir_mount         sys-mount-v%{ver_mount}
 %define dir_mountinfo     sys-mountinfo-v%{ver_mountinfo}
@@ -56,15 +67,6 @@ BuildSystem:    golangmodules
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/sys)
-
-Provides:       go(github.com/moby/sys/atomicwriter) = %{ver_atomicwriter}
-Provides:       go(github.com/moby/sys/mount) = %{ver_mount}
-Provides:       go(github.com/moby/sys/mountinfo) = %{ver_mountinfo}
-Provides:       go(github.com/moby/sys/reexec) = %{ver_reexec}
-Provides:       go(github.com/moby/sys/sequential) = %{ver_sequential}
-Provides:       go(github.com/moby/sys/signal) = %{ver_signal}
-Provides:       go(github.com/moby/sys/user) = %{ver_user}
-Provides:       go(github.com/moby/sys/userns) = %{ver_userns}
 
 Requires:       go(golang.org/x/sys)
 
@@ -107,6 +109,7 @@ cp -a %{dir_user}/user/. \
     %{buildroot}%{go_sys_gopath}/%{go_import_path}/user/
 cp -a %{dir_userns}/userns/. \
     %{buildroot}%{go_sys_gopath}/%{go_import_path}/userns/
+%go_generate_provides -i %{go_import_path} -v %{version}
 
 %check
 %go_common
