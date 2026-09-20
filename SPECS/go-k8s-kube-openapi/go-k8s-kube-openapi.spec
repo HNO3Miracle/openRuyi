@@ -6,7 +6,7 @@
 
 %define _name           kube-openapi
 %define go_import_path  k8s.io/kube-openapi
-%define commit_id aa012df4f4afd161d6bb3d4208d375556419a430
+%define commit_id       aa012df4f4afd161d6bb3d4208d375556419a430
 # OBS currently uses a validator path that rejects the generated OpenAPI v3
 # default {} in test/integration with "property S is missing". The
 # pkg/validation/spec tests also generate very large randomized OpenAPI
@@ -14,8 +14,7 @@
 # TestGnosticConversionLargeDeterministic. The pkg/generators tests import
 # the removed golang.org/x/tools/go/packages/packagestest test helper. Keep
 # the rest of %check enabled.
-# - HNO3Miracle
-%define go_test_exclude %{shrink:
+%define go_test_exclude  %{shrink:
     %{go_import_path}/pkg/generators
     %{go_import_path}/pkg/validation/spec
     %{go_import_path}/test/integration
@@ -33,7 +32,7 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # https://github.com/kubernetes/kube-openapi/pull/616
-Patch0:         0001-Insulate-go-json-experiment-from-stdlib.patch
+Patch1:         0001-Insulate-go-json-experiment-from-stdlib.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
