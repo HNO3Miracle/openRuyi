@@ -10,7 +10,7 @@
 # go.opentelemetry.io/otel/internal/global imports go.opentelemetry.io/auto/sdk,
 # while auto/sdk imports otel APIs. Limit bootstrap %check to leaf API packages
 # that do not require auto/sdk so the BuildRequires cycle can be resolved. - HNO3Miracle
-%define go_test_include %{shrink:
+%define go_test_include  %{shrink:
     %{go_import_path}/attribute
     %{go_import_path}/baggage
     %{go_import_path}/codes
@@ -28,7 +28,8 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # Current Go vet rejects %%q with a uint64 value in codes.UnmarshalJSON.
-# Use the numeric format that matches the parsed value. - HNO3Miracle
+# Use the numeric format that matches the parsed value.
+# https://github.com/open-telemetry/opentelemetry-go/pull/8497
 Patch2000:      2000-fix-invalid-code-format-for-go-vet.patch
 
 BuildRequires:  go
