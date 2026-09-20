@@ -6,12 +6,12 @@
 
 %define _name           ginkgo
 %define go_import_path  github.com/onsi/ginkgo/v2
-%define commit_id 4f62d7a74752034222d97d911f904d9be47ff7aa
+%define commit_id       4f62d7a74752034222d97d911f904d9be47ff7aa
 # Integration tests run ginkgo watch and nested module commands. In OBS they
 # timed out after 30s waiting for watched suites and failed module commands with
 # "GOPROXY list is not the empty string, but contains no entries".
 # - HNO3Miracle
-%define go_test_exclude %{go_import_path}/integration
+%define go_test_exclude  %{go_import_path}/integration
 
 Name:           go-github-onsi-ginkgo-v2
 Version:        0+git20260607.4f62d7a
