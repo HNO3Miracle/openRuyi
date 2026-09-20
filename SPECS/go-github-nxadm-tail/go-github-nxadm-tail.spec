@@ -18,9 +18,9 @@ Source0:        https://github.com/nxadm/tail/archive/v%{version}.tar.gz#/%{_nam
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
-# Upstreamable Go 1.25 vet fix for non-constant fmt.Printf calls in examples.
-# - HNO3Miracle
-Patch2000:         2000-fix-example-non-constant-fmt-printf.patch
+# Fix non-constant fmt.Printf calls in examples for current Go vet.
+# https://github.com/nxadm/tail/pull/86
+Patch2000:      2000-fix-example-non-constant-fmt-printf.patch
 
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
