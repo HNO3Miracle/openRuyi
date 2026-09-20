@@ -13,7 +13,7 @@ Release:        %autorelease
 Summary:        Goroutine leak detector
 License:        MIT
 URL:            https://github.com/uber-go/goleak
-#!RemoteAsset
+#!RemoteAsset:  sha256:4813e7694736f4d7fd1aad195d942f40ffca448c29bff3282ba6e92eaba4e0cd
 Source0:        https://github.com/uber-go/goleak/archive/v%{version}.tar.gz#/%{_name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
@@ -37,4 +37,4 @@ Goroutine leak detector to help avoid Goroutine leaks.
 %{go_sys_gopath}/%{go_import_path}
 
 %changelog
-%{?autochangelog}
+%autochangelog
