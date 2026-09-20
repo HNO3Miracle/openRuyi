@@ -6,7 +6,7 @@
 
 %define _name           advancedtls
 %define go_import_path  google.golang.org/grpc/security/advancedtls
-%define go_source_subdir security/advancedtls
+%define go_source_subdir  security/advancedtls
 
 Name:           go-google-grpc-security-advancedtls
 Version:        1.0.0
