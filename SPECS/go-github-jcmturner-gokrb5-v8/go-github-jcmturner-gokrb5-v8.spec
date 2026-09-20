@@ -18,6 +18,7 @@ BuildArch:      noarch
 BuildSystem:    golangmodules
 
 # Preserve diagnostic text and satisfy current Go vet.
+# https://github.com/jcmturner/gokrb5/pull/579
 Patch2000:      2000-use-literal-diagnostic-error.patch
 
 BuildRequires:  go
