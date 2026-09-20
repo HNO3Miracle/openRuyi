@@ -10,7 +10,7 @@
 # so this exporter builds against the cloud.google.com/go packages in openRuyi.
 # Root package tests require Google Application Default Credentials for
 # Stackdriver clients in OBS; subpackage tests still run. - HNO3Miracle
-%define go_test_exclude %{go_import_path}
+%define go_test_exclude  %{go_import_path}
 
 Name:           go-opencensus-contrib-exporter-stackdriver
 Version:        0.13.14
