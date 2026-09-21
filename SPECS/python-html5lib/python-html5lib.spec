@@ -21,6 +21,8 @@ BuildSystem:    pyproject
 
 # see https://github.com/html5lib/html5lib-python/pull/594
 Patch0:         0001-setup-py-except-importerror-for-missing-pkg.patch
+# https://github.com/html5lib/html5lib-python/pull/589
+Patch1:         0002-fix-build-on-python-3.14.patch
 
 BuildOption(install):  -l %{srcname}
 
