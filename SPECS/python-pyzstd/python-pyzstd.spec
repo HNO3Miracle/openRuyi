@@ -21,7 +21,6 @@ BuildOption(install):  -l pyzstd
 
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  pyproject-rpm-macros
-BuildRequires:  python3dist(backports-zstd)
 BuildRequires:  python3dist(hatch-vcs)
 BuildRequires:  python3dist(hatchling)
 BuildRequires:  python3dist(pip)
