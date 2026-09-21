@@ -19,6 +19,8 @@ BuildArch:      noarch
 BuildSystem:    pyproject
 
 BuildOption(install):  -l %{srcname}
+# No module named '_ruamel_yaml'
+BuildOption(check):  -e strictyaml.ruamel.cyaml
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
