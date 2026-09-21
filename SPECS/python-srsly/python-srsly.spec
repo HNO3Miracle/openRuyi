@@ -16,10 +16,12 @@ URL:            https://github.com/explosion/srsly
 Source0:        https://files.pythonhosted.org/packages/source/s/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildSystem:    pyproject
 
+BuildOption(install):  -l %{srcname}
 # Needs additional dependencies
 # ModuleNotFoundError: No module named 'srsly.cloudpickle.compat'
 BuildOption(check):  -e "srsly.tests.*"
-BuildOption(install):  -l %{srcname}
+# No module named '_ruamel_yaml'
+BuildOption(check):  -e srsly.ruamel_yaml.cyaml
 
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
