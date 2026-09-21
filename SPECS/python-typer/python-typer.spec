@@ -37,8 +37,8 @@ Provides:       python3-%{srcname} = %{version}-%{release}
 # Upstream deprecated typer-slim and merged it into the main typer package.
 # Provide python3dist(typer-slim) here to maintain backward compatibility
 # for numerous packages that still depend on the old name.
-Provides:       python3dist(typer-slim) = %{version}
-Provides:       python3.13dist(typer-slim) = %{version}
+Provides:       python%{python3_pkgversion}dist(typer-slim) = %{version}
+Provides:       python%{__default_python3_version}dist(typer-slim) = %{version}
 %python_provide python3-%{srcname}
 
 %description
