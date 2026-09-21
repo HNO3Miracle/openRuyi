@@ -8,12 +8,12 @@
 %global pypi_name pydantic_extra_types
 
 Name:           python-%{srcname}
-Version:        2.11.1
+Version:        2.11.2
 Release:        %autorelease
 Summary:        Extra Pydantic types
 License:        MIT
 URL:            https://github.com/pydantic/pydantic-extra-types
-#!RemoteAsset:  sha256:46792d2307383859e923d8fcefa82108b1a141f8a9c0198982b3832ab5ef1049
+#!RemoteAsset:  sha256:3a2b83b61fe920925688e7838b59caa90a45637d1dbba2b1364b8d1f7ff72a0a
 Source0:        https://files.pythonhosted.org/packages/source/p/%{srcname}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    pyproject
@@ -31,6 +31,7 @@ BuildRequires:  python3dist(phonenumbers)
 BuildRequires:  python3dist(semver)
 BuildRequires:  python3dist(python-ulid)
 BuildRequires:  python3dist(bson)
+BuildRequires:  python3dist(jsonschema)
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 %python_provide python3-%{srcname}
@@ -38,7 +39,7 @@ Provides:       python3-%{srcname} = %{version}-%{release}
 %description
 A place for pydantic types that probably shouldn't exist in the main pydantic lib.
 
-%pyproject_extras_subpkg -n python-%{srcname} phonenumbers pycountry semver python_ulid cron uuid_utils
+%pyproject_extras_subpkg -n python-%{srcname} phonenumbers pycountry semver python_ulid cron
 
 %generate_buildrequires
 %pyproject_buildrequires
