@@ -7,13 +7,13 @@
 %global srcname torchaudio
 
 Name:           python-%{srcname}
-Version:        2.10.0
+Version:        2.11.0
 Release:        %autorelease
 Summary:        Audio library for PyTorch
 License:        BSD-2-Clause
 URL:            https://github.com/pytorch/audio
 # PyPI only provides prebuilt wheels for this release; build from GitHub source.
-#!RemoteAsset:  sha256:d0d0d9575025eb85150356a0b0de75b553484838006af17a62470b52d59845d1
+#!RemoteAsset:  sha256:599ec24e7e1eef476ef21f0178e33da00e2434f930ba42e9cc20bf4002220486
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 BuildSystem:    pyproject
 
@@ -30,12 +30,16 @@ BuildRequires:  pkgconfig(protobuf)
 BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools)
-BuildRequires:  python3dist(torch) >= 2.10
+BuildRequires:  python3dist(torch) >= 2.11
 BuildRequires:  python3dist(wheel)
+# Could not find a package configuration file provided by "Torch"
+BuildRequires:  python-torch-devel
 
 Provides:       python3-%{srcname} = %{version}-%{release}
 Provides:       python3-%{srcname}%{?_isa} = %{version}-%{release}
 %python_provide python3-%{srcname}
+
+Requires:       python3dist(torch) >= 2.11
 
 %description
 TorchAudio is an audio package for PyTorch providing signal processing
@@ -46,7 +50,6 @@ functions, datasets, transforms, and I/O utilities.
 
 %build -p
 export BUILD_VERSION=%{version}
-export PYTORCH_VERSION=%{version}
 export USE_CUDA=0
 export USE_ROCM=0
 
