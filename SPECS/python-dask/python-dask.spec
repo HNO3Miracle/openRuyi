@@ -18,6 +18,8 @@ BuildArch:      noarch
 BuildSystem:    pyproject
 
 BuildOption(install):  -l %{srcname}
+# skip tests: No module named 'skimage' (circular dependency)
+BuildOption(check):  -e 'dask.array.tests.test_image'
 # skip tests: No module named 'distributed' (circular dependency)
 BuildOption(check):  -e 'dask.tests.test_distributed'
 BuildOption(check):  -e 'dask.distributed'
@@ -58,7 +60,6 @@ BuildRequires:  python3dist(pyspark)
 BuildRequires:  python3dist(pyyaml)
 BuildRequires:  python3dist(requests)
 BuildRequires:  python3dist(s3fs)
-BuildRequires:  python3dist(scikit-image)
 BuildRequires:  python3dist(scipy)
 BuildRequires:  python3dist(setuptools-scm)
 BuildRequires:  python3dist(sparse)
