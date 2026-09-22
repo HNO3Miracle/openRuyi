@@ -7,13 +7,13 @@
 %global srcname huggingface_hub
 
 Name:           python-huggingface-hub
-Version:        1.10.0
+Version:        1.16.0
 Release:        %autorelease
 Summary:        Client library for the Hugging Face Hub
 License:        Apache-2.0
 URL:            https://pypi.org/project/huggingface-hub/
 VCS:            git:https://github.com/huggingface/huggingface_hub
-#!RemoteAsset:  sha256:f803c3aae2dc98515a4341a0ce310b4e6b96ac557bb4b5fb4a77bcf525026d5b
+#!RemoteAsset:  sha256:05764336d618062c5fc5a7cf3d6b1477c0f6ef1a29f92122a87df7d6651c1b9b
 Source0:        https://files.pythonhosted.org/packages/source/h/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    pyproject
@@ -34,7 +34,6 @@ and spaces from Python.
 
 %prep
 %autosetup -n %{srcname}-%{version}
-sed -i 's/"typer",/"typer-slim",/' setup.py
 
 %generate_buildrequires
 %pyproject_buildrequires
