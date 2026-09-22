@@ -8,13 +8,13 @@
 %global pypi_name opentelemetry_proto
 
 Name:           python-%{srcname}
-Version:        1.42.1
+Version:        1.43.0
 Release:        %autorelease
 Summary:        OpenTelemetry Python protobuf bindings
 License:        Apache-2.0
 URL:            https://github.com/open-telemetry/opentelemetry-python
 VCS:            git:https://github.com/open-telemetry/opentelemetry-python.git
-#!RemoteAsset:  sha256:c6a51e6b4f05ae63565f3a113217f3d2bfaec68f78c02d7a6c85f9010d1cfca6
+#!RemoteAsset:  sha256:224778df17e1f3fafeaaa21d874236ca5f6ffc2f86e0899298ec7351aac27924
 Source0:        https://files.pythonhosted.org/packages/source/o/%{srcname}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    pyproject
