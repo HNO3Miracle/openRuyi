@@ -19,6 +19,9 @@ Source:         https://files.pythonhosted.org/packages/source/z/%{srcname}/%{py
 BuildArch:      noarch
 BuildSystem:    pyproject
 
+# Relax setuptools version requirement to allow building with newer setuptools
+Patch2000:      2000-Relax-setuptools-version-requirement-to-allow-buildi.patch
+
 BuildOption(install):  -l zope
 
 BuildRequires:  pyproject-rpm-macros
