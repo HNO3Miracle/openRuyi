@@ -7,18 +7,18 @@
 %global srcname voyageai
 
 Name:           python-%{srcname}
-Version:        0.3.7
+Version:        0.5.0
 Release:        %autorelease
 Summary:        The official Python client for the Voyage AI API
 License:        MIT
 URL:            https://www.voyageai.com
-#!RemoteAsset:  sha256:826cd97f97223f42b5babc5c459c9c80f3a8215ce5c0e007b0b276550f790d24
+#!RemoteAsset:  sha256:ed2775fe9faeb96cc2b3931edc35d76185d19f34f1523d1f70535f0451126ae9
 Source0:        https://files.pythonhosted.org/packages/source/v/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildArch:      noarch
 BuildSystem:    pyproject
 
-# Remove langchain-text-splitters and ffmpeg-python deps to avoid deep dependency chains
-Patch2000:      2000-remove-langchain-and-ffmpeg-deps.patch
+# Remove langchain-text-splitters deps to avoid deep dependency chains
+Patch2000:      2000-remove-langchain-deps.patch
 
 BuildOption(install):  voyageai
 
