@@ -15,10 +15,12 @@ URL:            https://github.com/onnx/onnx
 Source:         https://github.com/onnx/onnx/archive/refs/tags/v%{version}.tar.gz
 BuildSystem:    cmake
 
+# https://github.com/onnx/onnx/issues/6094
+Patch0001:      0001-fix-build-register-onnx-protobuf-descriptors-only-once.patch
 # Build shared libraries instead of static
-Patch0:         0001-Build-shared-libraries.patch
+Patch2000:      2000-Build-shared-libraries.patch
 # Add onnxruntime_fix.h for compatibility with onnxruntime
-Patch1:         0002-Add-onnxruntime-fix.patch
+Patch2001:      2001-Add-onnxruntime-fix.patch
 
 BuildOption(conf):  -DBUILD_ONNX_PYTHON=ON
 BuildOption(conf):  -DPYTHON_EXECUTABLE=%{__python3}
@@ -103,4 +105,4 @@ install -p "./onnx/"*.proto -t "%{buildroot}/%{_includedir}/onnx/"
 %{_bindir}/check-node
 
 %changelog
-%{?autochangelog}
+%autochangelog
