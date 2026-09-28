@@ -22,14 +22,14 @@
 %global config_version 0
 
 Name:           linux-lts
-Version:        6.18.52
+Version:        6.18.54
 Release:        %{patchset_release}.%{config_version}_%autorelease
 Summary:        The Linux lts Kernel
 License:        GPL-2.0-only
 URL:            https://www.kernel.org/
-#!RemoteAsset:  sha256:2b69564f7d4fea0c859b1959ba33709ee6e9139bd100e30a853b57159a8221b8
+#!RemoteAsset:  sha256:9df30b02dd8102bbd0be52556288ef6889ddbe7f1ddb96fbf847d0becf3eacac
 Source0:        https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-%{version}.tar.xz
-#!RemoteAsset:  sha256:52fe456d1cdcb766f68dd92e6b0bbd26f80254c7895a9096e42ea8894da63ea7
+#!RemoteAsset:  sha256:ee949140d29f4f4473e72216b2aa1f03bcde666a873fae17813cb74fa2498227
 Source1:        https://github.com/openRuyi-Project/kernel-team-tools/releases/download/v%{version}-%{patchset_release}.%{config_version}/%{name}-v%{version}-%{patchset_release}.tar.gz
 %if "%{?openruyi_riscv_arch}" == "-march=rva20u64"
     %global arch_suffix -rva20
