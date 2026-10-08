@@ -72,7 +72,7 @@ Development files for the python-talloc bindings.
 
 %files -n python-talloc-devel
 %{_includedir}/pytalloc.h
-%{_libdir}/pkgconfig/pytalloc-util.cpython-313-%{_arch}-linux-gnu.pc
+%{_libdir}/pkgconfig/pytalloc-util.cpython-*-%{_arch}-linux-gnu.pc
 %{_libdir}/libpytalloc-util.cpython*.so
 
 %changelog
