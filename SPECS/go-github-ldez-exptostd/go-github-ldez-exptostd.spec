@@ -17,6 +17,9 @@ Source0:        https://github.com/ldez/exptostd/archive/v%{version}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# Preserve fixture language versions while using installed x/exp sources.
+Patch2000:      2000-offline-module-fixtures.patch
+
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/exp)
