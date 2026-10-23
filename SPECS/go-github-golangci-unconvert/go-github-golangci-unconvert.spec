@@ -17,6 +17,9 @@ Source0:        https://codeload.github.com/golangci/unconvert/tar.gz/a129a6e641
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# Build the CLI test helper from the library implementation after the fork.
+Patch2000:      2000-tests-build-executable-from-library-sources.patch
+
 BuildRequires:  go >= 1.23.0
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(golang.org/x/mod)
