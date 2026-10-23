@@ -17,6 +17,9 @@ Source0:        https://github.com/mvdan/gofumpt/archive/v%{version}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# OBS Go test binaries report no module metadata for this package.
+Patch2000:      2000-adjust-diagnose-golden-for-buildinfo.patch
+
 BuildOption(prep):  -n gofumpt-%{version}
 
 BuildRequires:  go
