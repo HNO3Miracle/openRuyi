@@ -17,6 +17,9 @@ Source0:        https://github.com/ldez/tagliatelle/archive/v%{version}.tar.gz#/
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# These dependency-free fixture modules do not need go mod vendor.
+Patch2000:      2000-offline-module-fixtures.patch
+
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/ettle/strcase)
