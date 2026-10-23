@@ -17,6 +17,10 @@ Source0:        https://github.com/tommy-muehle/go-mnd/archive/v%{version}.tar.g
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# The upstream archive marks testdata as export-ignore; restore it so the
+# complete analyzer test suite can run from the packaged source.
+Patch2000:      2000-restore-testdata-excluded-from-release-archive.patch
+
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/davecgh/go-spew)
