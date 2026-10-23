@@ -49,6 +49,14 @@ This package contains the complete upstream Go source and test data.
 %prep
 %autosetup -p1 -n loggercheck-%{version}
 
+%check
+# analysistest creates an isolated GOPATH under testdata/src; expose packaged
+# dependency trees there so fixture imports resolve without modifying fixtures.
+ln -s %{_datadir}/gocode/src/github.com testdata/src/github.com
+ln -s %{_datadir}/gocode/src/go.uber.org testdata/src/go.uber.org
+ln -s %{_datadir}/gocode/src/k8s.io testdata/src/k8s.io
+%buildsystem_golangmodules_check
+
 %files
 %doc README.md
 %license LICENSE
