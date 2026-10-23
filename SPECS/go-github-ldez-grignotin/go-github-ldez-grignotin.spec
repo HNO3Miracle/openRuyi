@@ -17,6 +17,11 @@ Source0:        https://github.com/ldez/grignotin/archive/v%{version}.tar.gz#/%{
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# https://github.com/ldez/grignotin/commit/c39f1e5d0ab40177e83d1223186796fb1583691f
+Patch1000:      1000-tests-fix.patch
+# Keep module queries and HTTP tests deterministic in offline GOPATH builds.
+Patch2000:      2000-offline-module-and-http-tests.patch
+
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/davecgh/go-spew)
@@ -40,6 +45,11 @@ This package contains the complete upstream Go source and test data.
 
 %prep
 %autosetup -p1 -n grignotin-%{version}
+
+%check -p
+# GOPATH builds default to legacy mux semantics; the test servers use Go 1.22
+# method-aware patterns and need the current ServeMux implementation.
+export GODEBUG="${GODEBUG:+$GODEBUG,}httpmuxgo121=0"
 
 %files
 %doc readme.md
