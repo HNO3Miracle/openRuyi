@@ -17,6 +17,9 @@ Source0:        https://gitlab.com/bosi/decorder/-/archive/v%{version}/decorder-
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# Go 1.27 vet requires a constant format string for Reportf.
+Patch2000:      2000-use-constant-format-for-reportf.patch
+
 BuildOption(prep):  -n decorder-v%{version}
 
 BuildRequires:  go
