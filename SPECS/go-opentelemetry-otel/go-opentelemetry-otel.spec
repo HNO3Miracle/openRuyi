@@ -58,6 +58,39 @@ Provides:       go(go.opentelemetry.io/otel/sdk/metric/metricdata) = %{version}
 Provides:       go(go.opentelemetry.io/otel/sdk/log) = %{version}
 Provides:       go(go.opentelemetry.io/otel/sdk/log/logtest) = %{version}
 Provides:       go(go.opentelemetry.io/otel/trace) = %{version}
+# These OTLP log and metric modules are nested in the same upstream source tree.
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc/internal) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc/internal/observ) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc/internal/retry) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc/internal/transform) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc/internal/x) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp/internal) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp/internal/observ) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp/internal/retry) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp/internal/transform) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploghttp/internal/x) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc/internal) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc/internal/counter) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc/internal/envconfig) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc/internal/observ) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc/internal/oconf) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc/internal/otest) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc/internal/retry) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc/internal/transform) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc/internal/x) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp/internal) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp/internal/counter) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp/internal/envconfig) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp/internal/observ) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp/internal/oconf) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp/internal/otest) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp/internal/retry) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp/internal/transform) = %{version}
+Provides:       go(go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp/internal/x) = %{version}
 
 Requires:       go(github.com/cespare/xxhash/v2)
 Requires:       go(github.com/go-logr/logr)
@@ -82,10 +115,6 @@ This package provides the core OpenTelemetry API module for Go.
 # will hit RPM file conflicts. - HNO3Miracle
 %exclude %{go_sys_gopath}/%{go_import_path}/bridge/opencensus
 %exclude %{go_sys_gopath}/%{go_import_path}/bridge/opentracing
-%exclude %{go_sys_gopath}/%{go_import_path}/exporters/otlp/otlplog/otlploggrpc
-%exclude %{go_sys_gopath}/%{go_import_path}/exporters/otlp/otlplog/otlploghttp
-%exclude %{go_sys_gopath}/%{go_import_path}/exporters/otlp/otlpmetric/otlpmetricgrpc
-%exclude %{go_sys_gopath}/%{go_import_path}/exporters/otlp/otlpmetric/otlpmetrichttp
 %exclude %{go_sys_gopath}/%{go_import_path}/exporters/otlp/otlptrace
 %exclude %{go_sys_gopath}/%{go_import_path}/exporters/otlp/otlptrace/otlptracegrpc
 %exclude %{go_sys_gopath}/%{go_import_path}/exporters/otlp/otlptrace/otlptracehttp
