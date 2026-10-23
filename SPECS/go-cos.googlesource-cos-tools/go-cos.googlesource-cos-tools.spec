@@ -13,7 +13,7 @@ Release:        %autorelease
 Summary:        Container-Optimized OS tooling and support libraries
 License:        Apache-2.0
 URL:            https://cos.googlesource.com/cos/tools
-#!RemoteAsset:  sha256:46852b3d8869516485d651ca0740fa73257ffe9a1b0217b843912b3de1e54453
+#!RemoteAsset:  sha256:a98b96a9994ceb424200f0406479a7590cfabdf72cafaca5cffb2fd897bf2a29
 Source0:        https://cos.googlesource.com/cos/tools/+archive/%{commit_id}.tar.gz#/tools-%{commit_id}.tar.gz
 BuildArch:      noarch
 BuildSystem:    golangmodules
