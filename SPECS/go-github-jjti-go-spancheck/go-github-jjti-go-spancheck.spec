@@ -17,6 +17,9 @@ Source0:        https://github.com/jjti/go-spancheck/archive/v%{version}.tar.gz#
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# Run all analyzer fixtures against installed dependencies without downloads.
+Patch2000:      2000-offline-analyzer-fixtures.patch
+
 BuildRequires:  go
 BuildRequires:  go-rpm-macros
 BuildRequires:  go(github.com/go-logr/logr)
@@ -26,6 +29,7 @@ BuildRequires:  go(go.opencensus.io)
 BuildRequires:  go(go.opentelemetry.io/otel)
 BuildRequires:  go(go.opentelemetry.io/otel/metric)
 BuildRequires:  go(go.opentelemetry.io/otel/trace)
+BuildRequires:  go(go.opentelemetry.io/auto/sdk)
 BuildRequires:  go(golang.org/x/mod)
 BuildRequires:  go(golang.org/x/sync)
 BuildRequires:  go(golang.org/x/tools)
