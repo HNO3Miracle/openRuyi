@@ -17,6 +17,10 @@ Source0:        https://github.com/mvdan/gofumpt/archive/v%{version}.tar.gz#/%{_
 BuildArch:      noarch
 BuildSystem:    golangmodules
 
+# GOPATH builds omit module metadata; retain the development-version fallback
+# so diagnose tests exercise the same output as upstream's module builds.
+Patch2000:      2000-report-devel-without-module-metadata.patch
+
 BuildOption(prep):  -n gofumpt-%{version}
 
 BuildRequires:  go
