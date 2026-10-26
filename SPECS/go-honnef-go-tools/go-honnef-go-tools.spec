@@ -6,6 +6,10 @@
 
 %define _name           tools
 %define go_import_path  honnef.co/go/tools
+# This noarch package contains Go source only. The riscv64 OBS worker's
+# brp-remove-la-files crashes while scanning this tree, which cannot contain
+# libtool archives.
+%global __brp_remove_la_files %{nil}
 
 Name:           go-honnef-go-tools
 Version:        0.8.1
