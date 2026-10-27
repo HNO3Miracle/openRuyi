@@ -9,6 +9,7 @@
 %global pypi_name opentelemetry_api
 
 Name:           python-%{srcname}
+# Update with python-opentelemetry-semantic-conventions - 251
 Version:        1.44.0
 Release:        %autorelease
 Summary:        OpenTelemetry Python API
