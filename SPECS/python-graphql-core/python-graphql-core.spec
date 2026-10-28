@@ -25,7 +25,7 @@ BuildOption(install):  -l graphql -L
 BuildRequires:  pyproject-rpm-macros
 BuildRequires:  pkgconfig(python3)
 
-Provides:       python3-%{srcname} = %{version}-%{release}
+Provides:       python3-%{srcname} = %{epoch}:%{version}-%{release}
 %python_provide python3-%{srcname}
 
 %description
